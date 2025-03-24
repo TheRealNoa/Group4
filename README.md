@@ -28,3 +28,25 @@ Taking data from the patients dataset, feeding it into the LLM, classifying rela
 Matching patient to profile (LLM):
 Taking the two inputs:
 One of applicable trials criteria, one of patient profiles and finding if there exists a trial that can be matched to the patient.- Marcus
+
+---------------------------------------------------------------------------------------------------
+**To setup:**
+1. Open folder in visual studio code
+2. View->Terminal
+3. Execute the following: 
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+.venv\Scripts\activate
+4. Run "testing.py"
+---------------------------------------------------------------------------------------------------
+The current model works as follows:
+1. We train it on an artificially produced dataset of patients with eligibility criteria which has a 33/33/33 % split between the labels of: "Not eligible for any tirals", "Eligible for some", "Eligible for most". Then this is used as a sort of a "soft supervision", since no actual trial will (most likely) match perfectly with the ones created in the dataset. (Each patient's stats are created based on ALL of the inclusion/exclusion parameters I could extract from all the trials).
+2. There is some rule-based matching for the exclusion criteria. This is similar to what our prof. had and you can think of it as criteria such as Age:<18 and similar.
+3. LLM reasoning- I'm using Google's Flan-T5 to try and match the patients with the trials based on what it knows from above.
+4. Then we have some "fuzzy matching" where the model helps match patient values to criteria even with phrasing differences.
+5. It then "translates" the raw trial matches (so like 0 matches, 1, 2+) into "Not eligivble", "Eligible for some", "Eligible for most"
+6. We have the evaluation.
+
+However, here is what's essentially happening:
+The model just predicts "Eligible for most" and nothing else. We can see recall is 100% for it since it guessed all of the "Eligible for most" correctly.
+Precision is 33% because the other 66% it tried to guess "Eligible for most" as well... 
+![alt text](image.png)

@@ -75,7 +75,8 @@ def process_file(file_path):
     return data
 
 # File path to the document
-file_path = r"C:\Users\erykd\Downloads\TREAT_ctDNA_study.csv"  # Replace with your file path
+file_path = "trials_data/TREAT_ctDNA_study.csv"
+
 
 # Process the file and get structured data
 structured_data = process_file(file_path)
@@ -84,5 +85,5 @@ structured_data = process_file(file_path)
 print(json.dumps(structured_data, indent=4))
 
 # Optionally, save the structured data to a JSON file
-with open("output.json", "w", encoding="utf-8") as json_file:
+with open("TrialExtractionOutput.json", "w", encoding="utf-8") as json_file:
     json.dump(structured_data, json_file, indent=4)
