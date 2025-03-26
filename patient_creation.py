@@ -48,7 +48,7 @@ def matches_trial(patient, trial):
     return True
 
 # Set total number of patients (must be divisible by 3 for equal split)
-N = 120
+N = 30
 target_per_label = N // 3
 
 label_counts = {'Not Eligible': 0, 'Eligible for Some': 0, 'Eligible for Most': 0}
@@ -78,4 +78,4 @@ while sum(label_counts.values()) < N:
 # Convert to DataFrame and export
 final_df = pd.DataFrame(patients)
 print(final_df['eligibility_label'].value_counts())
-final_df.to_csv("patients_data/synthetic_balanced_split.csv", index=False)
+final_df.to_csv("patients_data/testing_dataset.csv", index=False)

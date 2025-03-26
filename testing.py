@@ -1,46 +1,53 @@
-# file: patient_trial_matcher.py
-
 import os
 import re
-import difflib
 import pandas as pd
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-from sklearn.metrics import classification_report, confusion_matrix
+import evaluate
+import torch
+from torch.utils.data import Dataset
 from sklearn.model_selection import train_test_split
-import seaborn as sns
-import matplotlib.pyplot as plt
+from transformers import (
+    AutoTokenizer, AutoModelForSeq2SeqLM,
+    Seq2SeqTrainer, Seq2SeqTrainingArguments
+)
 
-# ==================== CONFIGURATION ====================
+# ========== Metric ==========
 
-FIELD_KEYWORDS = {
-    "ECOGPerformanceStatus": ["ecog", "performance status"],
-    "GeneticMutations": ["mutation", "brca", "tp53"],
-    "Comorbidities": ["hypertension", "diabetes", "cardiac"],
-    "OrganFunctionStatus": ["organ", "liver", "kidney", "renal"],
-    "PreviousCancerHistory": ["previous cancer", "prior cancer"],
-    "PresenceOfMetastases": ["metastatic", "stage iv", "metastases"],
-    "PregnancyBreastfeedingStatus": ["pregnancy", "pregnant", "breastfeeding"],
-    "Age": ["age", "years old"],
-    "Diagnosis": ["diagnosis", "tumor", "carcinoma"],
-    "Gender": ["female", "male"],
-    "TreatmentHistory": ["chemotherapy", "radiotherapy", "treatment history"]
-}
+accuracy_metric = evaluate.load("accuracy")
+label2id = {
+    "not eligible": 0,
+    "eligible": 1,
+    "eligible for some": 2,
+    "eligible for most": 3
+    }
 
-EXCLUSION_NOISE = [
-    "ages eligible", "sexes eligible", "healthy volunteers", "show less",
-    "sampling method", "study population", "gender eligibility"
-]
+id2label = {v: k for k, v in label2id.items()}
+def build_compute_metrics(tokenizer):
+    def compute_metrics(eval_pred):
+        predictions, labels = eval_pred
+        decoded_preds = tokenizer.batch_decode(predictions, skip_special_tokens=True)
+        decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
 
-# ==================== DATA HELPERS ====================
+        decoded_preds = [p.strip().lower() for p in decoded_preds]
+        decoded_labels = [l.strip().lower() for l in decoded_labels]
 
-def load_patient_csv(csv_path):
-    df = pd.read_csv(csv_path)
-    return train_test_split(df, test_size=30, stratify=df["eligibility_label"], random_state=42)
+        # Convert to integers
+        try:
+            preds_ids = [label2id[p] for p in decoded_preds]
+            labels_ids = [label2id[l] for l in decoded_labels]
+        except KeyError as e:
+            print(f"⚠️ Unknown label: {e}. Prediction: {decoded_preds}")
+            return {"accuracy": 0.0}
+
+        return accuracy_metric.compute(predictions=preds_ids, references=labels_ids)
+
+    return compute_metrics
+
+# ========== Field Formatter ==========
 
 def format_patient_profile(patient: dict) -> str:
     return "\n".join([f"{k}: {v}" for k, v in patient.items()])
 
-# ==================== TRIAL LOADING ====================
+# ========== Trial Loader ==========
 
 def read_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -83,116 +90,115 @@ def load_trials(folder_path):
         if f.endswith(".csv")
     ]
 
-# ==================== MATCHING LOGIC ====================
+# ========== Dataset ==========
 
-def clean_criteria_list(criteria):
-    return [c for c in criteria if not any(p in c.lower() for p in EXCLUSION_NOISE)]
+class TrialMatchingDataset(Dataset):
+    def __init__(self, patient_df, trials, tokenizer, max_input_length=512, max_target_length=8):
+        self.examples = []
+        self.tokenizer = tokenizer
+        self.max_input_length = max_input_length
+        self.max_target_length = max_target_length
 
-def smart_semantic_match(patient: dict, criteria):
-    matched = []
-    cleaned_criteria = clean_criteria_list(criteria)
+        for _, patient in patient_df.iterrows():
+            profile_dict = patient.to_dict()
+            patient_str = format_patient_profile(profile_dict)
+            label = patient["eligibility_label"]
 
-    for field, value in patient.items():
-        if not isinstance(value, str) or not value.strip():
-            continue
-        keywords = FIELD_KEYWORDS.get(field, [])
-        for rule in cleaned_criteria:
-            rule_lower = rule.lower()
-            for keyword in keywords:
-                if keyword in rule_lower:
-                    score = difflib.SequenceMatcher(None, value.lower(), rule_lower).ratio()
-                    if value.lower() in rule_lower or score > 0.9:
-                        matched.append((field, value, rule))
-                        break
-    return matched
-
-def evaluate_trial_match(patient_str, patient_dict, trial, tokenizer, model):
-    trial_name = trial.get("Name", "Unnamed Trial")
-    inc = trial.get("Inclusion Criteria", [])
-    exc = trial.get("Exclusion Criteria", [])
-
-    matched_exc = smart_semantic_match(patient_dict, exc)
-    if matched_exc:
-        return "Not Eligible"
-
-    inc_display = "\n- " + "\n- ".join(inc[:8])
-    exc_display = "\n- " + "\n- ".join(exc[:8])
-    prompt = f"""
-You are a clinical trial eligibility expert.
-
-Based on the patient's profile and trial criteria, determine if the patient is eligible. Use this format:
-
-Matched Inclusion Criteria:
-- [PatientField: Value] ↔ [Trial Inclusion: Text]
-
-Unmatched or Violated Criteria:
-- ...
-
-Conclusion:
-Eligible / Not Eligible with reason
-
-### Patient Profile:
+            for trial in trials:
+                trial_name = trial.get("Name", "Unnamed Trial")
+                inc = "\n- " + "\n- ".join(trial.get("Inclusion Criteria", [])[:6])
+                exc = "\n- " + "\n- ".join(trial.get("Exclusion Criteria", [])[:6])
+                input_text = f"""Patient Profile:
 {patient_str}
 
-### Trial: {trial_name}
-Inclusion Criteria:{inc_display}
-
-Exclusion Criteria:{exc_display}
-
-Answer:
+Trial: {trial_name}
+Inclusion Criteria:{inc}
+Exclusion Criteria:{exc}
 """
-    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=1024)
-    outputs = model.generate(inputs["input_ids"], max_length=512, num_beams=5, early_stopping=True)
-    explanation = tokenizer.decode(outputs[0], skip_special_tokens=True).strip()
+                self.examples.append((input_text, label))
 
-    explanation_lower = explanation.lower()
-    if "not eligible" in explanation_lower:
-        return "Not Eligible"
-    elif "eligible" in explanation_lower:
-        return "Eligible"
-    else:
-        return "Not Eligible"
+    def __len__(self):
+        return len(self.examples)
 
-# ==================== MAIN ====================
+    def __getitem__(self, idx):
+        input_text, target_text = self.examples[idx]
+        model_input = self.tokenizer(
+            input_text,
+            truncation=True,
+            padding="max_length",
+            max_length=self.max_input_length,
+            return_tensors="pt"
+        )
+        label_input = self.tokenizer(
+            target_text,
+            truncation=True,
+            padding="max_length",
+            max_length=self.max_target_length,
+            return_tensors="pt"
+        )
+        return {
+            "input_ids": model_input["input_ids"].squeeze(),
+            "attention_mask": model_input["attention_mask"].squeeze(),
+            "labels": label_input["input_ids"].squeeze()
+        }
+
+# ========== Main Training ==========
 
 def main():
-    csv_path = "patients_data/synthetic_balanced_split.csv"
+
+    if torch.cuda.is_available():
+        print(f"🔥 CUDA is available. Using GPU: {torch.cuda.get_device_name(0)}")
+    else:
+        print("⚠️ CUDA not available. Using CPU.")
+
+    csv_path = "patients_data/testing_dataset.csv"
     trials_folder = "trials_data"
     model_name = "google/flan-t5-base"
 
-    print("🔄 Loading model...")
+    print("🔄 Loading tokenizer and model...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
-    print("📋 Loading patient and trial data...")
-    train_df, test_df = load_patient_csv(csv_path)
+    print("📋 Loading data...")
+    full_df = pd.read_csv(csv_path)
+    train_df, val_df = train_test_split(full_df, test_size=0.2, stratify=full_df["eligibility_label"], random_state=42)
     trials = load_trials(trials_folder)
 
-    def predict_label(patient):
-        profile_dict = patient.to_dict()
-        patient_str = format_patient_profile(profile_dict)
-        match_count = sum(
-            1 for trial in trials
-            if evaluate_trial_match(patient_str, profile_dict, trial, tokenizer, model) == "Eligible"
-        )
-        if match_count == 0:
-            return "Not Eligible"
-        elif match_count < len(trials) * 0.5:
-            return "Eligible for Some"
-        else:
-            return "Eligible for Most"
+    print("📚 Preparing datasets...")
+    train_dataset = TrialMatchingDataset(train_df, trials, tokenizer)
+    val_dataset = TrialMatchingDataset(val_df, trials, tokenizer)
 
-    print("🔬 Evaluating validation set...")
-    test_df["predicted_label"] = test_df.apply(predict_label, axis=1)
-    print("\n📊 Classification Report:")
-    print(classification_report(test_df["eligibility_label"], test_df["predicted_label"]))
+    
 
-    cm = confusion_matrix(test_df["eligibility_label"], test_df["predicted_label"], labels=["Not Eligible", "Eligible for Some", "Eligible for Most"])
-    sns.heatmap(cm, annot=True, fmt="d", xticklabels=["Not Eligible", "Some", "Most"], yticklabels=["Not Eligible", "Some", "Most"])
-    plt.xlabel("Predicted")
-    plt.ylabel("True")
-    plt.title("Confusion Matrix")
-    plt.show()
+    print("⚙️ Setting training arguments...")
+    training_args = Seq2SeqTrainingArguments(
+        output_dir="./t5_trial_matcher",
+        per_device_train_batch_size=4,
+        per_device_eval_batch_size=4,
+        learning_rate=5e-5,
+        num_train_epochs=3,
+        evaluation_strategy="epoch",
+        save_strategy="epoch",
+        logging_dir="./logs",
+        predict_with_generate=True,
+        report_to="none"
+    )
+
+    print("🚀 Starting training...")
+    trainer = Seq2SeqTrainer(
+        model=model,
+        args=training_args,
+        train_dataset=train_dataset,
+        eval_dataset=val_dataset,
+        tokenizer=tokenizer,
+        compute_metrics=build_compute_metrics(tokenizer)
+    )
+
+    trainer.train()
+    trainer.save_model("./t5_trial_matcher")
+    print("✅ Model saved to ./t5_trial_matcher")
+
+# ========== Entry Point ==========
 
 if __name__ == "__main__":
     main()
