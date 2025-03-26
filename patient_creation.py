@@ -48,10 +48,10 @@ def matches_trial(patient, trial):
     return True
 
 # Set total number of patients (must be divisible by 3 for equal split)
-N = 30
-target_per_label = N // 3
+N = 40
+target_per_label = N // 2
 
-label_counts = {'Not Eligible': 0, 'Eligible for Some': 0, 'Eligible for Most': 0}
+label_counts = {'Not Eligible': 0, 'Eligible':0}
 patients = []
 patient_id = 1
 
@@ -62,10 +62,8 @@ while sum(label_counts.values()) < N:
 
     if matched_trials == 0:
         label = 'Not Eligible'
-    elif matched_trials < len(TRIAL_RULES) / 2:
-        label = 'Eligible for Some'
-    else:
-        label = 'Eligible for Most'
+    elif matched_trials > 0:
+        label = 'Eligible'
 
     # Add only if we haven't reached the quota for this label
     if label_counts[label] < target_per_label:
@@ -78,4 +76,4 @@ while sum(label_counts.values()) < N:
 # Convert to DataFrame and export
 final_df = pd.DataFrame(patients)
 print(final_df['eligibility_label'].value_counts())
-final_df.to_csv("patients_data/testing_dataset.csv", index=False)
+final_df.to_csv("patients_data/testing_dataset2.csv", index=False)

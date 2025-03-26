@@ -1,0 +1,201 @@
+age_over_18,triple_negative,her2_negative,ecog_0_1,adequate_organ_function,received_radiotherapy,no_metastasis,previous_cancer,cardiac_condition,brca_mutation,prior_her2_treatment,prior_endocrine_therapy,active_infection,pregnant_or_breastfeeding,lvef_below_50,arrhythmia,ctla4_inhibitor,cd137_agent,ox40_agent,topoisomerase_inhibitor,er_positive,trial_name,eligibility_label,patient_id
+True,True,False,False,False,False,True,False,True,True,True,True,True,True,True,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0173
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0025
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0070
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0073
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0059
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0093
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0007
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0088
+True,True,True,True,False,True,True,False,True,False,False,False,True,True,False,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0160
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0049
+True,False,True,True,False,False,False,True,True,True,True,False,False,True,True,False,True,True,False,True,True,ASCENT-05,Not Eligible,P0161
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0011
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0065
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0046
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0003
+True,False,False,False,True,True,True,False,True,False,True,True,True,True,False,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0199
+False,False,False,True,False,False,True,True,True,False,True,True,True,True,True,True,False,False,True,True,False,ASCENT-05,Not Eligible,P0195
+True,False,True,True,True,False,True,False,False,True,False,False,True,True,False,True,False,True,True,True,False,ASCENT-05,Not Eligible,P0134
+True,True,False,True,True,True,True,False,True,True,True,True,True,True,False,False,True,True,False,True,False,ASCENT-05,Not Eligible,P0176
+False,False,False,False,False,False,False,True,False,True,True,True,True,True,True,False,False,True,True,True,True,ASCENT-05,Not Eligible,P0150
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0057
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0027
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0100
+False,False,True,False,False,False,True,True,True,True,True,False,True,False,True,False,False,False,False,True,True,ASCENT-05,Not Eligible,P0182
+False,True,True,True,False,True,True,False,False,True,True,True,False,True,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0129
+True,False,False,False,False,True,False,True,True,True,True,True,False,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0196
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0072
+True,False,True,True,False,True,True,True,True,True,True,True,False,False,True,True,False,True,False,True,False,ASCENT-05,Not Eligible,P0192
+True,False,False,False,True,False,True,True,True,True,True,True,True,True,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0112
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0016
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0077
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0037
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0081
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0020
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0098
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0015
+False,True,True,True,True,False,True,False,False,True,False,True,True,True,False,False,True,True,True,True,True,ASCENT-05,Not Eligible,P0105
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0034
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0031
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0067
+False,True,False,True,False,True,False,False,False,True,True,False,False,True,True,True,True,True,True,True,False,ASCENT-05,Not Eligible,P0138
+True,False,False,True,False,True,False,False,False,True,True,True,True,True,True,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0186
+False,True,True,False,False,True,True,True,True,True,True,True,True,True,True,True,True,False,True,True,False,ASCENT-05,Not Eligible,P0183
+True,True,False,False,True,False,False,True,True,False,False,False,True,True,True,True,True,False,False,False,False,ASCENT-05,Not Eligible,P0157
+False,True,False,False,True,True,True,True,True,True,True,False,False,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0102
+True,True,True,False,False,False,True,False,True,True,True,True,True,False,True,True,True,True,False,True,False,ASCENT-05,Not Eligible,P0193
+False,True,True,False,False,False,False,True,False,False,True,True,True,False,True,False,False,True,True,True,True,ASCENT-05,Not Eligible,P0139
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0082
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0006
+False,True,True,False,False,True,True,True,True,False,True,False,True,True,True,False,True,False,True,True,True,ASCENT-05,Not Eligible,P0147
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0040
+True,False,False,True,False,False,True,False,True,True,False,False,True,True,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0151
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0005
+True,False,False,False,False,True,True,False,True,True,True,True,True,True,True,False,False,True,False,False,True,ASCENT-05,Not Eligible,P0136
+True,False,True,True,False,True,False,True,True,True,False,False,True,True,True,False,True,False,True,True,False,ASCENT-05,Not Eligible,P0126
+True,False,False,True,True,False,False,True,True,True,True,True,True,True,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0177
+True,True,True,True,False,False,False,True,True,True,False,False,True,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0121
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0004
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0094
+False,False,False,True,False,False,True,True,True,False,False,False,True,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0148
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0047
+False,False,True,False,True,False,True,True,True,True,True,False,False,True,True,True,False,True,True,False,True,ASCENT-05,Not Eligible,P0117
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0038
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0087
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0030
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0076
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0053
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0014
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0060
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0002
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0064
+False,True,True,False,True,True,False,False,True,True,False,True,False,True,True,True,False,True,False,True,False,ASCENT-05,Not Eligible,P0143
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0054
+False,True,True,False,False,True,False,True,False,False,True,True,True,False,True,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0179
+False,False,False,False,False,False,True,True,False,True,True,True,True,True,True,False,True,True,False,True,False,ASCENT-05,Not Eligible,P0169
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0056
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0018
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0017
+False,True,True,True,True,True,False,True,True,True,True,True,False,True,True,False,True,False,False,True,False,ASCENT-05,Not Eligible,P0200
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0083
+True,True,False,False,True,True,False,True,True,True,True,True,True,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0181
+False,False,False,False,False,True,True,False,True,True,True,True,False,True,True,True,True,False,True,False,True,ASCENT-05,Not Eligible,P0194
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0079
+False,True,True,False,False,False,False,False,False,False,True,True,True,True,True,True,True,True,True,True,False,ASCENT-05,Not Eligible,P0111
+False,False,False,True,True,True,True,True,True,True,False,False,True,True,True,True,True,True,True,True,False,ASCENT-05,Not Eligible,P0110
+False,True,True,True,True,False,True,False,True,True,True,True,True,True,True,True,True,False,True,False,False,ASCENT-05,Not Eligible,P0137
+False,False,False,False,False,True,True,True,True,True,True,False,True,False,True,True,True,True,True,False,False,ASCENT-05,Not Eligible,P0174
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0063
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0013
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0001
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0080
+False,True,False,False,False,True,False,False,False,True,True,True,False,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0119
+True,False,True,True,False,False,True,True,False,True,True,True,True,False,True,True,True,False,False,True,True,ASCENT-05,Not Eligible,P0197
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0045
+True,True,False,False,True,True,True,True,True,True,True,True,False,False,True,True,True,False,True,True,False,ASCENT-05,Not Eligible,P0170
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0051
+True,False,True,True,False,False,False,True,True,True,True,True,True,True,False,False,False,True,True,True,True,ASCENT-05,Not Eligible,P0167
+False,True,True,True,True,False,True,False,True,True,True,True,True,False,True,False,False,True,True,True,True,ASCENT-05,Not Eligible,P0154
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0009
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0085
+True,False,False,False,False,True,False,False,True,False,True,True,True,False,True,False,True,True,False,True,True,ASCENT-05,Not Eligible,P0178
+True,True,True,True,False,False,False,True,True,True,False,False,True,False,True,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0101
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0039
+False,False,True,False,True,False,False,True,False,True,True,False,True,True,True,True,True,True,True,False,True,ASCENT-05,Not Eligible,P0113
+False,False,False,False,True,False,True,True,True,True,True,True,True,True,False,False,True,True,True,False,False,ASCENT-05,Not Eligible,P0159
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0099
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0023
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0092
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0071
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0028
+False,False,False,False,False,False,True,True,True,True,False,True,True,True,True,True,True,False,True,False,False,ASCENT-05,Not Eligible,P0156
+False,False,True,False,False,True,False,False,True,True,True,False,True,True,False,False,True,True,True,False,True,ASCENT-05,Not Eligible,P0162
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0026
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0012
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0052
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0010
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0096
+True,False,True,False,True,True,True,True,True,True,True,True,True,True,False,True,True,True,False,False,False,ASCENT-05,Not Eligible,P0175
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0066
+False,False,False,True,False,False,True,False,False,True,False,True,False,True,True,False,False,True,False,True,True,ASCENT-05,Not Eligible,P0118
+False,False,True,False,False,False,False,True,True,True,False,True,True,True,False,False,False,False,False,False,True,ASCENT-05,Not Eligible,P0149
+True,False,False,True,True,False,True,True,True,True,True,True,True,True,True,True,True,False,True,True,True,ASCENT-05,Not Eligible,P0130
+False,True,True,False,True,False,True,True,True,True,True,False,True,True,True,False,True,True,False,True,True,ASCENT-05,Not Eligible,P0141
+False,True,False,False,False,False,True,True,False,True,True,False,False,False,False,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0163
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0068
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0050
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0069
+False,False,True,False,True,True,True,True,False,False,False,True,False,True,True,False,True,False,True,True,False,ASCENT-05,Not Eligible,P0171
+False,True,True,False,True,False,False,True,False,True,True,True,False,True,True,True,False,False,True,True,False,ASCENT-05,Not Eligible,P0132
+True,True,True,True,False,True,True,True,True,True,False,True,True,True,True,True,False,True,True,True,False,ASCENT-05,Not Eligible,P0145
+True,True,False,True,True,False,True,True,False,False,True,True,True,True,True,True,True,False,True,True,True,ASCENT-05,Not Eligible,P0106
+True,False,True,False,False,True,True,False,False,False,False,False,False,True,False,False,True,False,True,False,True,ASCENT-05,Not Eligible,P0188
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0032
+False,False,True,True,False,False,True,True,True,True,True,True,True,True,False,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0107
+False,True,False,True,False,True,True,True,False,False,True,True,True,True,False,True,True,True,True,False,False,ASCENT-05,Not Eligible,P0104
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0022
+True,True,False,False,True,True,True,True,False,True,True,True,False,True,True,False,True,True,False,True,True,ASCENT-05,Not Eligible,P0133
+True,True,True,False,True,True,False,True,True,True,False,True,True,False,True,True,True,True,True,False,False,ASCENT-05,Not Eligible,P0131
+True,True,False,True,True,False,True,True,False,True,True,True,False,False,False,True,True,False,True,True,True,ASCENT-05,Not Eligible,P0142
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0043
+False,True,True,True,False,False,True,True,True,False,False,True,False,False,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0190
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0008
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0078
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0019
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0029
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0075
+True,False,False,False,False,False,False,False,False,True,True,False,True,True,True,False,False,False,True,True,False,ASCENT-05,Not Eligible,P0198
+False,True,False,True,True,False,True,True,True,False,True,True,False,False,True,True,False,True,True,True,False,ASCENT-05,Not Eligible,P0109
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0041
+True,True,False,False,False,False,True,True,True,True,True,True,True,True,True,False,True,True,False,False,False,ASCENT-05,Not Eligible,P0123
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0035
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0058
+False,True,True,True,False,False,False,True,True,False,True,True,True,True,True,False,True,True,False,True,True,ASCENT-05,Not Eligible,P0115
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0074
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0086
+True,False,False,False,True,True,True,False,False,True,False,True,True,False,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0108
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0024
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0036
+False,False,False,False,True,False,True,False,True,True,True,True,False,True,False,False,True,True,False,True,False,ASCENT-05,Not Eligible,P0189
+False,True,False,False,False,False,True,True,True,False,False,True,True,True,False,False,True,False,True,True,False,ASCENT-05,Not Eligible,P0124
+False,False,True,True,False,True,False,True,True,True,True,False,False,False,True,False,True,False,True,True,False,ASCENT-05,Not Eligible,P0185
+True,True,False,True,True,False,True,True,False,True,True,True,True,True,False,True,False,False,True,True,False,ASCENT-05,Not Eligible,P0168
+True,True,True,True,False,False,True,True,False,True,True,True,True,True,True,True,False,True,True,True,True,ASCENT-05,Not Eligible,P0114
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0044
+False,True,True,False,True,True,True,True,False,True,True,True,False,True,True,False,False,False,True,True,True,ASCENT-05,Not Eligible,P0180
+True,False,False,True,False,True,True,True,True,False,True,True,True,True,True,True,True,False,True,False,True,ASCENT-05,Not Eligible,P0135
+True,True,False,False,False,False,True,False,True,True,True,False,False,True,True,True,False,False,False,True,False,ASCENT-05,Not Eligible,P0152
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0091
+True,True,False,False,False,False,False,True,True,False,True,False,False,True,True,True,False,False,True,True,True,ASCENT-05,Not Eligible,P0128
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0048
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0084
+True,True,True,False,True,True,True,True,True,True,False,False,True,False,True,True,False,True,True,True,False,ASCENT-05,Not Eligible,P0153
+False,True,False,True,False,False,True,True,False,False,True,True,False,True,True,False,False,False,False,True,True,ASCENT-05,Not Eligible,P0184
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0090
+True,False,False,True,True,False,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True,ASCENT-05,Not Eligible,P0172
+False,True,True,False,True,False,True,True,True,True,True,False,True,True,False,True,True,False,True,True,False,ASCENT-05,Not Eligible,P0166
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0089
+False,False,False,True,True,False,True,True,True,True,True,True,True,True,True,False,False,False,False,True,True,ASCENT-05,Not Eligible,P0140
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0021
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0062
+False,True,True,False,True,False,True,False,True,False,False,True,False,True,True,True,True,True,True,False,False,ASCENT-05,Not Eligible,P0155
+True,False,True,True,False,True,True,True,False,False,True,True,True,True,True,True,False,True,True,True,True,ASCENT-05,Not Eligible,P0103
+True,False,True,True,True,True,False,True,True,True,True,True,True,False,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0165
+False,True,True,True,False,False,False,False,True,False,True,False,True,True,False,True,True,True,False,False,True,ASCENT-05,Not Eligible,P0127
+False,False,False,True,False,True,False,False,True,True,True,True,False,True,True,True,True,False,True,True,False,ASCENT-05,Not Eligible,P0146
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0042
+True,True,False,True,True,True,True,False,False,False,False,True,True,True,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0122
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0033
+False,False,False,False,False,False,True,True,True,True,False,True,True,False,True,True,True,True,True,True,False,ASCENT-05,Not Eligible,P0158
+True,True,True,False,False,False,False,False,False,True,True,False,True,True,True,True,True,True,True,True,True,ASCENT-05,Not Eligible,P0120
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0097
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,ASCENT-05,Eligible,P0061
+False,False,False,False,False,False,True,True,True,False,True,True,True,True,True,True,True,True,True,False,False,ASCENT-05,Not Eligible,P0191
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0095
+True,True,True,True,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,True,ASCENT-05,Eligible,P0055
+True,False,True,False,False,True,True,False,False,True,False,True,True,True,False,False,True,True,False,True,True,ASCENT-05,Not Eligible,P0164
+False,False,False,True,False,True,True,True,True,True,True,False,True,True,False,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0116
+False,False,False,True,False,False,False,False,False,True,True,True,True,True,True,True,False,False,False,False,True,ASCENT-05,Not Eligible,P0144
+False,True,False,True,False,True,True,True,True,True,True,True,True,False,True,False,True,True,True,True,False,ASCENT-05,Not Eligible,P0125
+False,True,False,False,True,True,True,True,True,False,True,True,True,False,True,True,True,True,False,True,True,ASCENT-05,Not Eligible,P0187
