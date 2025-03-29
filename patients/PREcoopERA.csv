@@ -1,0 +1,2001 @@
+patient_id,trial_name,eligibility_label,explanation,natural_language_profile
+PREC_0001,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Operable stage i ii iii excluding t4, Uses contraception during treatment set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0002,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1, Normal hematologic status set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0003,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Premenopausal female set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0004,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: No hormonal therapy last 6 months, ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0005,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Premenopausal female, Normal liver function set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0006,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Agrees to data transfer and sample submission set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0007,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0008,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Tumor size over 1cm set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0009,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0010,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0011,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: No hormonal therapy last 6 months set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0012,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Er positive asco cap set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0013,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0014,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Histologically confirmed invasive breast cancer, ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0015,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Normal hematologic status set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0016,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0017,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0018,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Er positive asco cap set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0019,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Normal hematologic status set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0020,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: No hormonal therapy last 6 months, Agrees to data transfer and sample submission set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0021,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0022,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Operable stage i ii iii excluding t4 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0023,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Multicentric or multifocal allowed, Normal renal function, Inr under 15 or stable on anticoagulants, Signed informed consent, Agrees to data transfer and sample submission set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0024,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0025,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0026,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0027,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0028,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0029,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, Er positive asco cap set to No. No exclusion criteria violated.","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0030,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0031,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0032,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Negative pregnancy test pre randomization set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0033,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0034,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0035,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Normal renal function set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0036,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0037,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0038,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0039,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Operable stage i ii iii excluding t4, Er positive asco cap set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0040,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Her2 negative asco cap, Resting hr over 40bpm, Normal hematologic status set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0041,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Inr under 15 or stable on anticoagulants set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0042,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Negative pregnancy test pre randomization, Signed informed consent set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0043,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Tumor size over 1cm, Ki67 over 10 percent, Normal liver function set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0044,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0045,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Inr under 15 or stable on anticoagulants set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0046,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Premenopausal female, Uses contraception during treatment set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0047,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Resting hr over 40bpm set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0048,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Normal liver function set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0049,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Ki67 over 10 percent, Inr under 15 or stable on anticoagulants set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0050,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: No hormonal therapy last 6 months, Inr under 15 or stable on anticoagulants set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0051,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Tumor size over 1cm, Agrees to data transfer and sample submission set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0052,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0053,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1, Agrees to data transfer and sample submission set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0054,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0055,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0056,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0057,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Uses contraception during treatment set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0058,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Er positive asco cap set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0059,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Premenopausal female set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0060,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Her2 negative asco cap set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0061,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, Er positive asco cap, Normal liver function set to No. No exclusion criteria violated.","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0062,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: No hormonal therapy last 6 months, Uses contraception during treatment set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0063,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0064,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, Signed informed consent set to No. No exclusion criteria violated.","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0065,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Signed informed consent set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0066,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, Ki67 over 10 percent, Normal renal function set to No. No exclusion criteria violated.","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0067,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Patient is over 18 set to No. No exclusion criteria violated.,"Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0068,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Normal liver function set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0069,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0070,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0071,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Signed informed consent set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0072,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0073,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Resting hr over 40bpm, Normal renal function set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0074,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0075,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0076,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Premenopausal female, ECOG performance status is 0 or 1, Signed informed consent set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0077,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0078,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Operable stage i ii iii excluding t4 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0079,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Er positive asco cap set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0080,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0081,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Agrees to data transfer and sample submission set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0082,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Resting hr over 40bpm set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0083,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Inr under 15 or stable on anticoagulants, Signed informed consent set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0084,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Operable stage i ii iii excluding t4 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0085,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0086,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Premenopausal female set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0087,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Patient is over 18 set to No. No exclusion criteria violated.,"Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0088,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: No hormonal therapy last 6 months, Ki67 over 10 percent set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0089,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Her2 negative asco cap, Ki67 over 10 percent set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0090,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Er positive asco cap, Normal liver function set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0091,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Premenopausal female, Signed informed consent set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0092,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0093,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0094,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0095,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Tumor size over 1cm, Her2 negative asco cap, Negative pregnancy test pre randomization, Uses contraception during treatment set to No. No exclusion criteria violated.","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0096,PREcoopERA,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, Normal liver function set to No. No exclusion criteria violated.","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0097,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0098,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0099,PREcoopERA,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0100,PREcoopERA,Eligible,Eligible despite minor inclusion gaps: Negative pregnancy test pre randomization set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0101,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0102,PREcoopERA,Not Eligible,"Not eligible due to: Liver disease child pugh b or c is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0103,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0104,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0105,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0106,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0107,PREcoopERA,Not Eligible,"Not eligible due to: Active or historical cardiac disease is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0108,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0109,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0110,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0111,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0112,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0113,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0114,PREcoopERA,Not Eligible,"Not eligible due to: Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0115,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0116,PREcoopERA,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0117,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0118,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0119,PREcoopERA,Not Eligible,"Not eligible due to: History of bleeding disorders or thromboembolism is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0120,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0121,PREcoopERA,Not Eligible,"Not eligible due to: Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0122,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0123,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0124,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0125,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0126,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0127,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0128,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0129,PREcoopERA,Not Eligible,"Not eligible due to: Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0130,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0131,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0132,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0133,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0134,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0135,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0136,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0137,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0138,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0139,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0140,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0141,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0142,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0143,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0144,PREcoopERA,Not Eligible,"Not eligible due to: History of bleeding disorders or thromboembolism is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0145,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0146,PREcoopERA,Not Eligible,"Not eligible due to: Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0147,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0148,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0149,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0150,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0151,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0152,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0153,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0154,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0155,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0156,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0157,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0158,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0159,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0160,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0161,PREcoopERA,Not Eligible,"Not eligible due to: Abnormal ecg clinically significant is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0162,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0163,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0164,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0165,PREcoopERA,Not Eligible,"Not eligible due to: Liver disease child pugh b or c is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0166,PREcoopERA,Not Eligible,"Not eligible due to: Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0167,PREcoopERA,Not Eligible,"Not eligible due to: Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0168,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0169,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0170,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0171,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0172,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0173,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0174,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0175,PREcoopERA,Not Eligible,"Not eligible due to: Severe medical or psychiatric conditions is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0176,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0177,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0178,PREcoopERA,Not Eligible,"Not eligible due to: Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0179,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0180,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0181,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0182,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0183,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0184,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0185,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0186,PREcoopERA,Not Eligible,"Not eligible due to: Severe medical or psychiatric conditions is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0187,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0188,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0189,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0190,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Any condition preventing safe participation is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+PREC_0191,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Swallowing difficulty is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0192,PREcoopERA,Not Eligible,"Not eligible due to: Inflammatory breast cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0193,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Cyp3a4 interactions not washout is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: Yes
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+PREC_0194,PREcoopERA,Not Eligible,"Not eligible due to: Major surgery within 4 weeks is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0195,PREcoopERA,Not Eligible,"Not eligible due to: Prior treatment for current cancer is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0196,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Qtc over 470ms or qt related syndromes is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Qt prolonging medications is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0197,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: No
+Progesterone receptor positive: No
+HER2 negative: Yes
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+PREC_0198,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Inflammatory breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Pregnant or lactating is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+PREC_0199,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Severe medical or psychiatric conditions is Yes (violates exclusion), History of bleeding disorders or thromboembolism is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Contraindication to trial drug is Yes (violates exclusion)","Patient is over 18: Yes
+ECOG performance status is 0 or 1: No
+Left ventricular ejection fraction is below 50%: Yes
+Estrogen receptor positive: No
+Progesterone receptor positive: Yes
+HER2 negative: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+PREC_0200,PREcoopERA,Not Eligible,"Not eligible due to: Stage iv breast cancer is Yes (violates exclusion), Recent gnrh lhrh analog use is Yes (violates exclusion), Major surgery within 4 weeks is Yes (violates exclusion), Liver disease child pugh b or c is Yes (violates exclusion), Active or historical cardiac disease is Yes (violates exclusion), Abnormal ecg clinically significant is Yes (violates exclusion), Ventricular dysrhythmia risk is Yes (violates exclusion), Active ibd or gi absorption issues is Yes (violates exclusion), Recent serious infection is Yes (violates exclusion), Active non breast malignancy is Yes (violates exclusion), Likely to be noncompliant is Yes (violates exclusion), Recent investigational agent is Yes (violates exclusion)","Patient is over 18: No
+ECOG performance status is 0 or 1: Yes
+Left ventricular ejection fraction is below 50%: No
+Estrogen receptor positive: Yes
+Progesterone receptor positive: Yes
+HER2 negative: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
