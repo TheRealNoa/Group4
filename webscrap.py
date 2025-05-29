@@ -1,51 +1,39 @@
+import tkinter as tk
 import requests
 import csv
 import os
 import re
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
+import threading
+import time
 
-BASE_URL = 'https://www.cancertrials.ie/current-trials/breast/'
-OUTPUT_DIR = "trials_data"  # Folder to store CSV files
+# Cancer type URLs
+CANCER_URLS = {
+    "Breast": "https://www.cancertrials.ie/current-trials/breast/",
+    "Lung": "https://www.cancertrials.ie/current-trials/lung/",
+    "Multiple Myeloma": "https://www.cancertrials.ie/current-trials/lymphoma-blood-cancers/multiple-myeloma/",
+    "Genitourinary": "https://www.cancertrials.ie/current-trials/genitourinary/",
+    "CLL": "https://www.cancertrials.ie/current-trials/lymphoma-blood-cancers/chronic-lymphocytic-leukaemia-cll/"
+}
+EU_COUNTRIES = [
+    "Ireland", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic",
+    "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Italy",
+    "Latvia", "Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal",
+    "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
+]
 
-# Ensure output directory exists
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-def get_all_trial_links():
-    """Scrapes and returns all trial links from the main page."""
-    current_page = BASE_URL
-    links = []
-
-    while current_page:
-        print(f"Scraping page: {current_page}")
-        page = requests.get(current_page)
-        soup = BeautifulSoup(page.text, 'html.parser')
-
-        # Extract "Read More" links from the current page
-        for trial in soup.select('.inside-article'):
-            read_more = trial.select_one('a.btn-login.btn-xs')
-            if read_more:
-                links.append(read_more['href'])
-
-        # Find the "Next" page link
-        next_button = soup.select_one('a.next.page-numbers')
-        current_page = next_button['href'] if next_button else None
-
-    return links
-
+API_QUERY_MAP = {
+    "Breast": "Breast Cancer",
+    "Lung": "Lung Cancer",
+    "Multiple Myeloma": "Multiple Myeloma",
+    "Genitourinary": "Prostate Cancer",
+    "CLL": "Chronic Lymphocytic Leukemia"
+}
 def sanitize_filename(name):
-    """Sanitizes filename by removing spaces and special characters."""
     return "".join(c if c.isalnum() or c == "-" else "_" for c in name)
 
 def extract_detailed_info_link(soup, trial_url):
-    """Finds the 'For more detailed information' link, compares it with trial_url."""
     info_link = soup.select_one('h2 + a.btn-login')
     if info_link and 'href' in info_link.attrs:
         detailed_url = urljoin(trial_url, info_link['href'])
@@ -53,83 +41,45 @@ def extract_detailed_info_link(soup, trial_url):
     return "n/a"
 
 def extract_participation_criteria_link(detailed_url):
-    """Generates the 'Participation Criteria' link by appending '#participation-criteria'."""
     return f"{detailed_url}#participation-criteria" if detailed_url != "n/a" else "n/a"
 
-def extract_eligibility_criteria_selenium(participation_url):
-    """Extracts 'Eligibility Criteria' using Selenium, with better error handling."""
-    if participation_url == "n/a":
-        print("Participation URL not found")
-        return "n/a"
-
-    print(f"Fetching Eligibility Criteria from {participation_url} using Selenium...")
-
-    options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
-    options.add_argument("--disable-gpu")
-    options.add_argument("--window-size=1920,1080")
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
+def extract_eligibility_from_api(nct_id):
+    import requests
+    api_url = f"https://clinicaltrials.gov/api/v2/studies/{nct_id}"
     try:
-        driver.get(participation_url)
-
-        # Attempt to wait for Eligibility Criteria section
-        try:
-            WebDriverWait(driver, 15).until(
-                EC.presence_of_element_located((By.XPATH, "//div[contains(text(), 'Eligibility Criteria')]"))
-            )
-        except TimeoutException:
-            print(f"Timeout: No 'Eligibility Criteria' section found for {participation_url}")
-            return "n/a"
-
-        soup = BeautifulSoup(driver.page_source, "html.parser")
-
-        # Try known class names
-        criteria_section = None
-        possible_classes = [
-            "participation-content", "ctg-long-text", "text-container",
-            "text-block", "usa-prose", "section-content", "eligibility-criteria-description"
-        ]
-
-        for class_name in possible_classes:
-            criteria_section = soup.find("div", class_=class_name)
-            if criteria_section:
-                print(f"Found eligibility section: {class_name}")
-                break
-
-        # If no known sections are found, check for the keyword in text
-        if not criteria_section:
-            criteria_section = soup.find(string=re.compile("Eligibility Criteria", re.IGNORECASE))
-            if criteria_section:
-                criteria_section = criteria_section.find_parent("div")
-
-        # Final fallback check
-        if not criteria_section:
-            print(f"No eligibility criteria section found on {participation_url}. Skipping.")
-            return "n/a"
-
-        # Extract text
-        page_text = criteria_section.get_text(" ", strip=True)
-
-        # Extract Inclusion & Exclusion Criteria
-        inclusion_match = re.search(r"Inclusion Criteria[:\s]*(.*?)Exclusion Criteria", page_text, re.DOTALL | re.IGNORECASE)
-        exclusion_match = re.search(r"Exclusion Criteria[:\s]*(.*)", page_text, re.DOTALL | re.IGNORECASE)
-
-        inclusion_text = inclusion_match.group(1).strip() if inclusion_match else "n/a"
-        exclusion_text = exclusion_match.group(1).strip() if exclusion_match else "n/a"
-
-        return f"Inclusion: {inclusion_text} || Exclusion: {exclusion_text}"
-
+        response = requests.get(api_url, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        eligibility = data.get("protocolSection", {}).get("eligibilityModule", {}).get("eligibilityCriteria", "")
+        return eligibility if eligibility else "n/a"
     except Exception as e:
-        print(f"Error extracting eligibility criteria from {participation_url}: {e}")
+        return f"API error: {e}"
+
+def extract_nct_id_from_url(url):
+    match = re.search(r"(NCT\d+)", url)
+    return match.group(1) if match else None
+
+def extract_eligibility_criteria(participation_url):
+    if participation_url == "n/a":
+        print(" No participation URL provided.")
         return "n/a"
 
-    finally:
-        driver.quit()
+    nct_id = extract_nct_id_from_url(participation_url)
+    if not nct_id:
+        print(f" Could not extract NCT ID from: {participation_url}")
+        return "n/a"
 
+    print(f"📡 Fetching eligibility via API for {nct_id}...")
+    eligibility_text = extract_eligibility_from_api(nct_id)
+    
+    if eligibility_text != "n/a":
+        print(" Retrieved eligibility text via API.")
+        return f"Eligibility Criteria: {eligibility_text}"
+    else:
+        print(f" No eligibility criteria found via API for {nct_id}")
+        return "n/a"
 
-def extract_trial_data(url):
-    """Extracts tabular data from a trial page, adds extra details, and saves it as a CSV file."""
+def extract_trial_data(url, country, cancer_type):
     print(f"Extracting trial data from {url}")
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -144,33 +94,241 @@ def extract_trial_data(url):
 
     for table in tables:
         rows = table.find_all("tr")
-
         for row in rows:
             cols = row.find_all(["td", "th"])
             cols = [col.get_text(" ", strip=True) for col in cols]
-
             if cols and "Name:" in cols[0]:
                 trial_name = sanitize_filename(cols[1])
-
             all_data.append(cols)
-
         all_data.append(["-" * 50])
 
     detailed_info_link = extract_detailed_info_link(soup, url)
     participation_criteria_link = extract_participation_criteria_link(detailed_info_link)
-    eligibility_criteria = extract_eligibility_criteria_selenium(participation_criteria_link)
+    eligibility_criteria = extract_eligibility_criteria(participation_criteria_link).strip("Eligibility Criteria")
 
     all_data.append(["More Detailed Information:", detailed_info_link])
     all_data.append(["Participation Criteria Link:", participation_criteria_link])
-    all_data.append(["Eligibility Criteria:", eligibility_criteria])
+    all_data.append([f"Eligibility Criteria: {eligibility_criteria}"])
 
-    filename = os.path.join(OUTPUT_DIR, f"{trial_name}.csv")
+    # Save in: trials_data/ireland/<cancer_type>/<trial_name>.csv
+    cancer_dir = os.path.join("trials_data", country.lower().replace(" ", "_"), cancer_type.lower().replace(" ", "_"))
+    os.makedirs(cancer_dir, exist_ok=True)
+    filename = os.path.join(cancer_dir, f"{trial_name}.csv")
+
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerows(all_data)
 
-    print(f"Saved: {filename}")
+    print(f"✅ Saved: {filename}")
 
-trial_links = get_all_trial_links()
-for link in trial_links:
-    extract_trial_data(link)
+def get_all_trial_links(base_url):
+    current_page = base_url
+    links = []
+
+    while current_page:
+        print(f"Scraping page: {current_page}")
+        page = requests.get(current_page)
+        soup = BeautifulSoup(page.text, 'html.parser')
+
+        for trial in soup.select('.inside-article'):
+            read_more = trial.select_one('a.btn-login.btn-xs')
+            if read_more:
+                links.append(read_more['href'])
+
+        next_button = soup.select_one('a.next.page-numbers')
+        current_page = next_button['href'] if next_button else None
+
+    return links
+
+
+def threaded_scrape_with_timestamp(cancer_type, status_label, update_times, country="Ireland"):
+    status_label.config(text=f"{cancer_type}: Updating...")
+    update_times[cancer_type] = time.time()
+
+    try:
+        if country == "Ireland":
+            base_url = CANCER_URLS[cancer_type]
+            trial_links = get_all_trial_links(base_url)
+            for link in trial_links:
+                extract_trial_data(link, country, cancer_type)
+        else:
+            output_dir = os.path.join("trials_data", country.lower().replace(" ", "_"))
+            extract_trial_data_in_eu(cancer_type, country, output_dir)
+
+        update_times[cancer_type] = time.time()
+        status_label.config(text=f"{cancer_type}: Last updated just now.")
+    except Exception as e:
+        status_label.config(text=f"{cancer_type}: Error: {e}")
+
+
+def fetch_eu_trials(cancer_type, country):
+    url = "https://clinicaltrials.gov/api/v2/studies"
+    headers = {"Accept": "application/json"}
+    params = {
+        "query.cond": API_QUERY_MAP.get(cancer_type, cancer_type),
+        "query.locn": country,
+        "filter.overallStatus": "RECRUITING|NOT_YET_RECRUITING",
+        "pageSize": 50
+    }
+
+    try:
+        response = requests.get(url, params=params, headers=headers)
+        response.raise_for_status()
+        data = response.json()
+        return data.get("studies", [])
+    except Exception as e:
+        print(f"API error for {cancer_type} in {country}: {e}")
+        return []
+
+
+
+def extract_trial_data_in_eu(cancer_type, country, output_dir):
+    trials = fetch_eu_trials(cancer_type, country)
+    if not trials:
+        print(f"No trials found for {cancer_type} in {country}")
+        return
+
+    # Create subdirectory: country/cancer_type/
+    cancer_dir = os.path.join(output_dir, cancer_type.lower().replace(" ", "_"))
+    os.makedirs(cancer_dir, exist_ok=True)
+
+    for idx, trial in enumerate(trials, start=1):
+        ps = trial.get("protocolSection", {})
+        id_mod = ps.get("identificationModule", {})
+        status_mod = ps.get("statusModule", {})
+        sponsor_mod = ps.get("sponsorCollaboratorsModule", {})
+        design_mod = ps.get("designModule", {})
+        eligibility_mod = ps.get("eligibilityModule", {})
+
+        # Extract data fields
+        nct_id = id_mod.get("nctId", f"trial{idx}")
+        title = id_mod.get("briefTitle", "n/a")
+        full_title = id_mod.get("officialTitle", "n/a")
+        sponsor = sponsor_mod.get("leadSponsor", {}).get("name", "n/a")
+        pi = sponsor_mod.get("leadSponsor", {}).get("agencyClass", "n/a")
+        start_date = status_mod.get("startDateStruct", {}).get("date", "n/a")
+        eligibility = eligibility_mod.get("eligibilityCriteria", "n/a")
+
+        # Format file content
+        rows = []
+        rows.append(["Name:", title])
+        rows.append(["Number:", str(idx)])
+        rows.append(["Full Title:", full_title])
+        rows.append(["-" * 50])
+        if pi != "n/a":
+            rows.append(["Principal Investigator:", pi])
+        rows.append(["Type:", design_mod.get("studyType", "n/a")])
+        rows.append(["Sponsor:", sponsor])
+        rows.append(["Recruitment Started:", f"Global: {start_date}"])
+        rows.append(["-" * 50])
+        base_url = f"https://clinicaltrials.gov/study/{nct_id}"
+        rows.append(["More Detailed Information:", base_url])
+        rows.append(["Participation Criteria Link:", f"{base_url}#participation-criteria"])
+        rows.append(["Eligibility Criteria:", f"Eligibility Criteria: {eligibility}"])
+
+        # Save trial
+        filename = os.path.join(cancer_dir, f"{sanitize_filename(nct_id)}.csv")
+        with open(filename, mode="w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerows(rows)
+
+        print(f"✅ Saved EU trial: {filename}")
+
+
+# --- GUI Code ---
+def run_gui():
+    root = tk.Tk()
+    root.title("Cancer Trials Scraper")
+    root.geometry("500x600")
+
+    # --- COUNTRY & COUNTY SELECTION ---
+    location_frame = tk.Frame(root)
+    location_frame.pack(pady=10)
+
+    tk.Label(location_frame, text="Select Country:", font=("Helvetica", 12)).grid(row=0, column=0, sticky="w")
+    selected_country = tk.StringVar(value="Ireland")
+    country_dropdown = tk.OptionMenu(location_frame, selected_country, *EU_COUNTRIES)
+    country_dropdown.grid(row=1, column=0, padx=5)
+
+    tk.Label(location_frame, text="County (if Ireland):", font=("Helvetica", 10)).grid(row=0, column=1, sticky="w")
+    counties = [
+        "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal",
+        "Down", "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny",
+        "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath",
+        "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone",
+        "Waterford", "Westmeath", "Wexford", "Wicklow"
+    ]
+    selected_county = tk.StringVar(value="Dublin")
+    county_dropdown = tk.OptionMenu(location_frame, selected_county, *counties)
+    county_dropdown.grid(row=1, column=1, padx=5)
+
+    def update_county_visibility(*args):
+        if selected_country.get() == "Ireland":
+            county_dropdown.grid()
+        else:
+            county_dropdown.grid_remove()
+
+    selected_country.trace_add("write", update_county_visibility)
+    update_county_visibility()
+
+    # --- CANCER TYPE SELECTION ---
+    tk.Label(root, text="Select Cancer Type:", font=("Helvetica", 12)).pack()
+    selected_cancer_type = tk.StringVar(value=list(CANCER_URLS.keys())[0])
+    cancer_dropdown = tk.OptionMenu(root, selected_cancer_type, *CANCER_URLS.keys())
+    cancer_dropdown.pack(pady=5)
+
+    # --- PATIENT INFO ---
+    tk.Label(root, text="Patient Information", font=("Helvetica", 12)).pack(pady=10)
+
+    patient_name_var = tk.StringVar()
+    tk.Label(root, text="Patient Name:").pack()
+    tk.Entry(root, textvariable=patient_name_var).pack()
+
+    patient_age_var = tk.StringVar()
+    tk.Label(root, text="Patient Age:").pack()
+    tk.Entry(root, textvariable=patient_age_var).pack()
+
+    tk.Label(root, text="Diagnosis Type:").pack()
+    diagnosis_type_var = tk.StringVar(value="Newly Diagnosed")
+    diagnosis_dropdown = tk.OptionMenu(root, diagnosis_type_var, "Newly Diagnosed", "Relapsed")
+    diagnosis_dropdown.pack()
+
+    # --- SCRAPE BUTTON ---
+    status_labels = {}
+    update_times = {}
+
+    def start_scraping():
+        country = selected_country.get()
+        cancer_type = selected_cancer_type.get()
+        name = patient_name_var.get()
+        age = patient_age_var.get()
+        diagnosis = diagnosis_type_var.get()
+
+        if not name or not age:
+            tk.messagebox.showerror("Missing Info", "Please fill in all patient fields.")
+            return
+
+        print(f"🧍 Patient: {name}, Age: {age}, Diagnosis: {diagnosis}")
+        print(f"🌍 Country: {country}, Cancer Type: {cancer_type}")
+        if country == "Ireland":
+            print(f"📍 County: {selected_county.get()}")
+
+        frame = tk.Frame(root)
+        frame.pack(pady=3)
+        label = tk.Label(frame, text=f"{cancer_type}: Starting...", width=45, anchor="w", fg="blue")
+        label.pack(side="left")
+        status_labels[cancer_type] = label
+
+        threading.Thread(
+            target=threaded_scrape_with_timestamp,
+            args=(cancer_type, label, update_times, country),
+            daemon=True
+        ).start()
+
+    tk.Button(root, text="Start Scraping", bg="lightblue", command=start_scraping).pack(pady=20)
+
+    root.mainloop()
+
+# Run GUI
+if __name__ == "__main__":
+    run_gui()

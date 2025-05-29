@@ -250,6 +250,57 @@ def feature_to_text(key, value):
 def generate_patient(patient_id, trial, eligible=True):
     patient = {}
 
+<<<<<<< HEAD
+def generate_patients(num_patients, output_file):
+    patients = []
+    num_age_groups = len(AGE_GROUPS)
+    num_cancer_types = len(CANCER_TYPES)
+    group_size = num_patients // (num_age_groups * num_cancer_types)
+
+    patient_id = 1
+    for age_group in AGE_GROUPS:
+        for cancer_type in CANCER_TYPES:
+            # Ensure 50% Irish, 50% other for each age group + cancer type
+            half_group = group_size // 2
+
+            for _ in range(half_group):
+                name = f"{random.choice(FIRST_NAMES)} {random.choice(LAST_NAMES)}"
+                age = random.choice(age_group)
+                diagnosis_type = random.choice(DIAGNOSIS_TYPES)
+                country = "Ireland"
+                county = random.choice(COUNTIES)
+                trial_open = "unassigned"
+
+                patients.append({
+                    "Patient name": name,
+                    "Patient age": age,
+                    "Diagnosis type": diagnosis_type,
+                    "Cancer type": cancer_type,
+                    "Clinical trial open for enrollment": trial_open,
+                    "Country": country,
+                    "County": county
+                })
+
+            for _ in range(group_size - half_group):
+                name = f"{random.choice(FIRST_NAMES)} {random.choice(LAST_NAMES)}"
+                age = random.choice(age_group)
+                diagnosis_type = random.choice(DIAGNOSIS_TYPES)
+                country = random.choice([c for c in EU_COUNTRIES if c != "Ireland"])
+                county = "NA"
+                trial_open = "unassigned"
+
+                patients.append({
+                    "Patient name": name,
+                    "Patient age": age,
+                    "Diagnosis type": diagnosis_type,
+                    "Cancer type": cancer_type,
+                    "Clinical trial open for enrollment": trial_open,
+                    "Country": country,
+                    "County": county
+                })
+
+            patient_id += group_size
+=======
     inclusion_keys = trial["inclusion"]
     exclusion_keys = trial["exclusion"]
     violated_exclusions = []
@@ -279,6 +330,7 @@ def generate_patient(patient_id, trial, eligible=True):
             key = random.choice(exclusion_keys)
             patient[key] = True
             violated_exclusions.append(key)
+>>>>>>> parent of 8c60606 (Changed patient-data creation)
 
     # --- TNBC logic ---
     if eligible:
@@ -327,6 +379,13 @@ def generate_patient(patient_id, trial, eligible=True):
         "natural_language_profile": patient_profile
     }
 
+<<<<<<< HEAD
+# Run it
+generate_patients(NUM_PATIENTS, OUTPUT_FILE)
+
+
+df = pd.read_csv("patients.csv")
+=======
 
 def generate_balanced_patients_for_trials(trials, patients_per_trial=500, output_dir="patients"):
     os.makedirs(output_dir, exist_ok=True)
@@ -339,6 +398,7 @@ def generate_balanced_patients_for_trials(trials, patients_per_trial=500, output
             patients.append(generate_patient(i + 1, trial, eligible=True))
         for i in range(half):
             patients.append(generate_patient(i + half + 1, trial, eligible=False))
+>>>>>>> parent of 8c60606 (Changed patient-data creation)
 
         df = pd.DataFrame(patients)
         file_name = trial["name"].replace(" ", "_").replace("/", "_") + ".csv"
@@ -349,9 +409,38 @@ def generate_balanced_patients_for_trials(trials, patients_per_trial=500, output
 
     return pd.concat(all_dfs, ignore_index=True)
 
+<<<<<<< HEAD
+# --- Part 1: Original Cancer Type Distribution Plot ---
+grouped = df.groupby(["Age Group", "Cancer type"]).size().unstack(fill_value=0)
+
+ax = grouped.plot(kind="bar", figsize=(12, 6))
+plt.title("Cancer Type Distribution by Age Group")
+plt.xlabel("Age Group")
+plt.ylabel("Number of Patients")
+plt.xticks(rotation=45)
+plt.grid(axis='y')
+plt.legend(title="Cancer Type", bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout()
+plt.show()
+
+
+# --- Part 2: Country Distribution per Age Group (Ireland vs Others) ---
+df["Country Group"] = df["Country"].apply(lambda c: "Ireland" if c == "Ireland" else "Other EU")
+country_grouped = df.groupby(["Age Group", "Country Group"]).size().unstack(fill_value=0)
+country_grouped.plot(kind='bar', figsize=(10, 5), color=["green", "blue"])
+plt.title("Country Distribution by Age Group")
+plt.xlabel("Age Group")
+plt.ylabel("Number of Patients")
+plt.xticks(rotation=45)
+plt.legend(title="Country", loc='upper right')
+plt.grid(axis='y')
+plt.tight_layout()
+plt.show()
+=======
 # Run generation
 df = generate_balanced_patients_for_trials(TRIALS, patients_per_trial=200)
 df.to_csv("balanced.csv", index=False)
 print(df["eligibility_label"].value_counts())
 print(df["trial_name"].value_counts())
 print(df[["patient_id", "trial_name", "eligibility_label", "explanation"]].head())
+>>>>>>> parent of 8c60606 (Changed patient-data creation)
