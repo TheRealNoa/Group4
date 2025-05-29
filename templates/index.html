@@ -84,12 +84,18 @@
     <button onclick="startScraping()">Start Scraping</button>
 
     <p id="status"></p>
+    <div id="trialList"></div>
 
     <script>
         function toggleCountyField() {
             const country = document.getElementById("country").value;
             const countyDiv = document.getElementById("countyDiv");
             countyDiv.style.display = (country === "Ireland") ? "block" : "none";
+        }
+
+        function toggleEligibility(id) {
+            const div = document.getElementById(id);
+            div.style.display = div.style.display === "block" ? "none" : "block";
         }
 
         async function startScraping() {
@@ -100,29 +106,55 @@
             const age = document.getElementById("patientAge").value;
             const diagnosis = document.getElementById("diagnosis").value;
             const status = document.getElementById("status");
+            const trialList = document.getElementById("trialList");
+            trialList.innerHTML = ""; // Clear previous trials
 
             if (!name || !age) {
                 alert("Please fill in all patient fields.");
                 return;
             }
 
-            console.log(`Patient: ${name}, Age: ${age}, Diagnosis: ${diagnosis}`);
-            console.log(`Country: ${country}, Cancer Type: ${cancerType}`);
-            if (country === "Ireland") console.log(`📍 County: ${county}`);
-
-            status.textContent = `⏳ ${cancerType}: Starting...`;
+            status.textContent = `⏳ ${cancerType}: Scraping...`;
 
             try {
-                const response = await fetch("http://localhost:5000/scrape", {
+                const response = await fetch("/scrape", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ cancer_type: cancerType, country: country })
                 });
 
                 const data = await response.json();
-                status.textContent = `${cancerType}: ${data.status}`;
+
+                if (data.trials && data.trials.length > 0) {
+                    status.textContent = `✅ ${data.trials.length} trials found.`;
+
+                    data.trials.forEach((trial, index) => {
+                    const trialDiv = document.createElement("div");
+                    trialDiv.style.marginTop = "15px";
+                                    
+                    const eligibilityId = `eligibility-${index}`;
+                    const eligibilityText = trial.eligibility && trial.eligibility.trim() !== "n/a"
+                        ? trial.eligibility
+                        : "No eligibility criteria available.";
+                                    
+                    trialDiv.innerHTML = `
+                        <strong>${trial.name}</strong>
+                        <button onclick="toggleEligibility('${eligibilityId}')">
+                            Show/Hide Eligibility
+                        </button>
+                        <div id="${eligibilityId}" style="display:none; white-space:pre-wrap; margin-top:5px;">
+                            ${eligibilityText}
+                        </div>
+                    `;
+                    trialList.appendChild(trialDiv);
+                });
+
+                } else {
+                    status.textContent = "No trials found.";
+                }
+
             } catch (err) {
-                status.textContent = `Error: ${err}`;
+                status.textContent = `❌ Error: ${err}`;
             }
         }
 
