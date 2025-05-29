@@ -119,7 +119,7 @@ def extract_trial_data(url, country, cancer_type):
         writer = csv.writer(file)
         writer.writerows(all_data)
 
-    print(f"✅ Saved: {filename}")
+    print(f"Saved: {filename}")
 
 def get_all_trial_links(base_url):
     current_page = base_url
@@ -232,7 +232,7 @@ def extract_trial_data_in_eu(cancer_type, country, output_dir):
             writer = csv.writer(f)
             writer.writerows(rows)
 
-        print(f"✅ Saved EU trial: {filename}")
+        print(f"Saved EU trial: {filename}")
 
 
 # --- GUI Code ---
@@ -308,10 +308,10 @@ def run_gui():
             tk.messagebox.showerror("Missing Info", "Please fill in all patient fields.")
             return
 
-        print(f"🧍 Patient: {name}, Age: {age}, Diagnosis: {diagnosis}")
-        print(f"🌍 Country: {country}, Cancer Type: {cancer_type}")
+        print(f"Patient: {name}, Age: {age}, Diagnosis: {diagnosis}")
+        print(f"Country: {country}, Cancer Type: {cancer_type}")
         if country == "Ireland":
-            print(f"📍 County: {selected_county.get()}")
+            print(f"County: {selected_county.get()}")
 
         frame = tk.Frame(root)
         frame.pack(pady=3)
