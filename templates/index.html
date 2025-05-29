@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cancer Trials Scraper</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        label { display: block; margin-top: 10px; }
+        select, input, button { margin-top: 5px; width: 100%; padding: 8px; }
+        #status { margin-top: 20px; color: green; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h2>Cancer Trials Scraper</h2>
+
+    <label for="country">Select Country:</label>
+    <select id="country" onchange="toggleCountyField()">
+        <option value="Ireland">Ireland</option>
+        <option value="Austria">Austria</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Bulgaria">Bulgaria</option>
+        <option value="Croatia">Croatia</option>
+        <option value="Cyprus">Cyprus</option>
+        <option value="Czech Republic">Czech Republic</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Estonia">Estonia</option>
+        <option value="Finland">Finland</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="Greece">Greece</option>
+        <option value="Hungary">Hungary</option>
+        <option value="Italy">Italy</option>
+        <option value="Latvia">Latvia</option>
+        <option value="Lithuania">Lithuania</option>
+        <option value="Luxembourg">Luxembourg</option>
+        <option value="Malta">Malta</option>
+        <option value="Netherlands">Netherlands</option>
+        <option value="Poland">Poland</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Romania">Romania</option>
+        <option value="Slovakia">Slovakia</option>
+        <option value="Slovenia">Slovenia</option>
+        <option value="Spain">Spain</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+
+    <div id="countyDiv">
+        <label for="county">County (if Ireland):</label>
+        <select id="county">
+            <option>Antrim</option><option>Armagh</option><option>Carlow</option><option>Cavan</option>
+            <option>Clare</option><option>Cork</option><option>Derry</option><option>Donegal</option>
+            <option>Down</option><option>Dublin</option><option>Fermanagh</option><option>Galway</option>
+            <option>Kerry</option><option>Kildare</option><option>Kilkenny</option><option>Laois</option>
+            <option>Leitrim</option><option>Limerick</option><option>Longford</option><option>Louth</option>
+            <option>Mayo</option><option>Meath</option><option>Monaghan</option><option>Offaly</option>
+            <option>Roscommon</option><option>Sligo</option><option>Tipperary</option><option>Tyrone</option>
+            <option>Waterford</option><option>Westmeath</option><option>Wexford</option><option>Wicklow</option>
+        </select>
+    </div>
+
+    <label for="cancerType">Select Cancer Type:</label>
+    <select id="cancerType">
+        <option>Breast</option>
+        <option>Lung</option>
+        <option>Multiple Myeloma</option>
+        <option>Genitourinary</option>
+        <option>CLL</option>
+    </select>
+
+    <label for="patientName">Patient Name:</label>
+    <input type="text" id="patientName">
+
+    <label for="patientAge">Patient Age:</label>
+    <input type="number" id="patientAge">
+
+    <label for="diagnosis">Diagnosis Type:</label>
+    <select id="diagnosis">
+        <option>Newly Diagnosed</option>
+        <option>Relapsed</option>
+    </select>
+
+    <button onclick="startScraping()">Start Scraping</button>
+
+    <p id="status"></p>
+
+    <script>
+        function toggleCountyField() {
+            const country = document.getElementById("country").value;
+            const countyDiv = document.getElementById("countyDiv");
+            countyDiv.style.display = (country === "Ireland") ? "block" : "none";
+        }
+
+        async function startScraping() {
+            const cancerType = document.getElementById("cancerType").value;
+            const country = document.getElementById("country").value;
+            const county = document.getElementById("county").value;
+            const name = document.getElementById("patientName").value;
+            const age = document.getElementById("patientAge").value;
+            const diagnosis = document.getElementById("diagnosis").value;
+            const status = document.getElementById("status");
+
+            if (!name || !age) {
+                alert("Please fill in all patient fields.");
+                return;
+            }
+
+            console.log(`🧍 Patient: ${name}, Age: ${age}, Diagnosis: ${diagnosis}`);
+            console.log(`🌍 Country: ${country}, Cancer Type: ${cancerType}`);
+            if (country === "Ireland") console.log(`📍 County: ${county}`);
+
+            status.textContent = `⏳ ${cancerType}: Starting...`;
+
+            try {
+                const response = await fetch("http://localhost:5000/scrape", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ cancer_type: cancerType, country: country })
+                });
+
+                const data = await response.json();
+                status.textContent = `✅ ${cancerType}: ${data.status}`;
+            } catch (err) {
+                status.textContent = `❌ Error: ${err}`;
+            }
+        }
+
+        toggleCountyField();
+    </script>
+</body>
+</html>
