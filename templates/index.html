@@ -106,8 +106,8 @@
                 return;
             }
 
-            console.log(`🧍 Patient: ${name}, Age: ${age}, Diagnosis: ${diagnosis}`);
-            console.log(`🌍 Country: ${country}, Cancer Type: ${cancerType}`);
+            console.log(`Patient: ${name}, Age: ${age}, Diagnosis: ${diagnosis}`);
+            console.log(`Country: ${country}, Cancer Type: ${cancerType}`);
             if (country === "Ireland") console.log(`📍 County: ${county}`);
 
             status.textContent = `⏳ ${cancerType}: Starting...`;
@@ -120,9 +120,9 @@
                 });
 
                 const data = await response.json();
-                status.textContent = `✅ ${cancerType}: ${data.status}`;
+                status.textContent = `${cancerType}: ${data.status}`;
             } catch (err) {
-                status.textContent = `❌ Error: ${err}`;
+                status.textContent = `Error: ${err}`;
             }
         }
 
