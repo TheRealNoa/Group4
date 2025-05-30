@@ -73,106 +73,64 @@
     </style>
 </head>
 <body>
-    <div class="container">
 
-        <button id="logoutButton" onclick="handleLogout()">Log Out</button>
+ <div class="container">
 
-        <h2>Cancer Trials Scraper</h2>
-        <label for="country">Select Country:</label>
-        <select id="country" onchange="toggleCountyField()">
-            <option value="Ireland">Ireland</option>
-            <option value="Austria">Austria</option>
-            <option value="Belgium">Belgium</option>
-            <option value="Bulgaria">Bulgaria</option>
-            <option value="Croatia">Croatia</option>
-            <option value="Cyprus">Cyprus</option>
-            <option value="Czech Republic">Czech Republic</option>
-            <option value="Denmark">Denmark</option>
-            <option value="Estonia">Estonia</option>
-            <option value="Finland">Finland</option>
-            <option value="France">France</option>
-            <option value="Germany">Germany</option>
-            <option value="Greece">Greece</option>
-            <option value="Hungary">Hungary</option>
-            <option value="Italy">Italy</option>
-            <option value="Latvia">Latvia</option>
-            <option value="Lithuania">Lithuania</option>
-            <option value="Luxembourg">Luxembourg</option>
-            <option value="Malta">Malta</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="Poland">Poland</option>
-            <option value="Portugal">Portugal</option>
-            <option value="Romania">Romania</option>
-            <option value="Slovakia">Slovakia</option>
-            <option value="Slovenia">Slovenia</option>
-            <option value="Spain">Spain</option>
-            <option value="Sweden">Sweden</option>
+    <button id="logoutButton" onclick="handleLogout()">Log Out</button>
+
+    <h2>Cancer Trials Scraper</h2>
+
+    <label for="country">Select Country:</label>
+    <select id="country" onchange="toggleCountyField()">
+        {% for c in [
+            "Ireland", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia",
+            "Finland", "France", "Germany", "Greece", "Hungary", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta",
+            "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
+        ] %}
+        <option value="{{ c }}" {% if patient_info.get("Country") == c %}selected{% endif %}>{{ c }}</option>
+        {% endfor %}
+    </select>
+
+    <div id="countyDiv">
+        <label for="county">County (if Ireland):</label>
+        <select id="county">
+            {% for county in [
+                "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry",
+                "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon",
+                "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow"
+            ] %}
+            <option value="{{ county }}" {% if patient_info.get("County") == county %}selected{% endif %}>{{ county }}</option>
+            {% endfor %}
         </select>
-
-        <div id="countyDiv">
-            <label for="county">County (if Ireland):</label>
-            <select id="county">
-                <option>Antrim</option>
-                <option>Armagh</option>
-                <option>Carlow</option>
-                <option>Cavan</option>
-                <option>Clare</option>
-                <option>Cork</option>
-                <option>Derry</option>
-                <option>Donegal</option>
-                <option>Down</option>
-                <option>Dublin</option>
-                <option>Fermanagh</option>
-                <option>Galway</option>
-                <option>Kerry</option>
-                <option>Kildare</option>
-                <option>Kilkenny</option>
-                <option>Laois</option>
-                <option>Leitrim</option>
-                <option>Limerick</option>
-                <option>Longford</option>
-                <option>Louth</option>
-                <option>Mayo</option>
-                <option>Meath</option>
-                <option>Monaghan</option>
-                <option>Offaly</option>
-                <option>Roscommon</option>
-                <option>Sligo</option>
-                <option>Tipperary</option>
-                <option>Tyrone</option>
-                <option>Waterford</option>
-                <option>Westmeath</option>
-                <option>Wexford</option>
-                <option>Wicklow</option>
-            </select>
-        </div>
-
-        <label for="cancerType">Select Cancer Type:</label>
-        <select id="cancerType">
-            <option>Breast</option>
-            <option>Lung</option>
-            <option>Multiple Myeloma</option>
-            <option>Genitourinary</option>
-            <option>CLL</option>
-        </select>
-
-        <label for="patientName">Patient Name:</label>
-        <input type="text" id="patientName" placeholder="e.g. Jane Doe">
-
-        <label for="patientAge">Patient Age:</label>
-        <input type="number" id="patientAge" placeholder="e.g. 45">
-
-        <label for="diagnosis">Diagnosis Type:</label>
-        <select id="diagnosis">
-            <option>Newly Diagnosed</option>
-            <option>Relapsed</option>
-        </select>
-
-        <button onclick="startScraping()">Start Scraping</button>
-
-        <p id="status"></p>
-        <div id="trialList"></div>
     </div>
+
+    <label for="cancerType">Select Cancer Type:</label>
+    <select id="cancerType">
+        {% for cancer in ["breast", "lung", "myeloma", "prostate", "CLL"] %}
+        <option value="{{ cancer }}" {% if patient_info.get("Cancer type") == cancer %}selected{% endif %}>{{ cancer }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="patientName">Patient Name:</label>
+    <input type="text" id="patientName" value="{{ patient_info.get('Patient name', '') }}" >
+
+    <label for="patientAge">Patient Age:</label>
+    <input type="number" id="patientAge" value="{{ patient_info.get('Patient age', '') }}" >
+
+    <label for="diagnosis">Diagnosis Type:</label>
+    <select id="diagnosis">
+        {% for diag in ["newly_diagnosed", "relapsed"] %}
+        <option value="{{ diag }}" {% if patient_info.get("Diagnosis type") == diag %}selected{% endif %}>{{ diag }}</option>
+        {% endfor %}
+    </select>
+
+    <button onclick="savePatientDetails()">Update Patient Details</button>
+
+    <button onclick="startScraping()">Start Scraping</button>
+
+    <p id="status"></p>
+    <div id="trialList"></div>
+</div>
 
     <script>
         function toggleCountyField() {
@@ -236,6 +194,39 @@
         function handleLogout() {
             window.location.href = "/logout";
         }
+    </script>
+
+    <script>
+    function savePatientDetails() {
+    const payload = {
+        "Patient name": document.getElementById("patientName").value,
+        "Patient age": document.getElementById("patientAge").value,
+        "Diagnosis type": document.getElementById("diagnosis").value,
+        "Cancer type": document.getElementById("cancerType").value,
+        "Country": document.getElementById("country").value,
+        "County": document.getElementById("county").value,
+    };
+
+    fetch("/update_patient", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert("Patient details updated successfully.");
+        } else {
+            alert("Failed to update details: " + (result.error || "Unknown error."));
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Network error occurred.");
+    });
+    }
     </script>
 </body>
 </html>
