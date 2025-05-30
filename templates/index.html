@@ -19,6 +19,7 @@
             padding: 25px 30px;
             border-radius: 12px;
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+            position: relative;
         }
         h2 {
             text-align: center;
@@ -55,33 +56,94 @@
             background: #f1f1f1;
             border-radius: 6px;
         }
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px 15px;
-            }
+        #logoutButton {
+            position: absolute; /* Position relative to the .container */
+            top: 15px;
+            right: 15px;
+            width: auto; /* Override default full width */
+            padding: 8px 15px;
+            font-size: 14px;
+            background-color: #dc3545; /* Red color for logout */
+            border-radius: 6px; /* Match other elements */
+            cursor: pointer;
+        }
+        #logoutButton:hover {
+            background-color: #c82333; /* Darker red on hover */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Cancer Trials Scraper</h2>
 
+        <button id="logoutButton" onclick="handleLogout()">Log Out</button>
+
+        <h2>Cancer Trials Scraper</h2>
         <label for="country">Select Country:</label>
         <select id="country" onchange="toggleCountyField()">
             <option value="Ireland">Ireland</option>
             <option value="Austria">Austria</option>
             <option value="Belgium">Belgium</option>
-            <!-- ... other countries ... -->
+            <option value="Bulgaria">Bulgaria</option>
+            <option value="Croatia">Croatia</option>
+            <option value="Cyprus">Cyprus</option>
+            <option value="Czech Republic">Czech Republic</option>
+            <option value="Denmark">Denmark</option>
+            <option value="Estonia">Estonia</option>
+            <option value="Finland">Finland</option>
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+            <option value="Greece">Greece</option>
+            <option value="Hungary">Hungary</option>
+            <option value="Italy">Italy</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+            <option value="Luxembourg">Luxembourg</option>
+            <option value="Malta">Malta</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="Poland">Poland</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Romania">Romania</option>
+            <option value="Slovakia">Slovakia</option>
+            <option value="Slovenia">Slovenia</option>
+            <option value="Spain">Spain</option>
             <option value="Sweden">Sweden</option>
         </select>
 
         <div id="countyDiv">
             <label for="county">County (if Ireland):</label>
             <select id="county">
-                <option>Dublin</option>
+                <option>Antrim</option>
+                <option>Armagh</option>
+                <option>Carlow</option>
+                <option>Cavan</option>
+                <option>Clare</option>
                 <option>Cork</option>
+                <option>Derry</option>
+                <option>Donegal</option>
+                <option>Down</option>
+                <option>Dublin</option>
+                <option>Fermanagh</option>
                 <option>Galway</option>
-                <!-- ... add all counties ... -->
+                <option>Kerry</option>
+                <option>Kildare</option>
+                <option>Kilkenny</option>
+                <option>Laois</option>
+                <option>Leitrim</option>
+                <option>Limerick</option>
+                <option>Longford</option>
+                <option>Louth</option>
+                <option>Mayo</option>
+                <option>Meath</option>
+                <option>Monaghan</option>
+                <option>Offaly</option>
+                <option>Roscommon</option>
+                <option>Sligo</option>
+                <option>Tipperary</option>
+                <option>Tyrone</option>
+                <option>Waterford</option>
+                <option>Westmeath</option>
+                <option>Wexford</option>
+                <option>Wicklow</option>
             </select>
         </div>
 
@@ -170,6 +232,10 @@
         }
 
         toggleCountyField();
+
+        function handleLogout() {
+            window.location.href = "/logout";
+        }
     </script>
 </body>
 </html>
