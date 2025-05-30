@@ -8,6 +8,17 @@ from scraper import scrape_trials
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+def get_patient_info(patient_id):
+    try:
+        with open("patients.csv", newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row["Patient ID"] == patient_id:
+                    return row
+    except Exception as e:
+        print(f"Error reading patients.csv: {e}")
+    return {}
+
 @app.route("/")
 def root():
     return redirect(url_for("home" if session.get("logged_in") else "login"))
@@ -45,7 +56,50 @@ def logout():
 def home():
     if not session.get("logged_in"):
         return redirect(url_for("login"))
-    return render_template("index.html")
+    patient_id = session["email"].split("@")[0]
+    patient_info = get_patient_info(patient_id)
+    return render_template("index.html", patient_info=patient_info)
+
+@app.route("/update_patient", methods=["POST"])
+def update_patient():
+    if not session.get("logged_in"):
+        return jsonify({"success": False, "error": "Not logged in"}), 401
+
+    data = request.get_json()
+    patient_id = session.get("email").split("@")[0]
+
+    updated = False
+    patients = []
+
+    try:
+        with open("patients.csv", newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            fieldnames = reader.fieldnames
+            for row in reader:
+                if row["Patient ID"] == patient_id:
+                    row.update({
+                        "Patient name": data.get("Patient name", row["Patient name"]),
+                        "Patient age": data.get("Patient age", row["Patient age"]),
+                        "Diagnosis type": data.get("Diagnosis type", row["Diagnosis type"]),
+                        "Cancer type": data.get("Cancer type", row["Cancer type"]),
+                        "Country": data.get("Country", row["Country"]),
+                        "County": data.get("County", row["County"]),
+                    })
+                    updated = True
+                patients.append(row)
+
+        if updated:
+            with open("patients.csv", "w", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(patients)
+
+        return jsonify({"success": updated})
+    except Exception as e:
+        print(f"❌ Error updating patient: {e}")
+        return jsonify({"success": False, "error": str(e)}), 500
+
+
 
 @app.route("/scrape", methods=["POST"])
 def scrape_route():
