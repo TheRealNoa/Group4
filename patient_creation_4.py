@@ -1,7 +1,7 @@
 import pandas as pd
 import random
 import os
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 
 # Parameters
 NUM_PATIENTS = 500
@@ -37,6 +37,12 @@ AGE_GROUPS = [
     range(79, 91)     
 ]
 
+# For generating patient IDs
+def generate_six_digit_id(base_id):
+    remaining_digits = 6 - len(str(base_id))
+    suffix = ''.join(random.choices('0123456789', k=remaining_digits))
+    return f"{base_id}{suffix}"
+
 #Actual generation code
 def generate_patients(num_patients, output_file):
     patients = []
@@ -56,6 +62,7 @@ def generate_patients(num_patients, output_file):
                 county = random.choice(COUNTIES)
 
                 patients.append({
+                    "Patient ID": generate_six_digit_id(patient_id),
                     "Patient name": name,
                     "Patient age": age,
                     "Diagnosis type": diagnosis_type,
@@ -93,3 +100,4 @@ plt.grid(axis='y')
 plt.legend(title="Cancer Type", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 plt.show()
+
