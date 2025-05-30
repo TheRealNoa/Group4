@@ -13,14 +13,28 @@ def root():
     return redirect(url_for("home" if session.get("logged_in") else "login"))
 
 @app.route("/login", methods=["GET", "POST"])
+
 def login():
+    def is_valid_patient_id(email):
+        if not email.endswith("@hse.ie"):
+            return False
+        patient_id = email.split("@")[0]
+        try:
+            with open("patients.csv", newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                return any(row["Patient ID"] == patient_id for row in reader)
+        except Exception as e:
+            print(f"Error reading patients.csv: {e}")
+            return False
+
     if request.method == "POST":
         email = request.form.get("email")
-        if email and email.endswith("@hse.ie"):
+        if email and is_valid_patient_id(email):
             session.update({"logged_in": True, "email": email})
             return redirect(url_for("home"))
-        return render_template("login.html", error="Only @hse.ie emails are allowed.")
+        return render_template("login.html", error="Invalid Patient ID or email format. Use PatientID@hse.ie")
     return render_template("login.html")
+
 
 @app.route("/logout")
 def logout():
