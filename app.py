@@ -67,6 +67,8 @@ def update_patient():
 
     data = request.get_json()
     patient_id = session.get("email").split("@")[0]
+    print("Received update for Patient ID:", patient_id)
+    print("Update data:", data)
 
     updated = False
     patients = []
@@ -75,17 +77,26 @@ def update_patient():
         with open("patients.csv", newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
             fieldnames = reader.fieldnames
+            if not fieldnames:
+                print("⚠️ No fieldnames found in CSV")
+                return jsonify({"success": False, "error": "Malformed CSV"}), 500
+
             for row in reader:
                 if row["Patient ID"] == patient_id:
+                    print("✅ Matching patient found. Old row:", row)
+                    updated_country = data.get("Country", row["Country"])
+                    updated_county = data.get("County", row["County"]) if updated_country == "Ireland" else ""
+                    
                     row.update({
                         "Patient name": data.get("Patient name", row["Patient name"]),
                         "Patient age": data.get("Patient age", row["Patient age"]),
                         "Diagnosis type": data.get("Diagnosis type", row["Diagnosis type"]),
                         "Cancer type": data.get("Cancer type", row["Cancer type"]),
-                        "Country": data.get("Country", row["Country"]),
-                        "County": data.get("County", row["County"]),
+                        "Country": updated_country,
+                        "County": updated_county,
                     })
                     updated = True
+                    print("🔄 Updated row:", row)
                 patients.append(row)
 
         if updated:
@@ -93,12 +104,14 @@ def update_patient():
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(patients)
+            print("✅ CSV updated successfully.")
+        else:
+            print("❌ No matching patient found to update.")
 
         return jsonify({"success": updated})
     except Exception as e:
         print(f"❌ Error updating patient: {e}")
         return jsonify({"success": False, "error": str(e)}), 500
-
 
 
 @app.route("/scrape", methods=["POST"])
@@ -118,17 +131,36 @@ def scrape_route():
                     reader = csv.reader(f)
                     name = "Unnamed Trial"
                     eligibility = "Eligibility not found"
+                    link = "#"
+
                     for row in reader:
                         if row and row[0].startswith("Name:"):
                             name = row[1]
+                        elif row and row[0].startswith("More Detailed Information:"):
+                            link = row[1]
                         elif row and any("Eligibility Criteria" in cell for cell in row):
                             eligibility = row[1] if len(row) > 1 else row[0].split("Eligibility Criteria:")[-1].strip()
-                    trials_output.append({"name": name, "eligibility": eligibility})
+
+                    trials_output.append({
+                        "name": name,
+                        "eligibility": eligibility,
+                        "link": link
+                    })
             except Exception as e:
                 print(f"❌ Error reading {path}: {e}")
         return trials_output
 
     return jsonify({"trials": format_trials_from_paths(filepaths)})
-
+def get_pinned_trials(patient_id):
+    try:
+        with open("pinned_trials.csv", newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row["Patient ID"] == patient_id:
+                    return row["Pinned Trials"].split("||") if row["Pinned Trials"] else []
+    except FileNotFoundError:
+        return []
+    return []
+    
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

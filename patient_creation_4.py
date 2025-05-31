@@ -4,7 +4,7 @@ import os
 import matplotlib.pyplot as plt 
 
 # Parameters
-NUM_PATIENTS = 500
+NUM_PATIENTS = 100
 OUTPUT_FILE = "patients.csv"
 
 # Fixed values

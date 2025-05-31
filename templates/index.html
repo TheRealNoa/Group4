@@ -145,50 +145,49 @@
         }
 
         async function startScraping() {
-            const cancerType = document.getElementById("cancerType").value;
-            const country = document.getElementById("country").value;
-            const name = document.getElementById("patientName").value;
-            const age = document.getElementById("patientAge").value;
-            const status = document.getElementById("status");
-            const trialList = document.getElementById("trialList");
-            trialList.innerHTML = "";
-
-            if (!name || !age) {
-                alert("Please fill in all patient fields.");
-                return;
-            }
-
-            status.textContent = `⏳ ${cancerType}: Scraping...`;
-
-            try {
-                const response = await fetch("/scrape", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ cancer_type: cancerType, country })
-                });
-
-                const data = await response.json();
-                if (data.trials?.length > 0) {
-                    status.textContent = `✅ ${data.trials.length} trials found.`;
-                    data.trials.forEach((trial, index) => {
-                        const trialDiv = document.createElement("div");
-                        const eligibilityId = `eligibility-${index}`;
-                        trialDiv.innerHTML = `
-                            <strong>${trial.name}</strong>
-                            <button onclick="toggleEligibility('${eligibilityId}')">Show/Hide Eligibility</button>
-                            <div id="${eligibilityId}" style="display:none; white-space:pre-wrap; margin-top:5px;">
-                                ${trial.eligibility || "No eligibility criteria available."}
-                            </div>`;
-                        trialList.appendChild(trialDiv);
-                    });
-                } else {
-                    status.textContent = "No trials found.";
-                }
-            } catch (err) {
-                status.textContent = `❌ Error: ${err}`;
-            }
+        const cancerType = document.getElementById("cancerType").value;
+        const country = document.getElementById("country").value;
+        const name = document.getElementById("patientName").value;
+        const age = document.getElementById("patientAge").value;
+        const status = document.getElementById("status");
+        const trialList = document.getElementById("trialList");
+        trialList.innerHTML = "";
+            
+        if (!name || !age) {
+            alert("Please fill in all patient fields.");
+            return;
         }
-
+    
+        status.textContent = `⏳ ${cancerType}: Scraping...`;
+    
+        try {
+            const response = await fetch("/scrape", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ cancer_type: cancerType, country })
+            });
+        
+            const data = await response.json();
+            if (data.trials?.length > 0) {
+                status.textContent = `✅ ${data.trials.length} trials found.`;
+                data.trials.forEach((trial, index) => {
+                    const trialDiv = document.createElement("div");
+                    const eligibilityId = `eligibility-${index}`;
+                    trialDiv.innerHTML = `
+                        <a href="${trial.link}" target="_blank"><strong>${trial.name}</strong></a>
+                        <button onclick="toggleEligibility('${eligibilityId}')">Show/Hide Eligibility</button>
+                        <div id="${eligibilityId}" style="display:none; white-space:pre-wrap; margin-top:5px;">
+                            ${trial.eligibility || "No eligibility criteria available."}
+                        </div>`;
+                    trialList.appendChild(trialDiv);
+                });
+            } else {
+                status.textContent = "No trials found.";
+            }
+        } catch (err) {
+            status.textContent = `❌ Error: ${err}`;
+        }
+    }
         toggleCountyField();
 
         function handleLogout() {
