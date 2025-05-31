@@ -119,7 +119,7 @@
 
     <label for="diagnosis">Diagnosis Type:</label>
     <select id="diagnosis">
-        {% for diag in ["newly_diagnosed", "relapsed"] %}
+        {% for diag in ["newly diagnosed", "relapsed"] %}
         <option value="{{ diag }}" {% if patient_info.get("Diagnosis type") == diag %}selected{% endif %}>{{ diag }}</option>
         {% endfor %}
     </select>
@@ -169,7 +169,7 @@
         
             const data = await response.json();
             if (data.trials?.length > 0) {
-                status.textContent = `✅ ${data.trials.length} trials found.`;
+                status.textContent = `${data.trials.length} trials found.`;
                 data.trials.forEach((trial, index) => {
                     const trialDiv = document.createElement("div");
                     const eligibilityId = `eligibility-${index}`;
@@ -185,7 +185,7 @@
                 status.textContent = "No trials found.";
             }
         } catch (err) {
-            status.textContent = `❌ Error: ${err}`;
+            status.textContent = `Error: ${err}`;
         }
     }
         toggleCountyField();
@@ -197,34 +197,42 @@
 
     <script>
     function savePatientDetails() {
-    const payload = {
-        "Patient name": document.getElementById("patientName").value,
-        "Patient age": document.getElementById("patientAge").value,
-        "Diagnosis type": document.getElementById("diagnosis").value,
-        "Cancer type": document.getElementById("cancerType").value,
-        "Country": document.getElementById("country").value,
-        "County": document.getElementById("county").value,
-    };
-
-    fetch("/update_patient", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-    })
-    .then(response => response.json())
-    .then(result => {
-        if (result.success) {
-            alert("Patient details updated successfully.");
-        } else {
-            alert("Failed to update details: " + (result.error || "Unknown error."));
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Network error occurred.");
-    });
+        const diagnosisMap = {
+            "newly diagnosed": "newly_diagnosed",
+            "relapsed": "relapsed"
+        };
+    
+        const rawDiagnosis = document.getElementById("diagnosis").value;
+        const normalizedDiagnosis = diagnosisMap[rawDiagnosis] || rawDiagnosis;
+    
+        const payload = {
+            "Patient name": document.getElementById("patientName").value,
+            "Patient age": document.getElementById("patientAge").value,
+            "Diagnosis type": normalizedDiagnosis,
+            "Cancer type": document.getElementById("cancerType").value,
+            "Country": document.getElementById("country").value,
+            "County": document.getElementById("county").value,
+        };
+    
+        fetch("/update_patient", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                alert("Patient details updated successfully.");
+            } else {
+                alert("Failed to update details: " + (result.error || "Unknown error."));
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("Network error occurred.");
+        });
     }
     </script>
 </body>
