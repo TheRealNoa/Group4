@@ -192,7 +192,14 @@ def extract_trial_data_in_eu(cancer_type, country, output_dir):
 
 def scrape_trials(cancer_type, country="Ireland"):
     if country == "Ireland":
+        # Normalize input to match keys in CANCER_URLS
+        cancer_type = cancer_type.strip().title()
+
         base_url = CANCER_URLS.get(cancer_type)
+        if not base_url:
+            print(f"⚠️ No URL found for cancer type: '{cancer_type}'.")
+            return []
+
         trial_links = get_all_trial_links(base_url)
         trial_entries = []
 

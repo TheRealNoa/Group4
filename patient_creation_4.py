@@ -59,7 +59,7 @@ def generate_patients(num_patients, output_file):
                 diagnosis_type = random.choice(DIAGNOSIS_TYPES)
                 trial_open = random.choice(["Yes", "No"])
                 country = random.choice(EU_COUNTRIES)
-                county = random.choice(COUNTIES)
+                county = random.choice(COUNTIES) if country == "Ireland" else None
 
                 patients.append({
                     "Patient ID": generate_six_digit_id(patient_id),
