@@ -78,15 +78,15 @@ def update_patient():
             reader = csv.DictReader(f)
             fieldnames = reader.fieldnames
             if not fieldnames:
-                print("⚠️ No fieldnames found in CSV")
+                print("No fieldnames found in CSV")
                 return jsonify({"success": False, "error": "Malformed CSV"}), 500
 
             for row in reader:
                 if row["Patient ID"] == patient_id:
-                    print("✅ Matching patient found. Old row:", row)
+                    print("Matching patient found. Old row:", row)
                     updated_country = data.get("Country", row["Country"])
                     updated_county = data.get("County", row["County"]) if updated_country == "Ireland" else ""
-                    
+
                     row.update({
                         "Patient name": data.get("Patient name", row["Patient name"]),
                         "Patient age": data.get("Patient age", row["Patient age"]),
@@ -104,13 +104,13 @@ def update_patient():
                 writer = csv.DictWriter(f, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(patients)
-            print("✅ CSV updated successfully.")
+            print("CSV updated successfully.")
         else:
-            print("❌ No matching patient found to update.")
+            print("No matching patient found to update.")
 
         return jsonify({"success": updated})
     except Exception as e:
-        print(f"❌ Error updating patient: {e}")
+        print(f"Error updating patient: {e}")
         return jsonify({"success": False, "error": str(e)}), 500
 
 
@@ -147,7 +147,7 @@ def scrape_route():
                         "link": link
                     })
             except Exception as e:
-                print(f"❌ Error reading {path}: {e}")
+                print(f"Error reading {path}: {e}")
         return trials_output
 
     return jsonify({"trials": format_trials_from_paths(filepaths)})
