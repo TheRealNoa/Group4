@@ -1,52 +1,55 @@
-from flask import Flask, render_template, request, redirect, session, url_for, jsonify, send_file
+from flask import Flask, render_template, request, redirect, session, url_for, jsonify, send_file, abort
 import os
-import csv
+import json
 import pyotp
 from scraper import scrape_trials
 from io import BytesIO
 import qrcode
-
+import csv
+from functools import wraps
 app = Flask(__name__)
 
 app.secret_key = 'your-secret-key'
 
-ADMIN_SECRETS_FILE = "admin_secrets.csv"
+ADMIN_SECRETS_FILE = "admin_secrets.json"
 
-def load_admin_emails():
-    try:
-        with open(ADMIN_SECRETS_FILE, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            return set(row["email"].lower() for row in reader)
-    except FileNotFoundError:
-        return {"admin@hse.ie"}  # fallback default if file is missing
 
-ADMIN_EMAILS = load_admin_emails()
+def require_permission(permission_name):
+    def decorator(f):
+        @wraps(f)
+        def wrapped(*args, **kwargs):
+            email = session.get("email")
+            if email not in ADMIN_EMAILS:
+                return jsonify({"success": False, "error": "Unauthorized"}), 403
+
+            secrets = load_admin_secrets()
+            perms = secrets.get(email, {}).get("permissions", [])
+
+            if permission_name not in perms:
+                return jsonify({"success": False, "error": "No permission to do this action"}), 403
+
+            return f(*args, **kwargs)
+        return wrapped
+    return decorator
+
 
 def load_admin_secrets():
-    secrets = {}
-    try:
-        with open(ADMIN_SECRETS_FILE, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                secrets[row["email"]] = {
-                    "secret": row["secret"],
-                    "qr_shown": row.get("qr_shown", "false").lower() == "true"
-                }
-    except FileNotFoundError:
-        pass
-    return secrets
+    if not os.path.exists(ADMIN_SECRETS_FILE):
+        return {}
+    with open(ADMIN_SECRETS_FILE, encoding='utf-8') as f:
+        return json.load(f)
 
 
 def save_admin_secrets(secrets):
-    with open(ADMIN_SECRETS_FILE, "w", newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=["email", "secret", "qr_shown"])
-        writer.writeheader()
-        for email, data in secrets.items():
-            writer.writerow({
-                "email": email,
-                "secret": data["secret"],
-                "qr_shown": str(data.get("qr_shown", False)).lower()
-            })
+    with open(ADMIN_SECRETS_FILE, "w", encoding='utf-8') as f:
+        json.dump(secrets, f, indent=2)
+
+
+def load_admin_emails():
+    return set(load_admin_secrets().keys())
+
+
+ADMIN_EMAILS = load_admin_emails()
 
 
 def get_or_create_secret(email):
@@ -54,7 +57,8 @@ def get_or_create_secret(email):
     if email not in secrets:
         secrets[email] = {
             "secret": pyotp.random_base32(),
-            "qr_shown": False
+            "qr_shown": False,
+            "permissions": ["add_admin", "remove_admin", "reset_2fa"] # These are default permissions.
         }
         save_admin_secrets(secrets)
     return secrets[email]["secret"]
@@ -71,7 +75,8 @@ def reset_admin_2fa(email):
     secrets = load_admin_secrets()
     secrets[email] = {
         "secret": pyotp.random_base32(),
-        "qr_shown": False
+        "qr_shown": False,
+        "permissions": ["add_admin", "remove_admin", "reset_2fa"]
     }
     save_admin_secrets(secrets)
 
@@ -80,8 +85,8 @@ def remove_admin(email):
     secrets = load_admin_secrets()
     if email in secrets:
         del secrets[email]
-    save_admin_secrets(secrets)
-    ADMIN_EMAILS.discard(email)
+        save_admin_secrets(secrets)
+        ADMIN_EMAILS.discard(email)
 
 
 @app.route("/")
@@ -181,16 +186,15 @@ def verify_2fa():
 
     totp = pyotp.TOTP(secrets[email]["secret"])
     if totp.verify(code):
-        session["admin_verified"] = True  # ✅ Set the flag
-        return jsonify({"success": True, "qr_shown": True})
+        session["admin_verified"] = True
+        mark_qr_as_shown(email)
+        return jsonify({"success": True})
     return jsonify({"success": False, "error": "Invalid 2FA code"})
 
-@app.route("/add_admin", methods=["POST"])
-def add_admin():
-    email = session.get("email")
-    if email not in ADMIN_EMAILS:
-        return jsonify({"success": False, "error": "Unauthorized"}), 403
 
+@app.route("/add_admin", methods=["POST"])
+@require_permission("add_admin")
+def add_admin():
     data = request.get_json()
     new_email = data.get("email", "").strip().lower()
     if not new_email.endswith("@hse.ie") or new_email in ADMIN_EMAILS:
@@ -201,36 +205,38 @@ def add_admin():
     return jsonify({"success": True, "admins": list(ADMIN_EMAILS)})
 
 
+@app.route("/remove_admin", methods=["POST"])
+@require_permission("remove_admin")
+def remove_admin_route():
+    data = request.get_json()
+    target_email = data.get("target_email")
+
+    if target_email not in ADMIN_EMAILS:
+        return jsonify({"success": False, "error": "Target not an admin"})
+
+    remove_admin(target_email)
+    return jsonify({"success": True, "message": "Admin removed"})
+
+
+@app.route("/reset_2fa", methods=["POST"])
+@require_permission("reset_2fa")
+def reset_2fa_route():
+    data = request.get_json()
+    target_email = data.get("target_email")
+
+    if target_email not in ADMIN_EMAILS:
+        return jsonify({"success": False, "error": "Target not an admin"})
+
+    reset_admin_2fa(target_email)
+    return jsonify({"success": True, "message": "2FA reset"})
+
+
 @app.route("/admin_list")
 def admin_list():
     email = session.get("email")
     if email not in ADMIN_EMAILS:
         return jsonify({"error": "Unauthorized"}), 403
     return jsonify({"admins": list(ADMIN_EMAILS)})
-
-
-@app.route("/manage_admin", methods=["POST"])
-def manage_admin():
-    email = session.get("email")
-    if email not in ADMIN_EMAILS:
-        return jsonify({"success": False, "error": "Unauthorized"}), 403
-
-    data = request.get_json()
-    target_email = data.get("target_email")
-    action = data.get("action")
-
-    if target_email not in ADMIN_EMAILS:
-        return jsonify({"success": False, "error": "Target not an admin"})
-
-    if action == "remove":
-        remove_admin(target_email)
-        return jsonify({"success": True, "message": "Admin removed"})
-
-    if action == "reset_2fa":
-        reset_admin_2fa(target_email)
-        return jsonify({"success": True, "message": "2FA reset"})
-
-    return jsonify({"success": False, "error": "Unknown action"})
 
 
 @app.route("/admin_status")
@@ -241,7 +247,8 @@ def admin_status():
 
     secrets = load_admin_secrets()
     qr_shown = secrets.get(email, {}).get("qr_shown", False)
-    return jsonify({ "qr_shown": qr_shown })
+    return jsonify({"qr_shown": qr_shown})
+
 
 @app.route("/admin")
 def admin_entry():
@@ -255,12 +262,42 @@ def admin_entry():
 
     return render_template("admin_login.html", is_admin=True)
 
+
 @app.route("/admin_panel")
 def admin_panel():
     email = session.get("email")
     if email not in ADMIN_EMAILS or not session.get("admin_verified"):
-        return redirect(url_for("admin_entry")) 
+        return redirect(url_for("admin_entry"))
     return render_template("admin_panel.html", is_admin=True)
+
+
+@app.route("/admin_permissions")
+@require_permission("see_permissions")
+def admin_permissions():
+    email = request.args.get("email", "").lower()
+    all_admins = load_admin_secrets()
+    if email not in all_admins:
+        return jsonify({"error": "Admin not found"}), 404
+    return jsonify({"permissions": all_admins[email].get("permissions", [])})
+
+
+@app.route("/set_permissions", methods=["POST"])
+def set_permissions():
+    if session.get("email") not in ADMIN_EMAILS:
+        return jsonify({"success": False, "error": "Unauthorized"}), 403
+
+    data = request.get_json()
+    target_email = data.get("email", "").lower()
+    permissions = data.get("permissions", [])
+
+    secrets = load_admin_secrets()
+    if target_email not in secrets:
+        return jsonify({"success": False, "error": "Target admin not found"}), 404
+
+    secrets[target_email]["permissions"] = permissions
+    save_admin_secrets(secrets)
+    return jsonify({"success": True, "message": "Permissions updated"})
+
 
 @app.route("/scrape", methods=["POST"])
 def scrape_route():

@@ -151,6 +151,8 @@ async function loadAdminList() {
     });
 }
 
+const ALL_PERMISSIONS = ["add_admin", "remove_admin", "reset_2fa", "see_permissions"];
+
 function showAdminOptions(email) {
     const overlay = document.createElement('div');
     overlay.className = 'modal-overlay';
@@ -160,6 +162,7 @@ function showAdminOptions(email) {
 
     modalContent.innerHTML = `
         <p><strong>Manage:</strong> ${email}</p>
+        <button onclick="showPermissionsModal('${email}')">Manage permissions</button>
         <button onclick="manageAdmin('${email}', 'remove')">Remove Admin</button>
         <button onclick="manageAdmin('${email}', 'reset_2fa')">Reset 2FA</button>
         <button onclick="document.body.removeChild(this.closest('.modal-overlay'))" style="background:#ccc;">Close</button>
@@ -169,12 +172,75 @@ function showAdminOptions(email) {
     document.body.appendChild(overlay);
 }
 
+function showPermissionsModal(email) {
+    fetch(`/admin_permissions?email=${encodeURIComponent(email)}`)
+        .then(res => res.json())
+        .then(data => {
+            if (data.error) return alert(data.error);
+
+            const currentPermissions = data.permissions;
+            const overlay = document.createElement('div');
+            overlay.className = 'modal-overlay';
+
+            const modalContent = document.createElement('div');
+            modalContent.className = 'modal-content';
+            modalContent.innerHTML = `<p><strong>Permissions for:</strong> ${email}</p>`;
+
+            ALL_PERMISSIONS.forEach(perm => {
+                const isChecked = currentPermissions.includes(perm);
+                modalContent.innerHTML += `
+                    <label style="display:block; margin-bottom:6px;">
+                        <input type="checkbox" data-email="${email}" data-permission="${perm}" ${isChecked ? 'checked' : ''}>
+                        ${perm}
+                    </label>
+                `;
+            });
+
+            modalContent.innerHTML += `
+                <button style="background:#007bff;color:#fff;" onclick="savePermissions('${email}')">Save</button>
+                <button onclick="document.body.removeChild(this.closest('.modal-overlay'))" style="background:#ccc;">Close</button>
+            `;
+
+            overlay.appendChild(modalContent);
+            document.body.appendChild(overlay);
+        })
+        .catch(() => alert("Failed to load permissions."));
+}
+
+
+function savePermissions(email) {
+    const checkboxes = document.querySelectorAll(`input[data-email="${email}"][data-permission]`);
+    const selected = [...checkboxes].filter(cb => cb.checked).map(cb => cb.dataset.permission);
+
+    fetch("/set_permissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, permissions: selected })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert("Permissions updated.");
+            document.querySelectorAll('.modal-overlay').forEach(el => el.remove());
+        } else {
+            alert(data.error || "Failed to save permissions.");
+        }
+    })
+    .catch(() => alert("Request failed."));
+}
+
 async function manageAdmin(email, action) {
-    const res = await fetch('/manage_admin', {
+    let endpoint = "";
+    if (action === "remove") endpoint = "/remove_admin";
+    else if (action === "reset_2fa") endpoint = "/reset_2fa";
+    else return alert("Unknown action");
+
+    const res = await fetch(endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ target_email: email, action })
+        body: JSON.stringify({ target_email: email })
     });
+
     const result = await res.json();
     if (result.success) {
         alert(result.message);
