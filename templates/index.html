@@ -57,25 +57,26 @@
             border-radius: 6px;
         }
         #logoutButton {
-            position: absolute; /* Position relative to the .container */
+            position: absolute;
             top: 15px;
             right: 15px;
-            width: auto; /* Override default full width */
+            width: auto;
             padding: 8px 15px;
             font-size: 14px;
-            background-color: #dc3545; /* Red color for logout */
-            border-radius: 6px; /* Match other elements */
+            background-color: #dc3545;
+            border-radius: 6px;
             cursor: pointer;
         }
         #logoutButton:hover {
-            background-color: #c82333; /* Darker red on hover */
+            background-color: #c82333;
         }
     </style>
 </head>
 <body>
 
- <div class="container">
-
+<div class="container" style="display: flex; gap: 20px;">
+    <div style="flex: 3;">
+    
     <button id="logoutButton" onclick="handleLogout()">Log Out</button>
 
     <h2>Cancer Trials Scraper</h2>
@@ -130,110 +131,73 @@
 
     <p id="status"></p>
     <div id="trialList"></div>
+
+    </div>
 </div>
 
-    <script>
-        function toggleCountyField() {
-            const country = document.getElementById("country").value;
-            const countyDiv = document.getElementById("countyDiv");
-            countyDiv.style.display = (country === "Ireland") ? "block" : "none";
-        }
 
-        function toggleEligibility(id) {
-            const div = document.getElementById(id);
-            div.style.display = div.style.display === "block" ? "none" : "block";
-        }
+{% if is_admin %}
+  {% include 'admin_login.html' %}
+{% endif %}
+<script>
+function toggleCountyField() {
+    const country = document.getElementById("country").value;
+    const countyDiv = document.getElementById("countyDiv");
+    countyDiv.style.display = (country === "Ireland") ? "block" : "none";
+}
 
-        async function startScraping() {
-        const cancerType = document.getElementById("cancerType").value;
-        const country = document.getElementById("country").value;
-        const name = document.getElementById("patientName").value;
-        const age = document.getElementById("patientAge").value;
-        const status = document.getElementById("status");
-        const trialList = document.getElementById("trialList");
-        trialList.innerHTML = "";
-            
-        if (!name || !age) {
-            alert("Please fill in all patient fields.");
-            return;
-        }
-    
-        status.textContent = `⏳ ${cancerType}: Scraping...`;
-    
-        try {
-            const response = await fetch("/scrape", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ cancer_type: cancerType, country })
-            });
-        
-            const data = await response.json();
-            if (data.trials?.length > 0) {
-                status.textContent = `${data.trials.length} trials found.`;
-                data.trials.forEach((trial, index) => {
-                    const trialDiv = document.createElement("div");
-                    const eligibilityId = `eligibility-${index}`;
-                    trialDiv.innerHTML = `
-                        <a href="${trial.link}" target="_blank"><strong>${trial.name}</strong></a>
-                        <button onclick="toggleEligibility('${eligibilityId}')">Show/Hide Eligibility</button>
-                        <div id="${eligibilityId}" style="display:none; white-space:pre-wrap; margin-top:5px;">
-                            ${trial.eligibility || "No eligibility criteria available."}
-                        </div>`;
-                    trialList.appendChild(trialDiv);
-                });
-            } else {
-                status.textContent = "No trials found.";
-            }
-        } catch (err) {
-            status.textContent = `Error: ${err}`;
-        }
-    }
-        toggleCountyField();
+function toggleEligibility(id) {
+    const div = document.getElementById(id);
+    div.style.display = div.style.display === "block" ? "none" : "block";
+}
 
-        function handleLogout() {
-            window.location.href = "/logout";
-        }
-    </script>
+toggleCountyField();
 
-    <script>
-    function savePatientDetails() {
-        const diagnosisMap = {
-            "newly diagnosed": "newly_diagnosed",
-            "relapsed": "relapsed"
-        };
-    
-        const rawDiagnosis = document.getElementById("diagnosis").value;
-        const normalizedDiagnosis = diagnosisMap[rawDiagnosis] || rawDiagnosis;
-    
-        const payload = {
-            "Patient name": document.getElementById("patientName").value,
-            "Patient age": document.getElementById("patientAge").value,
-            "Diagnosis type": normalizedDiagnosis,
-            "Cancer type": document.getElementById("cancerType").value,
-            "Country": document.getElementById("country").value,
-            "County": document.getElementById("county").value,
-        };
-    
-        fetch("/update_patient", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(payload)
-        })
-        .then(response => response.json())
-        .then(result => {
-            if (result.success) {
-                alert("Patient details updated successfully.");
-            } else {
-                alert("Failed to update details: " + (result.error || "Unknown error."));
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            alert("Network error occurred.");
-        });
-    }
-    </script>
+function handleLogout() {
+    window.location.href = "/logout";
+}
+</script>
+
+<script>
+function savePatientDetails() {
+    const diagnosisMap = {
+        "newly diagnosed": "newly_diagnosed",
+        "relapsed": "relapsed"
+    };
+
+    const rawDiagnosis = document.getElementById("diagnosis").value;
+    const normalizedDiagnosis = diagnosisMap[rawDiagnosis] || rawDiagnosis;
+
+    const payload = {
+        "Patient name": document.getElementById("patientName").value,
+        "Patient age": document.getElementById("patientAge").value,
+        "Diagnosis type": normalizedDiagnosis,
+        "Cancer type": document.getElementById("cancerType").value,
+        "Country": document.getElementById("country").value,
+        "County": document.getElementById("county").value,
+    };
+
+    fetch("/update_patient", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert("Patient details updated successfully.");
+        } else {
+            alert("Failed to update details: " + (result.error || "Unknown error."));
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("Network error occurred.");
+    });
+}
+</script>
+
 </body>
 </html>

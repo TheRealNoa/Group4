@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: transparent;
+      margin: 0;
+    }
+
+    .admin-box {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      max-width: 300px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+      z-index: 10000;
+    }
+
+    h3, h4 {
+      margin-top: 0;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #twoFAError {
+      margin-top: 10px;
+      color: red;
+    }
+
+    #qrContainer img {
+      max-width: 100%;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+{% if is_admin %}
+  <div class="admin-box">
+    <div id="qrContainer" style="display: none;">
+      <h4>Your 2FA QR Code</h4>
+      <img id="qrImage" alt="2FA QR Code">
+    </div>
+
+    <div>
+      <h3>Enter 2FA Code</h3>
+      <input type="text" id="twoFACode" placeholder="Enter 2FA code">
+      <button onclick="verify2FA()">Verify</button>
+      <p id="twoFAError"></p>
+    </div>
+  </div>
+
+  <script>
+    function verify2FA() {
+  const code = document.getElementById("twoFACode").value;
+  fetch("/verify_2fa", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ code })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      // ✅ Remove QR code after successful 2FA
+      const qrContainer = document.getElementById('qrContainer');
+      if (qrContainer) {
+        qrContainer.remove();  // Remove it from DOM completely
+      }
+
+      fetch('/admin_qr_shown', { method: 'POST' }).finally(() => {
+        window.open("/admin_panel", "_blank");
+      });
+    } else {
+      document.getElementById('twoFAError').textContent = data.error || "Invalid code";
+    }
+  })
+  .catch(() => {
+    document.getElementById('twoFAError').textContent = "Request failed.";
+  });
+}
+
+
+    window.onload = function () {
+      fetch('/admin_status')
+        .then(res => res.json())
+        .then(data => {
+          if (!data.qr_shown) {
+            const qrImg = document.getElementById('qrImage');
+            qrImg.onload = () => {
+              document.getElementById('qrContainer').style.display = 'block';
+              qrImg.style.display = 'block';
+
+              // Delay marking it as shown to ensure it's visible
+              setTimeout(() => {
+                fetch('/admin_qr_shown', { method: 'POST' });
+              }, 500); // brief delay just in case
+          
+              alert("Scan this QR code with your authenticator app.");
+            };
+            qrImg.src = '/admin_qr?' + new Date().getTime();
+          }
+        });
+    };
+  </script>
+{% else %}
+  <p>You are not authorized to view this page.</p>
+{% endif %}
+</body>
+</html>

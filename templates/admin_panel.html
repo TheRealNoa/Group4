@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0019fa33 url("/static/images/cac.svg") no-repeat center top;
+            background-size: 1000px;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .panel-container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.925);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #333;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #0026ff;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding: 8px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background: rgb(255, 255, 255);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .modal-content button {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .modal-content p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+{% if is_admin %}
+<div class="panel-container">
+    <h2>Admin Control Panel</h2>
+
+    <input type="email" id="newAdminEmail" placeholder="Add new admin@hse.ie">
+    <button onclick="addAdmin()">Add Admin</button>
+
+    <h3 style="margin-top: 30px;">Current Admins</h3>
+    <ul id="adminList"></ul>
+</div>
+
+<script>
+function addAdmin() {
+    const email = document.getElementById("newAdminEmail").value.trim();
+    if (!email) return alert("Please enter a valid email.");
+
+    fetch("/add_admin", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            document.getElementById("newAdminEmail").value = "";
+            loadAdminList();
+        } else {
+            alert(data.error || "Failed to add admin");
+        }
+    })
+    .catch(err => {
+        console.error("Add admin error:", err);
+        alert("Request failed.");
+    });
+}
+
+async function loadAdminList() {
+    const res = await fetch('/admin_list');
+    const data = await res.json();
+    const list = document.getElementById('adminList');
+    list.innerHTML = '';
+
+    data.admins.forEach(email => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <span>${email}</span>
+            <button onclick="showAdminOptions('${email}')">Manage</button>
+        `;
+        list.appendChild(li);
+    });
+}
+
+function showAdminOptions(email) {
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+
+    modalContent.innerHTML = `
+        <p><strong>Manage:</strong> ${email}</p>
+        <button onclick="manageAdmin('${email}', 'remove')">Remove Admin</button>
+        <button onclick="manageAdmin('${email}', 'reset_2fa')">Reset 2FA</button>
+        <button onclick="document.body.removeChild(this.closest('.modal-overlay'))" style="background:#ccc;">Close</button>
+    `;
+
+    overlay.appendChild(modalContent);
+    document.body.appendChild(overlay);
+}
+
+async function manageAdmin(email, action) {
+    const res = await fetch('/manage_admin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ target_email: email, action })
+    });
+    const result = await res.json();
+    if (result.success) {
+        alert(result.message);
+        loadAdminList();
+        document.querySelectorAll('.modal-overlay').forEach(el => el.remove());
+    } else {
+        alert(result.error || 'Something went wrong');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadAdminList);
+</script>
+{% else %}
+<p>You are not authorized to view this page.</p>
+{% endif %}
+</body>
+</html>

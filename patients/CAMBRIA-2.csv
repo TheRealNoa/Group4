@@ -1,0 +1,2401 @@
+patient_id,trial_name,eligibility_label,explanation,natural_language_profile
+CAMB_0001,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0002,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0003,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: HER2 negative set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0004,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0005,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Estrogen receptor positive set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0006,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0007,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Adequate bone marrow function set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0008,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Early stage resected breast cancer set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0009,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0010,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0011,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0012,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0013,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Early stage resected breast cancer, Randomised within 12 months of surgery set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0014,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Neo adjuvant chemo optional set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0015,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0016,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0017,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0018,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0019,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, Estrogen receptor positive set to No. No exclusion criteria violated.","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0020,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Completed locoregional therapy set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0021,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0022,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Randomised within 12 months of surgery set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0023,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0024,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Estrogen receptor positive set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0025,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Estrogen receptor positive, Early stage resected breast cancer set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0026,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0027,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0028,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0029,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Completed locoregional therapy set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0030,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0031,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Estrogen receptor positive set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0032,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0033,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0034,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Randomised within 12 months of surgery set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0035,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Estrogen receptor positive, ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0036,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Received up to 12 weeks endocrine therapy, Adequate bone marrow function set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0037,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Has metastatic disease set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0038,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Neo adjuvant chemo optional set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0039,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Early stage resected breast cancer, Adequate bone marrow function set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0040,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Has metastatic disease set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0041,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Received up to 12 weeks endocrine therapy set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0042,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0043,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Organ function is adequate set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0044,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Estrogen receptor positive set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0045,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0046,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0047,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0048,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Organ function is adequate set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0049,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0050,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0051,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0052,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Patient is over 18, HER2 negative set to No. No exclusion criteria violated.","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0053,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0054,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0055,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Early stage resected breast cancer set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0056,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0057,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0058,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Adequate bone marrow function set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0059,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0060,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Organ function is adequate set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0061,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0062,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0063,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0064,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Neo adjuvant chemo optional set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0065,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0066,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0067,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Estrogen receptor positive, ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0068,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: ECOG performance status is 0 or 1 set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0069,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0070,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Has metastatic disease set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0071,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0072,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0073,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Early stage resected breast cancer, Completed locoregional therapy set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0074,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Has metastatic disease set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0075,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: HER2 negative, Early stage resected breast cancer set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0076,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Neo adjuvant chemo optional, Organ function is adequate set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0077,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0078,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0079,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Adequate bone marrow function set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0080,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0081,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Patient is over 18 set to No. No exclusion criteria violated.,"Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0082,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0083,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0084,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0085,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0086,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0087,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0088,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Early stage resected breast cancer set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0089,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0090,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0091,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Received up to 12 weeks endocrine therapy set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0092,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0093,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Completed locoregional therapy set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0094,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: HER2 negative, Received up to 12 weeks endocrine therapy set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0095,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0096,CAMBRIA-2,Eligible,Eligible: all required inclusion criteria mostly satisfied and no exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0097,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Randomised within 12 months of surgery set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0098,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: Estrogen receptor positive set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0099,CAMBRIA-2,Eligible,Eligible despite minor inclusion gaps: HER2 negative set to No. No exclusion criteria violated.,"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0100,CAMBRIA-2,Eligible,"Eligible despite minor inclusion gaps: Estrogen receptor positive, Has metastatic disease set to No. No exclusion criteria violated.","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0101,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0102,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0103,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0104,CAMBRIA-2,Not Eligible,Not eligible due to: Lhrh intolerance in premenopausal is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0105,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0106,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0107,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0108,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0109,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0110,CAMBRIA-2,Not Eligible,Not eligible due to: Previous camizestrant or similar agents is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0111,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0112,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0113,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0114,CAMBRIA-2,Not Eligible,"Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0115,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0116,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0117,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0118,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0119,CAMBRIA-2,Not Eligible,Not eligible due to: Hypersensitivity to camizestrant is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0120,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0121,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0122,CAMBRIA-2,Not Eligible,"Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0123,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0124,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0125,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0126,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0127,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0128,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0129,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0130,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0131,CAMBRIA-2,Not Eligible,"Not eligible due to: Qtcf over 480ms is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0132,CAMBRIA-2,Not Eligible,"Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0133,CAMBRIA-2,Not Eligible,"Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0134,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0135,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0136,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0137,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0138,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0139,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0140,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0141,CAMBRIA-2,Not Eligible,Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0142,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0143,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0144,CAMBRIA-2,Not Eligible,"Not eligible due to: Qtcf over 480ms is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0145,CAMBRIA-2,Not Eligible,"Not eligible due to: Is pregnant or breastfeeding is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0146,CAMBRIA-2,Not Eligible,"Not eligible due to: Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0147,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0148,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0149,CAMBRIA-2,Not Eligible,"Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0150,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0151,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0152,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0153,CAMBRIA-2,Not Eligible,"Not eligible due to: Qtcf over 480ms is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0154,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0155,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0156,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0157,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0158,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0159,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0160,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0161,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0162,CAMBRIA-2,Not Eligible,"Not eligible due to: Concurrent hormonal therapy non cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0163,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0164,CAMBRIA-2,Not Eligible,Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0165,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0166,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0167,CAMBRIA-2,Not Eligible,Not eligible due to: Lhrh intolerance in premenopausal is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0168,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0169,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0170,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0171,CAMBRIA-2,Not Eligible,"Not eligible due to: Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0172,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0173,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0174,CAMBRIA-2,Not Eligible,Not eligible due to: Concurrent anticancer treatment not allowed is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0175,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0176,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0177,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0178,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0179,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0180,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0181,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0182,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0183,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0184,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0185,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0186,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0187,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Previous camizestrant or similar agents is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0188,CAMBRIA-2,Not Eligible,"Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent hormonal therapy non cancer is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0189,CAMBRIA-2,Not Eligible,"Not eligible due to: Concurrent anticancer treatment not allowed is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0190,CAMBRIA-2,Not Eligible,Not eligible due to: Heart failure nyha 2 or more is Yes (violates exclusion),"Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0191,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
+CAMB_0192,CAMBRIA-2,Not Eligible,Not eligible due to: Qtcf over 480ms is Yes (violates exclusion),"Patient is over 18: No
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0193,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: Yes"
+CAMB_0194,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), Pathological complete response to neoadjuvant is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0195,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion), Lhrh intolerance in premenopausal is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0196,CAMBRIA-2,Not Eligible,"Not eligible due to: Pathological complete response to neoadjuvant is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: No
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: No
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0197,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: No
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: No
+BMI over 30: No"
+CAMB_0198,CAMBRIA-2,Not Eligible,"Not eligible due to: Has locally advanced or metastatic breast cancer is Yes (violates exclusion), History of other cancer is Yes (violates exclusion), Severe or uncontrolled systemic disease is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion), Is pregnant or breastfeeding is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: Yes
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0199,CAMBRIA-2,Not Eligible,"Not eligible due to: History of other cancer is Yes (violates exclusion), Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Qtcf over 480ms is Yes (violates exclusion), Concurrent anticancer treatment not allowed is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: Yes
+HER2 negative: No
+ECOG performance status is 0 or 1: No
+Organ function is adequate: No
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: Yes
+Triple negative breast cancer: No
+Smoker: Yes
+Family history of cancer: Yes
+BMI over 30: No"
+CAMB_0200,CAMBRIA-2,Not Eligible,"Not eligible due to: Left ventricular ejection fraction is below 50% is Yes (violates exclusion), Heart failure nyha 2 or more is Yes (violates exclusion), Hypersensitivity to camizestrant is Yes (violates exclusion)","Patient is over 18: Yes
+Estrogen receptor positive: No
+HER2 negative: Yes
+ECOG performance status is 0 or 1: Yes
+Organ function is adequate: Yes
+Left ventricular ejection fraction is below 50%: Yes
+Is pregnant or breastfeeding: No
+Progesterone receptor positive: No
+Triple negative breast cancer: Yes
+Smoker: No
+Family history of cancer: No
+BMI over 30: Yes"
