@@ -1,376 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cancer Trials Scraper</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #51a5ffbe url("/static/images/cac.svg") no-repeat center top;
-            background-size: 1000px;
-            margin: 0;
-            padding: 30px;
-        }
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.925);
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 25px;
-        }
-        label {
-            margin-top: 15px;
-            display: block;
-            font-weight: 500;
-        }
-        select, input, button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            margin-bottom: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            font-size: 15px;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        #trialList div {
-            padding: 10px;
-            margin-top: 10px;
-            background: #f1f1f1;
-            border-radius: 6px;
-        }
-        #logoutButton {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: auto;
-            padding: 8px 15px;
-            font-size: 14px;
-            background-color: #dc3545;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        #logoutButton:hover {
-            background-color: #c82333;
-        }
-        #patientListPanel {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 220px;
-            max-height: 300px;
-            overflow-y: auto;
-            background: rgba(255, 255, 255, 0.95);
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            padding: 10px 15px;
-            z-index: 999;
-        }
-        #patientListPanel h4 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 16px;
-            text-align: center;
-        }
-        #patientNames li {
-            padding: 4px 0;
-            font-size: 14px;
-            border-bottom: 1px solid #eee;
-        }
-        #patientNames li.selected-patient {
-        background-color: #dbeafe;
-        font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Cancer Trials Scraper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #51a5ffbe url("/static/images/cac.svg") no-repeat center top;
+      background-size: 1000px;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .main-layout {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .container {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.925);
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+      flex: 1 1 700px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: 500;
+    }
+
+    select, input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #trialList div {
+      padding: 10px;
+      margin-top: 10px;
+      background: #f1f1f1;
+      border-radius: 6px;
+    }
+
+    #logoutButton {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: auto;
+      padding: 8px 15px;
+      font-size: 14px;
+      background-color: #dc3545;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #logoutButton:hover {
+      background-color: #c82333;
+    }
+
+    #patientListPanel {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+      width: 220px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    #patientListPanel h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    #patientNames li {
+      padding: 4px 0;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+
+    #patientNames li.selected-patient {
+      background-color: #dbeafe;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .admin-box {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 220px;
+  max-height: 500px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-box {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+    .admin-box h3, .admin-box h4 {
+      margin-top: 0;
+    }
+
+    .admin-box input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .admin-box button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .admin-box button:hover {
+      background-color: #0056b3;
+    }
+
+    #twoFAError {
+      margin-top: 10px;
+      color: red;
+    }
+
+    #qrContainer img {
+      max-width: 100%;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+  </style>
 </head>
+
 <body>
-<div id="patientListPanel">
-    <h4>Patients</h4>
-    <input type="text" id="patientSearch" placeholder="Search by name..." style="width: 100%; padding: 6px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
-    <ul id="patientNames" style="list-style: none; padding-left: 0;"></ul>
-</div>
-<div class="container" style="display: flex; gap: 20px;">
-    <div style="flex: 3;">
-    
+
+<div class="main-layout">
+
+{% if is_admin %}
+  <div class="admin-box">
+    <div id="qrContainer" style="display: none;">
+      <h4>Your 2FA QR Code</h4>
+      <img id="qrImage" alt="2FA QR Code">
+    </div>
+
+    <div>
+      <h3>Enter 2FA Code</h3>
+      <input type="text" id="twoFACode" placeholder="Enter 2FA code">
+      <button onclick="verify2FA()">Verify</button>
+      <p id="twoFAError"></p>
+    </div>
+  </div>
+{% endif %}
+  <div class="container">
     <button id="logoutButton" onclick="handleLogout()">Log Out</button>
 
     <h2>Cancer Trials Scraper</h2>
 
     <label for="country">Select Country:</label>
     <select id="country" onchange="toggleCountyField()">
-        {% for c in [
-            "Ireland", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia",
-            "Finland", "France", "Germany", "Greece", "Hungary", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta",
-            "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"
-        ] %}
+      {% for c in ["Ireland", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia",
+                   "Finland", "France", "Germany", "Greece", "Hungary", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta",
+                   "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia", "Spain", "Sweden"] %}
         <option value="{{ c }}" {% if patient_info.get("Country") == c %}selected{% endif %}>{{ c }}</option>
-        {% endfor %}
+      {% endfor %}
     </select>
 
     <div id="countyDiv">
-        <label for="county">County (if Ireland):</label>
-        <select id="county">
-            {% for county in [
-                "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry",
-                "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon",
-                "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow"
-            ] %}
-            <option value="{{ county }}" {% if patient_info.get("County") == county %}selected{% endif %}>{{ county }}</option>
-            {% endfor %}
-        </select>
+      <label for="county">County (if Ireland):</label>
+      <select id="county">
+        {% for county in ["Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh",
+                          "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath",
+                          "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow"] %}
+          <option value="{{ county }}" {% if patient_info.get("County") == county %}selected{% endif %}>{{ county }}</option>
+        {% endfor %}
+      </select>
     </div>
 
     <label for="cancerType">Select Cancer Type:</label>
     <select id="cancerType">
-        {% for cancer in ["breast", "lung", "myeloma", "prostate", "CLL"] %}
+      {% for cancer in ["breast", "lung", "myeloma", "prostate", "CLL"] %}
         <option value="{{ cancer }}" {% if patient_info.get("Cancer type") == cancer %}selected{% endif %}>{{ cancer }}</option>
-        {% endfor %}
+      {% endfor %}
     </select>
 
     <label for="patientName">Patient Name:</label>
-    <input type="text" id="patientName" value="{{ patient_info.get('Patient name', '') }}" >
+    <input type="text" id="patientName" value="{{ patient_info.get('Patient name', '') }}">
 
     <label for="patientAge">Patient Age:</label>
-    <input type="number" id="patientAge" value="{{ patient_info.get('Patient age', '') }}" >
+    <input type="number" id="patientAge" value="{{ patient_info.get('Patient age', '') }}">
 
     <label for="diagnosis">Diagnosis Type:</label>
     <select id="diagnosis">
-        {% for diag in ["newly diagnosed", "relapsed"] %}
+      {% for diag in ["newly diagnosed", "relapsed"] %}
         <option value="{{ diag }}" {% if patient_info.get("Diagnosis type") == diag %}selected{% endif %}>{{ diag }}</option>
-        {% endfor %}
+      {% endfor %}
     </select>
 
     <button onclick="savePatientDetails()">Update Patient Details</button>
-
     <button onclick="startScraping()">Start Scraping</button>
 
     <p id="status"></p>
     <div id="trialList"></div>
+  </div>
 
-    </div>
+  <div id="patientListPanel">
+    <h4>Patients</h4>
+    <button onclick="screenPatients()" style="width: 100%; margin-bottom: 10px;">Screen Patients</button>
+    <input type="text" id="patientSearch" placeholder="Search by name..." style="width: 100%; padding: 6px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    <ul id="patientNames" style="list-style: none; padding-left: 0;"></ul>
+  </div>
+
 </div>
 
 
-{% if is_admin %}
-  {% include 'admin_login.html' %}
-{% endif %}
+
+<!-- JS scripts (unchanged logic, all consolidated below) -->
 <script>
 function toggleCountyField() {
-    const country = document.getElementById("country").value;
-    const countyDiv = document.getElementById("countyDiv");
-    countyDiv.style.display = (country === "Ireland") ? "block" : "none";
+  const country = document.getElementById("country").value;
+  document.getElementById("countyDiv").style.display = (country === "Ireland") ? "block" : "none";
 }
-
-function toggleEligibility(id) {
-    const div = document.getElementById(id);
-    div.style.display = div.style.display === "block" ? "none" : "block";
-}
-
 toggleCountyField();
 
 function handleLogout() {
-    window.location.href = "/logout";
+  window.location.href = "/logout";
 }
-</script>
 
-<script>
 function savePatientDetails() {
-    const diagnosisMap = {
-        "newly diagnosed": "newly_diagnosed",
-        "relapsed": "relapsed"
-    };
+  const diagnosisMap = {
+    "newly diagnosed": "newly_diagnosed",
+    "relapsed": "relapsed"
+  };
 
-    const rawDiagnosis = document.getElementById("diagnosis").value;
-    const normalizedDiagnosis = diagnosisMap[rawDiagnosis] || rawDiagnosis;
+  const payload = {
+    "Patient name": document.getElementById("patientName").value,
+    "Patient age": document.getElementById("patientAge").value,
+    "Diagnosis type": diagnosisMap[document.getElementById("diagnosis").value] || "",
+    "Cancer type": document.getElementById("cancerType").value,
+    "Country": document.getElementById("country").value,
+    "County": document.getElementById("county").value
+  };
 
-    const payload = {
-        "Patient name": document.getElementById("patientName").value,
-        "Patient age": document.getElementById("patientAge").value,
-        "Diagnosis type": normalizedDiagnosis,
-        "Cancer type": document.getElementById("cancerType").value,
-        "Country": document.getElementById("country").value,
-        "County": document.getElementById("county").value,
-    };
+  fetch("/update_patient", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  })
+  .then(response => response.json())
+  .then(result => {
+    alert(result.success ? "Patient details updated successfully." : "Failed: " + (result.error || "Unknown error."));
+  })
+  .catch(() => alert("Network error occurred."));
+}
 
-    fetch("/update_patient", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-    })
+function startScraping() {
+  const payload = {
+    cancer_type: document.getElementById("cancerType").value,
+    country: document.getElementById("country").value
+  };
+
+  document.getElementById("status").textContent = "Scraping trials...";
+  fetch("/scrape", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  })
+  .then(res => res.json())
+  .then(data => {
+    const trialList = document.getElementById("trialList");
+    trialList.innerHTML = "";
+
+    if (data.trials?.length) {
+      data.trials.forEach(trial => {
+        const div = document.createElement("div");
+        div.innerHTML = `<strong>${trial.name}</strong><br><a href="${trial.link}" target="_blank">Details</a><br><small>${trial.eligibility}</small>`;
+        trialList.appendChild(div);
+      });
+      document.getElementById("status").textContent = `${data.trials.length} trials found.`;
+    } else {
+      document.getElementById("status").textContent = "No trials found.";
+    }
+  })
+  .catch(err => {
+    console.error("Scraping error:", err);
+    document.getElementById("status").textContent = "Error scraping trials.";
+  });
+}
+
+function screenPatients() {
+  fetch("/screen_patients", { method: "POST" })
+    .then(res => res.json())
+    .then(data => alert(data.success ? "Screening complete!\n" + JSON.stringify(data.result) : "Error: " + data.error))
+    .catch(() => alert("Network error while screening patients."));
+}
+
+let allPatients = [];
+function fetchPatientNames() {
+  fetch("/patient_names")
     .then(response => response.json())
-    .then(result => {
-        if (result.success) {
-            alert("Patient details updated successfully.");
-        } else {
-            alert("Failed to update details: " + (result.error || "Unknown error."));
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("Network error occurred.");
+    .then(data => {
+      if (data.success) {
+        allPatients = data.patients;
+        renderPatientList(allPatients);
+      }
     });
 }
-</script>
-<script>
-function fetchPatientNames() {
-    fetch("/patient_names")
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                const ul = document.getElementById("patientNames");
-                ul.innerHTML = "";
-                data.patients.forEach(patient => {
-                    const li = document.createElement("li");
-                    li.innerHTML = `<strong>${patient.name}</strong><br><small>${patient.cancer}</small>`;
-                    li.onclick = () => {
-                        document.querySelectorAll("#patientNames li").forEach(el => el.classList.remove("selected-patient"));
-                        li.classList.add("selected-patient");
-                        loadPatientDetails(patient.name);
-                    };
-                    ul.appendChild(li);
-                });
-            } else {
-                console.error("Failed to load patient names:", data.error);
-            }
-        })
-        .catch(err => console.error("Error fetching patient names:", err));
-}
-fetchPatientNames();  // Run on page load
-</script>
-
-<script>
-function loadPatientDetails(name) {
-    fetch(`/get_patient?name=${encodeURIComponent(name)}`)
-        .then(response => response.json())
-        .then(data => {
-            if (data.success && data.patient) {
-                const p = data.patient;
-
-                document.getElementById("patientName").value = p["Patient name"] || "";
-                document.getElementById("patientAge").value = p["Patient age"] || "";
-                document.getElementById("diagnosis").value = (p["Diagnosis type"] === "newly_diagnosed") ? "newly diagnosed" : p["Diagnosis type"];
-                document.getElementById("cancerType").value = p["Cancer type"] || "";
-                document.getElementById("country").value = p["Country"] || "";
-
-                toggleCountyField(); // Refreshes display of county field
-                if (p["Country"] === "Ireland" && p["County"]) {
-                    document.getElementById("county").value = p["County"];
-                }
-
-                document.getElementById("status").textContent = `Loaded patient: ${p["Patient name"]}`;
-            } else {
-                alert("Could not load patient data.");
-            }
-        })
-        .catch(err => {
-            console.error("Error loading patient:", err);
-            alert("Network error while loading patient.");
-        });
-}
-</script>
-
-<script>
-function startScraping() {
-    const payload = {
-        cancer_type: document.getElementById("cancerType").value,
-        country: document.getElementById("country").value
+function renderPatientList(patients) {
+  const ul = document.getElementById("patientNames");
+  ul.innerHTML = "";
+  patients.forEach(patient => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${patient.name}</strong><br><small>${patient.cancer}</small>`;
+    li.onclick = () => {
+      document.querySelectorAll("#patientNames li").forEach(el => el.classList.remove("selected-patient"));
+      li.classList.add("selected-patient");
+      loadPatientDetails(patient.name);
     };
+    ul.appendChild(li);
+  });
+}
+function loadPatientDetails(name) {
+  fetch(`/get_patient?name=${encodeURIComponent(name)}`)
+    .then(response => response.json())
+    .then(data => {
+      if (data.success && data.patient) {
+        const p = data.patient;
+        document.getElementById("patientName").value = p["Patient name"] || "";
+        document.getElementById("patientAge").value = p["Patient age"] || "";
+        document.getElementById("diagnosis").value = p["Diagnosis type"] === "newly_diagnosed" ? "newly diagnosed" : p["Diagnosis type"];
+        document.getElementById("cancerType").value = p["Cancer type"] || "";
+        document.getElementById("country").value = p["Country"] || "";
+        toggleCountyField();
+        if (p["Country"] === "Ireland" && p["County"]) {
+          document.getElementById("county").value = p["County"];
+        }
+        document.getElementById("status").textContent = `Loaded patient: ${p["Patient name"]}`;
+      }
+    });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("patientSearch").addEventListener("input", function () {
+    const term = this.value.toLowerCase();
+    const filtered = allPatients.filter(p => p.name.toLowerCase().includes(term));
+    renderPatientList(filtered);
+  });
+  fetchPatientNames();
+});
+</script>
 
-    document.getElementById("status").textContent = "Scraping trials...";
+<script>
+function verify2FA() {
+  const code = document.getElementById("twoFACode").value;
+  fetch("/verify_2fa", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ code })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      const qrContainer = document.getElementById('qrContainer');
+      if (qrContainer) qrContainer.remove();
+      fetch('/admin_qr_shown', { method: 'POST' }).finally(() => {
+        window.open("/admin_panel", "_blank");
+      });
+    } else {
+      document.getElementById('twoFAError').textContent = data.error || "Invalid code";
+    }
+  })
+  .catch(() => {
+    document.getElementById('twoFAError').textContent = "Request failed.";
+  });
+}
 
-    fetch("/scrape", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(payload)
-    })
+window.addEventListener("load", () => {
+  fetch('/admin_status')
     .then(res => res.json())
     .then(data => {
-        const trialList = document.getElementById("trialList");
-        trialList.innerHTML = "";
-
-        if (data.trials && data.trials.length > 0) {
-            data.trials.forEach(trial => {
-                const div = document.createElement("div");
-                div.innerHTML = `<strong>${trial.name}</strong><br>
-                                 <a href="${trial.link}" target="_blank">Details</a><br>
-                                 <small>${trial.eligibility}</small>`;
-                trialList.appendChild(div);
-            });
-            document.getElementById("status").textContent = `${data.trials.length} trials found.`;
-        } else {
-            document.getElementById("status").textContent = "No trials found.";
-        }
-    })
-    .catch(err => {
-        console.error("Scraping error:", err);
-        document.getElementById("status").textContent = "Error scraping trials.";
-    });
-}
-</script>
-
-<script>
-let allPatients = []; // store the full list for filtering
-
-function fetchPatientNames() {
-    fetch("/patient_names")
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                allPatients = data.patients;
-                renderPatientList(allPatients);
-            } else {
-                console.error("Failed to load patient names:", data.error);
-            }
-        })
-        .catch(err => console.error("Error fetching patient names:", err));
-}
-
-function renderPatientList(patients) {
-    const ul = document.getElementById("patientNames");
-    ul.innerHTML = "";
-    patients.forEach(patient => {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${patient.name}</strong><br><small>${patient.cancer}</small>`;
-        li.onclick = () => {
-            document.querySelectorAll("#patientNames li").forEach(el => el.classList.remove("selected-patient"));
-            li.classList.add("selected-patient");
-            loadPatientDetails(patient.name);
+      if (!data.qr_shown) {
+        const qrImg = document.getElementById('qrImage');
+        qrImg.onload = () => {
+          document.getElementById('qrContainer').style.display = 'block';
+          qrImg.style.display = 'block';
+          setTimeout(() => {
+            fetch('/admin_qr_shown', { method: 'POST' });
+          }, 500);
+          alert("Scan this QR code with your authenticator app.");
         };
-        ul.appendChild(li);
+        qrImg.src = '/admin_qr?' + new Date().getTime();
+      }
     });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("patientSearch").addEventListener("input", function () {
-        const term = this.value.toLowerCase();
-        const filtered = allPatients.filter(p => p.name.toLowerCase().includes(term));
-        renderPatientList(filtered);
-    });
-
-    fetchPatientNames();
 });
 </script>
 

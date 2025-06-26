@@ -3,6 +3,7 @@ import os
 import json
 import pyotp
 from scraper import scrape_trials
+from matcher import run_screening
 from io import BytesIO
 import qrcode
 import csv
@@ -393,5 +394,14 @@ def update_patient():
         return jsonify({"success": True})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
+
+@app.route("/screen_patients", methods=["POST"])
+def screen_patients():
+    try:
+        result = run_screening()
+        return jsonify({"success": True, "result": result})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
