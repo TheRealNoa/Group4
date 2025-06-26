@@ -8,14 +8,15 @@
         * { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f6f8;
-            padding: 20px;
+            background: #51a5ffbe url("/static/images/cac.svg") no-repeat center top;
+            background-size: 1000px;
             margin: 0;
+            padding: 30px;
         }
         .container {
             max-width: 700px;
             margin: auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.925);
             padding: 25px 30px;
             border-radius: 12px;
             box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
@@ -70,10 +71,43 @@
         #logoutButton:hover {
             background-color: #c82333;
         }
+        #patientListPanel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 220px;
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 10px 15px;
+            z-index: 999;
+        }
+        #patientListPanel h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+        #patientNames li {
+            padding: 4px 0;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+        #patientNames li.selected-patient {
+        background-color: #dbeafe;
+        font-weight: bold;
+        }
     </style>
 </head>
 <body>
-
+<div id="patientListPanel">
+    <h4>Patients</h4>
+    <input type="text" id="patientSearch" placeholder="Search by name..." style="width: 100%; padding: 6px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+    <ul id="patientNames" style="list-style: none; padding-left: 0;"></ul>
+</div>
 <div class="container" style="display: flex; gap: 20px;">
     <div style="flex: 3;">
     
@@ -197,6 +231,147 @@ function savePatientDetails() {
         alert("Network error occurred.");
     });
 }
+</script>
+<script>
+function fetchPatientNames() {
+    fetch("/patient_names")
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const ul = document.getElementById("patientNames");
+                ul.innerHTML = "";
+                data.patients.forEach(patient => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<strong>${patient.name}</strong><br><small>${patient.cancer}</small>`;
+                    li.onclick = () => {
+                        document.querySelectorAll("#patientNames li").forEach(el => el.classList.remove("selected-patient"));
+                        li.classList.add("selected-patient");
+                        loadPatientDetails(patient.name);
+                    };
+                    ul.appendChild(li);
+                });
+            } else {
+                console.error("Failed to load patient names:", data.error);
+            }
+        })
+        .catch(err => console.error("Error fetching patient names:", err));
+}
+fetchPatientNames();  // Run on page load
+</script>
+
+<script>
+function loadPatientDetails(name) {
+    fetch(`/get_patient?name=${encodeURIComponent(name)}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.patient) {
+                const p = data.patient;
+
+                document.getElementById("patientName").value = p["Patient name"] || "";
+                document.getElementById("patientAge").value = p["Patient age"] || "";
+                document.getElementById("diagnosis").value = (p["Diagnosis type"] === "newly_diagnosed") ? "newly diagnosed" : p["Diagnosis type"];
+                document.getElementById("cancerType").value = p["Cancer type"] || "";
+                document.getElementById("country").value = p["Country"] || "";
+
+                toggleCountyField(); // Refreshes display of county field
+                if (p["Country"] === "Ireland" && p["County"]) {
+                    document.getElementById("county").value = p["County"];
+                }
+
+                document.getElementById("status").textContent = `Loaded patient: ${p["Patient name"]}`;
+            } else {
+                alert("Could not load patient data.");
+            }
+        })
+        .catch(err => {
+            console.error("Error loading patient:", err);
+            alert("Network error while loading patient.");
+        });
+}
+</script>
+
+<script>
+function startScraping() {
+    const payload = {
+        cancer_type: document.getElementById("cancerType").value,
+        country: document.getElementById("country").value
+    };
+
+    document.getElementById("status").textContent = "Scraping trials...";
+
+    fetch("/scrape", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+        const trialList = document.getElementById("trialList");
+        trialList.innerHTML = "";
+
+        if (data.trials && data.trials.length > 0) {
+            data.trials.forEach(trial => {
+                const div = document.createElement("div");
+                div.innerHTML = `<strong>${trial.name}</strong><br>
+                                 <a href="${trial.link}" target="_blank">Details</a><br>
+                                 <small>${trial.eligibility}</small>`;
+                trialList.appendChild(div);
+            });
+            document.getElementById("status").textContent = `${data.trials.length} trials found.`;
+        } else {
+            document.getElementById("status").textContent = "No trials found.";
+        }
+    })
+    .catch(err => {
+        console.error("Scraping error:", err);
+        document.getElementById("status").textContent = "Error scraping trials.";
+    });
+}
+</script>
+
+<script>
+let allPatients = []; // store the full list for filtering
+
+function fetchPatientNames() {
+    fetch("/patient_names")
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                allPatients = data.patients;
+                renderPatientList(allPatients);
+            } else {
+                console.error("Failed to load patient names:", data.error);
+            }
+        })
+        .catch(err => console.error("Error fetching patient names:", err));
+}
+
+function renderPatientList(patients) {
+    const ul = document.getElementById("patientNames");
+    ul.innerHTML = "";
+    patients.forEach(patient => {
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${patient.name}</strong><br><small>${patient.cancer}</small>`;
+        li.onclick = () => {
+            document.querySelectorAll("#patientNames li").forEach(el => el.classList.remove("selected-patient"));
+            li.classList.add("selected-patient");
+            loadPatientDetails(patient.name);
+        };
+        ul.appendChild(li);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("patientSearch").addEventListener("input", function () {
+        const term = this.value.toLowerCase();
+        const filtered = allPatients.filter(p => p.name.toLowerCase().includes(term));
+        renderPatientList(filtered);
+    });
+
+    fetchPatientNames();
+});
 </script>
 
 </body>

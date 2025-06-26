@@ -327,6 +327,71 @@ def scrape_route():
 
     return jsonify({"trials": format_trials_from_paths(filepaths)})
 
+@app.route("/patient_names")
+def patient_names():
+    patients = []
+    try:
+        with open("patients.csv", newline='', encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                name = row.get("Patient name", "").strip()
+                cancer = row.get("Cancer type", "").strip()
+                if name:
+                    patients.append({"name": name, "cancer": cancer})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+    return jsonify({"success": True, "patients": patients})
 
+@app.route("/get_patient", methods=["GET"])
+def get_patient():
+    name = request.args.get("name", "").strip().lower()
+    try:
+        with open("patients.csv", newline='', encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row.get("Patient name", "").strip().lower() == name:
+                    return jsonify({"success": True, "patient": row})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
+    return jsonify({"success": False, "error": "Patient not found"}), 404
+@app.route("/update_patient", methods=["POST"])
+def update_patient():
+    data = request.get_json()
+
+    if not data or "Patient name" not in data:
+        return jsonify({"success": False, "error": "Missing patient name"}), 400
+
+    updated = False
+    patient_id = None
+
+    try:
+        # Load existing patients
+        with open("patients.csv", newline='', encoding="utf-8") as f:
+            patients = list(csv.DictReader(f))
+
+        for row in patients:
+            if row["Patient name"].strip().lower() == data["Patient name"].strip().lower():
+                row.update({
+                    "Patient age": data.get("Patient age", row.get("Patient age", "")),
+                    "Diagnosis type": data.get("Diagnosis type", row.get("Diagnosis type", "")),
+                    "Cancer type": data.get("Cancer type", row.get("Cancer type", "")),
+                    "Country": data.get("Country", row.get("Country", "")),
+                    "County": data.get("County", row.get("County", "")),
+                })
+                updated = True
+                break
+
+        if not updated:
+            return jsonify({"success": False, "error": "Patient not found"}), 404
+
+        # Save updated CSV
+        with open("patients.csv", "w", newline='', encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=patients[0].keys())
+            writer.writeheader()
+            writer.writerows(patients)
+
+        return jsonify({"success": True})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)}), 500
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
