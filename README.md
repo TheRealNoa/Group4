@@ -4,7 +4,7 @@ You need to go to the patients.csv file and use a patient's ID with the @hse.ie 
 It can be any user ID and for the password, you can input anything.
 
 ###### user interface:
-You can sellect/edit the following:
+You can select/edit the following:
 * Country
 * Cancer Type
 * Patient Name
