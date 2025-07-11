@@ -111,6 +111,52 @@
 </div>
 
 <script>
+function loadAdminLogs() {
+  fetch("/admin_logs")
+    .then(res => res.json())
+    .then(data => {
+      const logsContainer = document.getElementById("adminLogs");
+      logsContainer.innerHTML = "";
+
+      if (data.logs?.length) {
+        data.logs.forEach(log => {
+          const div = document.createElement("div");
+          div.innerHTML = `
+            <strong>${log.action}</strong> by ${log.email} @ ${log.timestamp}<br>
+            Details: ${log.details || "-"}<br>
+            <button onclick="deleteLog('${log.timestamp}')">Delete Log</button>
+            <hr>
+          `;
+          logsContainer.appendChild(div);
+        });
+      } else {
+        logsContainer.textContent = "No logs found.";
+      }
+    });
+}
+
+function deleteLog(timestamp) {
+  if (!confirm("Are you sure you want to delete this log entry?")) return;
+
+  fetch("/delete_log", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ timestamp: timestamp })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert(`Deleted log. ${data.remaining} logs remaining.`);
+      loadAdminLogs(); // refresh view
+    } else {
+      alert("Error: " + (data.error || "Unknown"));
+    }
+  });
+}
+
+window.addEventListener("load", loadAdminLogs);
+</script>
+<script>
 function addAdmin() {
     const email = document.getElementById("newAdminEmail").value.trim();
     if (!email) return alert("Please enter a valid email.");
@@ -163,6 +209,7 @@ function showAdminOptions(email) {
     modalContent.innerHTML = `
         <p><strong>Manage:</strong> ${email}</p>
         <button onclick="showPermissionsModal('${email}')">Manage permissions</button>
+        <button onclick="showUserLogs('${email}')">View Activity Logs</button>
         <button onclick="manageAdmin('${email}', 'remove')">Remove Admin</button>
         <button onclick="manageAdmin('${email}', 'reset_2fa')">Reset 2FA</button>
         <button onclick="document.body.removeChild(this.closest('.modal-overlay'))" style="background:#ccc;">Close</button>
@@ -250,6 +297,105 @@ async function manageAdmin(email, action) {
         alert(result.error || 'Something went wrong');
     }
 }
+
+async function loadLogs() {
+    const res = await fetch('/admin_logs');
+    const data = await res.json();
+    const logList = document.getElementById('logList');
+    logList.innerHTML = '';
+
+    data.logs.forEach(log => {
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${log.timestamp}</strong> | ${log.email} | ${log.action} | ${log.details}`;
+        logList.appendChild(li);
+    });
+}
+
+function showUserLogs(email) {
+  fetch(`/get_user_logs?email=${encodeURIComponent(email)}`)
+    .then(res => res.json())
+    .then(data => {
+      const overlay = document.createElement('div');
+      overlay.className = 'modal-overlay';
+
+      const modalContent = document.createElement('div');
+      modalContent.className = 'modal-content';
+      modalContent.style.maxHeight = '500px';
+      modalContent.style.overflowY = 'auto';
+
+      modalContent.innerHTML = `<p><strong>Activity Logs for:</strong> ${email}</p>`;
+
+      if (data.logs?.length) {
+        data.logs.forEach(log => {
+          modalContent.innerHTML += `
+            <div style="border:1px solid #ddd; padding:8px; margin-bottom:8px;">
+              <strong>${log.action}</strong> @ ${log.timestamp}<br>
+              <small style="color:#555; display:block; margin-top:5px; white-space:pre-wrap;">${log.details || ''}</small>
+              <button style="margin-top:8px; background:#007bff; color:white; border:none; padding:5px 10px; border-radius:4px;" onclick="deleteUserLog('${email}', '${log.timestamp}')">Delete Log</button>
+            </div>
+          `;
+        });
+
+        modalContent.innerHTML += `
+          <button style="background:red; color:white; margin-top:10px; width:100%; padding:10px; border:none; border-radius:4px;" onclick="deleteAllUserLogs('${email}')">Delete All Logs</button>
+        `;
+      } else {
+        modalContent.innerHTML += `<p>No logs for this user.</p>`;
+      }
+
+      modalContent.innerHTML += `
+        <button onclick="document.body.removeChild(this.closest('.modal-overlay'))" style="background:#ccc; width:100%; padding:10px; margin-top:10px; border:none; border-radius:4px;">Close</button>
+      `;
+
+      overlay.appendChild(modalContent);
+      document.body.appendChild(overlay);
+    })
+    .catch(() => alert("Failed to load user logs."));
+}
+
+function deleteAllUserLogs(email) {
+  if (!confirm(`Are you sure you want to delete ALL logs for ${email}?`)) return;
+
+  fetch("/delete_all_user_logs", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: email })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert(`Deleted ${data.deleted} logs.`);
+      document.querySelectorAll('.modal-overlay').forEach(el => el.remove());
+    } else {
+      alert(data.error || "Error deleting logs.");
+    }
+  });
+}
+
+function deleteUserLog(email, timestamp) {
+  if (!confirm("Are you sure you want to delete this log entry?")) return;
+
+  fetch("/delete_user_log", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: email, timestamp: timestamp })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert("Log deleted.");
+      document.querySelectorAll('.modal-overlay').forEach(el => el.remove());
+      showUserLogs(email); // reload logs for this user
+    } else {
+      alert(data.error || "Error deleting log.");
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadAdminList();
+    loadLogs(); 
+});
 
 document.addEventListener('DOMContentLoaded', loadAdminList);
 </script>

@@ -313,8 +313,9 @@
         <option value="{{ cancer }}" {% if patient_info.get("Cancer type") == cancer %}selected{% endif %}>{{ cancer }}</option>
       {% endfor %}
     </select>
-
-
+    
+    <input type="hidden" id="patientName">
+    <input type="hidden" id="yearOfBirth">
 
     <label for="patientAge">Patient Age:</label>
     <input type="text" id="patientAge" readonly>
@@ -444,7 +445,9 @@ function savePatientDetails() {
     "More than 1 treatment": document.getElementById("moreThanOneTreatment").value,
     "Cancer type": document.getElementById("cancerType").value,
     "Country": document.getElementById("country").value,
-    "County": document.getElementById("county").value,
+    "County": (document.getElementById("country").value === "Ireland")
+    ? document.getElementById("county").value
+    : "",
     "Patient age": document.getElementById("patientAge").value
   };
 
@@ -523,9 +526,10 @@ function renderPatientList(patients, listId = "patientNames") {
     li.setAttribute("data-id", patient.id || patient["Patient ID"] || "");
 
     li.addEventListener("click", () => {
-      highlightPatientInAllLists(li.getAttribute("data-id"));
-      loadPatientDetails(li.getAttribute("data-id"));
-    });
+  savePatientDetails(); // 🔑 force save old patient first!
+  highlightPatientInAllLists(li.getAttribute("data-id"));
+  loadPatientDetails(li.getAttribute("data-id"));
+});
 
     ul.appendChild(li);
   });
@@ -569,9 +573,11 @@ function loadPatientDetails(patientId) {
         } else {
           document.getElementById("patientAge").value = "";
         }
+        document.getElementById("diagnosis").value = p["Diagnosis type"] || "";
+        document.getElementById("patientName").value = p["Patient name"] || "";
+        document.getElementById("yearOfBirth").value = p["Year of birth"] || "";
         document.getElementById("ecog").value = p["ECOG"] || "";
         document.getElementById("gender").value = p["Gender"] || "";
-        document.getElementById("diagnosisText").value = p["Diagnosis"] || "";
         document.getElementById("statusOnReferral").value = p["Patient status on referral"] || "";
         document.getElementById("diseaseGroup").value = p["Disease group"] || "";
         document.getElementById("tStage").value = p["T stage"] || "";
@@ -615,6 +621,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("patientAge").value = "";
   }
 });
+
+function debounce(func, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
 const PatientFieldsToWatch = [
     "country", "county", "cancerType", "patientName",
     "diagnosis", "ecog", "gender", "statusOnReferral",
@@ -623,13 +638,17 @@ const PatientFieldsToWatch = [
     "previousTreatment", "moreThanOneTreatment"
   ];
 
-  PatientFieldsToWatch.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
+PatientFieldsToWatch.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) {
+    if (el.tagName === "SELECT") {
       el.addEventListener("change", savePatientDetails);
-      el.addEventListener("input", savePatientDetails); // For text inputs
+    } else {
+      el.addEventListener("input", debounce(savePatientDetails, 500));
+      el.addEventListener("blur", savePatientDetails);
     }
-  });
+  }
+});
 </script>
 
 <script>

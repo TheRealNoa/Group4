@@ -2,9 +2,9 @@ Patient ID,Patient name,Year of birth,ECOG,Gender,Diagnosis type,Patient status 
 172985,Ethan Clark,2018,3,Female,relapsed,"Pain uncontrolled, Symptomatic",CNS Tumor,T2,N0,M0,Well differentiated,Squamous cell carcinoma,"BRAF, EGFR",Immunotherapy,No,breast,Denmark,
 200108,Bob Johnson,2009,4,Male,newly diagnosed,"Palliative care only, Pain uncontrolled",Hematological Malignancy,T0,N1,M0,Moderately differentiated,Squamous cell carcinoma,"KRAS, BRCA2",None,No,breast,France,
 393642,George Taylor,2015,3,Male,relapsed,"Follow-up for surveillance, Palliative care only, Critical",Solid Tumor,T0,N3,M1,Moderately differentiated,Squamous cell carcinoma,None,Radiotherapy,No,lung,Malta,
-471602,Alice Lee,2010,4,Female,newly diagnosed,Wheelchair dependent,Sarcoma,T3,N0,M1,Poorly differentiated,Small cell carcinoma,"BRCA2, BRCA1",Immunotherapy,No,lung,Belgium,
+471602,Alice Lee,2010,42121,Female,newly diagnosed,Wheelchair dependent,Sarcoma,T3,N0,M1,Poorly differentiated,Small cell carcinoma,"BRCA2, BRCA1",Immunotherapy,No,lung,Belgium,
 595279,Alice Smith,2017,2,Female,newly diagnosed,Pain uncontrolled,Solid Tumor,T1,N2,M0,Undifferentiated,Squamous cell carcinoma,KRAS,See 'More than 1 treatment',"Chemotherapy, Surgery, Targeted therapy",CLL,Croatia,
-629474,Fiona Smith,2015,2,Femalerr,relapsed,Follow-up for surveillanceaaa,CNS Tumoraaa,T4a,N1a,M1a,Poorly differentiatedaaa,Lymphomaaaa,BRCA1a,See 'More than 1 treatment'aaa,"Chemotherapy, Radiotherapyaaa",CLL,Luxembourg,Antrim
+629474,Fiona Smith,2015,1,Female,relapsed,Follow-up for surveillance,CNS Tumor,T4,N1,M1,Poorly differentiated,Lymphoma,BRCA1,See 'More than 1 treatment',"Chemotherapy, Radiotherapy",CLL,Luxembourg,
 779200,Fiona Clark,2015,0,Male,relapsed,"Palliative care only, Ambulatory",Sarcoma,T0,N0,M0,Moderately differentiated,Squamous cell carcinoma,BRAF,See 'More than 1 treatment',"Radiotherapy, Chemotherapy, Targeted therapy",myeloma,Latvia,
 874384,Charlie Martin,2011,5,Female,newly diagnosed,"Symptomatic, Needs urgent intervention, On active treatment",Sarcoma,T4,N2,M1,Well differentiated,Small cell carcinoma,None,None,No,myeloma,Finland,
 984194,Charlie Taylor,2015,4,Male,relapsed,Independent,Solid Tumor,T1,N1,M1,Undifferentiated,Adenocarcinoma,TP53,Chemotherapy,No,prostate,Belgium,
@@ -32,7 +32,7 @@ Patient ID,Patient name,Year of birth,ECOG,Gender,Diagnosis type,Patient status 
 313312,Ethan Taylor,1981,2,Female,newly diagnosed,"Symptomatic, Bedbound, Asymptomatic",Hematological Malignancy,T4,N2,M0,Moderately differentiated,Sarcoma,None,Targeted therapy,No,breast,France,
 328139,Charlie Lee,1981,0,Female,newly diagnosed,"Follow-up for surveillance, Asymptomatic",Sarcoma,T4,N1,M0,Poorly differentiated,Sarcoma,"BRCA1, TP53",Immunotherapy,No,breast,Austria,
 336405,Alice Clark,1981,0,Female,newly diagnosed,"Symptomatic, Newly diagnosed",Hematological Malignancy,T0,N1,M0,Poorly differentiated,Sarcoma,"BRAF, BRCA2",Radiotherapy,No,lung,Portugal,
-342165,Hannah Brown,1984,1,Female,newly diagnosed,"Palliative care only, Bedbound, Terminal",Solid Tumor,T4,N2,M0,Well differentiated,Lymphoma,"KRAS, ALK",See 'More than 1 treatment',"Chemotherapy, Immunotherapy",lung,Romania,Antrim
+342165,Hannah Brown,1984,1,Female,newly diagnosed,"Palliative care only, Bedbound, Terminal",Solid Tumor,T4,N2,M0,Well differentiated,Lymphoma,"KRAS, ALK",See 'More than 1 treatment',"Chemotherapy, Immunotherapy",lung,Romania,
 353779,George Johnson,1980,0,Female,newly diagnosed,"Symptomatic, Newly diagnosed",Sarcoma,T3,N1,M0,Moderately differentiated,Adenocarcinoma,BRCA1,Chemotherapy,No,CLL,Finland,
 361356,George Anderson,1981,4,Male,newly diagnosed,"Relapsed, Needs urgent intervention",Hematological Malignancy,T2,N3,M0,Moderately differentiated,Lymphoma,"TP53, BRCA2",Surgery,No,CLL,Romania,
 378114,Alice Brown,1978,5,Female,newly diagnosed,Symptomatic,Hematological Malignancy,T2,N0,M0,Moderately differentiated,Small cell carcinoma,BRCA1,Radiotherapy,No,myeloma,Belgium,
