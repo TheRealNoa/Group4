@@ -143,7 +143,8 @@ def home():
             for row in reader:
                 patients.append({
                     "name": row.get("Patient name", "").strip(),
-                    "cancer": row.get("Cancer type", "").strip()
+                    "cancer": row.get("Cancer type", "").strip(),
+                    "id": row.get("Patient ID", "").strip()
                 })
 
     return render_template(
@@ -358,12 +359,13 @@ def get_patient():
     patient_file = get_user_patient_file()
     if not patient_file or not os.path.exists(patient_file):
         return "No patient file uploaded.", 400
-    name = request.args.get("name", "").strip().lower()
+
+    patient_id = request.args.get("patient_id", "").strip().lower()
     try:
         with open(patient_file, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                if row.get("Patient name", "").strip().lower() == name:
+                if row.get("Patient ID", "").strip().lower() == patient_id:
                     return jsonify({"success": True, "patient": row})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
@@ -376,40 +378,19 @@ def update_patient():
         return "No patient file uploaded.", 400
 
     data = request.get_json()
-    if not data or "Patient name" not in data:
-        return jsonify({"success": False, "error": "Missing patient name"}), 400
+    if not data or "Patient ID" not in data:
+        return jsonify({"success": False, "error": "Missing Patient ID"}), 400
 
     updated = False
 
     try:
-        # Load existing patients
         with open(patient_file, newline='', encoding="utf-8") as f:
             patients = list(csv.DictReader(f))
 
         for row in patients:
-            if row["Patient name"].strip().lower() == data["Patient name"].strip().lower():
-                # Update all relevant fields if present in payload
-                for key in [
-                    "Patient ID",
-                    "Patient name",
-                    "Year of birth",
-                    "ECOG",
-                    "Gender",
-                    "Diagnosis",
-                    "Patient status on referral",
-                    "Disease group",
-                    "T stage",
-                    "N stage",
-                    "M stage",
-                    "Grade",
-                    "Histology",
-                    "Mutations detected",
-                    "Previous treatment",
-                    "More than 1 treatment",
-                    "Cancer type",
-                    "Country",
-                    "County"
-                ]:
+            if row["Patient ID"].strip() == data["Patient ID"].strip():
+                # Update all fields in the CSV that are present in the payload
+                for key in row.keys():
                     if key in data:
                         row[key] = data[key]
                 updated = True
@@ -418,13 +399,13 @@ def update_patient():
         if not updated:
             return jsonify({"success": False, "error": "Patient not found"}), 404
 
-        # Save updated CSV
         with open(patient_file, "w", newline='', encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=patients[0].keys())
             writer.writeheader()
             writer.writerows(patients)
 
         return jsonify({"success": True})
+
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
 @app.route("/screen_patients", methods=["POST"])

@@ -91,14 +91,20 @@
     }
 
     #patientListPanel {
-      background: rgba(255, 255, 255, 0.95);
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 10px 15px;
       width: 220px;
-      max-height: 500px;
+      flex-shrink: 0;
+    }
+    
+    .patient-list-scroll {
+      max-height: 400px;  
       overflow-y: auto;
+    }
+    
+    .patient-list-card ul,
+    #patientListPanel ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0; 
     }
 
     #patientListPanel h4 {
@@ -115,9 +121,16 @@
       cursor: pointer;
     }
 
-    #patientNames li.selected-patient {
-      background-color: #dbeafe;
-      font-weight: bold;
+    #eligiblePatientsPanel ul li.selected-patient {
+      background-color: rgba(166, 247, 146, 0.932); /* light green for eligible */
+    }
+
+    #notEligiblePatientsPanel ul li.selected-patient {
+      background-color: rgba(248, 98, 98, 0.932); /* light red for not eligible */
+    }
+
+    #patientListPanel ul li.selected-patient {
+      background-color: #dbeafe; /* keep blue for normal list */
     }
 
     @media (max-width: 768px) {
@@ -126,30 +139,47 @@
         align-items: center;
       }
     }
+    .patient-list-card,
+    #patientListPanel {
+      background: rgba(255, 255, 255, 0.95);
+      color:#000000;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+      width: 220px;    
+      flex-shrink: 0;
+    }
 
-    .admin-box {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 15px;
-  width: 220px;
-  max-height: 500px;
-  overflow-y: auto;
-  flex-shrink: 0;
-}
+    .patient-list-card h4,
+    #patientListPanel h4 {
+      margin-top: 0;
+      text-align: center;
+    }
 
-@media (max-width: 768px) {
-  .main-layout {
-    flex-direction: column;
-    align-items: center;
-  }
+        .admin-box {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      width: 220px;
+      max-height: 500px;
+      overflow-y: auto;
+      flex-shrink: 0;
+    }
 
-  .admin-box {
-    width: 90%;
-    max-width: 320px;
-  }
-}
+    @media (max-width: 768px) {
+      .main-layout {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .admin-box {
+        width: 90%;
+        max-width: 320px;
+      }
+    }
 
     .admin-box h3, .admin-box h4 {
       margin-top: 0;
@@ -189,6 +219,41 @@
       display: none;
     }
 
+        .patient-panels {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .patient-panels > div {
+      flex-shrink: 0;
+      width: 220px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    #eligiblePatientsPanel {
+      background: rgba(255, 255, 255, 0.95);
+      color:#000000;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+    }
+    #notEligiblePatientsPanel {
+      background: rgba(255, 255, 255, 0.95);
+      color:#000000;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 10px 15px;
+    }
+
+    #patientListPanel {
+    max-height: none;  
+    overflow-y: visible; 
+    }
+
   </style>
 </head>
 
@@ -214,7 +279,13 @@
   <div class="container">
     <button id="logoutButton" onclick="handleLogout()">Log Out</button>
 
-    <h2>Cancer Trials Scraper</h2>
+    <h2 id="patientHeader">
+      {% if patient_info.get('Patient name') %}
+        {{ patient_info.get('Patient name') }}
+      {% else %}
+        Please select a patient
+      {% endif %}
+    </h2>
 
     <label for="country">Select Country:</label>
     <select id="country" onchange="toggleCountyField()">
@@ -243,8 +314,7 @@
       {% endfor %}
     </select>
 
-    <label for="patientName">Patient Name:</label>
-    <input type="text" id="patientName" value="{{ patient_info.get('Patient name', '') }}">
+
 
     <label for="patientAge">Patient Age:</label>
     <input type="text" id="patientAge" readonly>
@@ -305,29 +375,32 @@
     <div id="trialList"></div>
   </div>
 
+  <div class="patient-panels">
   <div id="patientListPanel">
-  <h4>Patients</h4>
+    <h4>Patients</h4>
+    <button onclick="triggerPatientUpload()">Upload Patient CSV</button>
+    <button onclick="downloadPatientCSV()">Download Patient CSV</button>
+    <form id="uploadPatientForm" action="/upload_patients" method="POST" enctype="multipart/form-data" style="display: none;">
+      <input type="file" id="uploadPatientInput" name="file" accept=".csv">
+    </form>
+    <button onclick="screenPatients()">Screen Patients</button>
+    <input type="text" id="patientSearch" placeholder="Search by name...">
+    <ul id="patientNames" class="patient-list-scroll"></ul>
+  </div>
 
-  <button onclick="triggerPatientUpload()" style="width: 100%; margin-bottom: 10px;">
-    Upload Patient CSV
-  </button>
-
-  <button onclick="downloadPatientCSV()" style="width: 100%; margin-bottom: 10px;">
-  Download Patient CSV
-  </button>
-
-  <form id="uploadPatientForm" action="/upload_patients" method="POST" enctype="multipart/form-data" style="display: none;">
-    <input type="file" id="uploadPatientInput" name="file" accept=".csv">
-  </form>
-
-  <button onclick="screenPatients()" style="width: 100%; margin-bottom: 10px;">
-    Screen Patients
-  </button>
-
-  <input type="text" id="patientSearch" placeholder="Search by name..." style="width: 100%; padding: 6px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
-  <ul id="patientNames" style="list-style: none; padding-left: 0;"></ul>
+  <div id="eligiblePatientsPanel" class="patient-list-card" style="display: none;">
+  <h4>Eligible Patients</h4>
+  <div class="patient-list-scroll">
+    <ul id="eligiblePatients"></ul>
+  </div>
 </div>
 
+  <div id="notEligiblePatientsPanel" class="patient-list-card" style="display: none;">
+  <h4>Not Eligible Patients</h4>
+  <div class="patient-list-scroll">
+    <ul id="notEligiblePatients"></ul>
+  </div>
+</div>
 </div>
 <script>
   const initialPatients = JSON.parse('{{ patient_list | tojson | safe }}');
@@ -426,45 +499,68 @@ function startScraping() {
 }
 
 function screenPatients() {
-  fetch("/screen_patients", { method: "POST" })
-    .then(res => res.json())
-    .then(data => alert(data.success ? "Screening complete!\n" + JSON.stringify(data.result) : "Error: " + data.error))
-    .catch(() => alert("Network error while screening patients."));
-}
+  if (allPatients.length === 0) {
+    alert("No patients to screen. Please upload or load a CSV.");
+    return;
+  }
 
-let allPatients = [];
-function fetchPatientNames() {
-  fetch("/patient_names")
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        allPatients = data.patients;
-        renderPatientList(allPatients);
-      }
-    });
+  const mid = Math.ceil(allPatients.length / 2);
+  const eligible = allPatients.slice(0, mid);
+  const notEligible = allPatients.slice(mid);
+
+  renderPatientList(eligible, "eligiblePatients");
+  renderPatientList(notEligible, "notEligiblePatients");
+
+  document.getElementById("eligiblePatientsPanel").style.display = "block";
+  document.getElementById("notEligiblePatientsPanel").style.display = "block";
 }
-function renderPatientList(patients) {
-  const ul = document.getElementById("patientNames");
+function renderPatientList(patients, listId = "patientNames") {
+  const ul = document.getElementById(listId);
   ul.innerHTML = "";
   patients.forEach(patient => {
     const li = document.createElement("li");
     li.innerHTML = `<strong>${patient.name}</strong><br><small>${patient.cancer}</small>`;
-    li.onclick = () => {
-      document.querySelectorAll("#patientNames li").forEach(el => el.classList.remove("selected-patient"));
-      li.classList.add("selected-patient");
-      loadPatientDetails(patient.name);
-    };
+    li.setAttribute("data-id", patient.id || patient["Patient ID"] || "");
+
+    li.addEventListener("click", () => {
+      highlightPatientInAllLists(li.getAttribute("data-id"));
+      loadPatientDetails(li.getAttribute("data-id"));
+    });
+
     ul.appendChild(li);
   });
 }
-function loadPatientDetails(name) {
-  fetch(`/get_patient?name=${encodeURIComponent(name)}`)
+function highlightPatientInAllLists(patientId) {
+  const lists = ["patientNames", "eligiblePatients", "notEligiblePatients"];
+  lists.forEach(listId => {
+    const list = document.getElementById(listId);
+    if (!list) return;
+    list.querySelectorAll("li").forEach(li => {
+      if (li.getAttribute("data-id") === patientId) {
+        li.classList.add("selected-patient");
+        li.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+      } else {
+        li.classList.remove("selected-patient");
+      }
+    });
+  });
+}
+function loadPatientDetails(patientId) {
+  fetch(`/get_patient?patient_id=${encodeURIComponent(patientId)}`)
     .then(response => response.json())
     .then(data => {
       if (data.success && data.patient) {
         const p = data.patient;
         document.getElementById("patientID").value = p["Patient ID"] || "";
-        document.getElementById("patientName").value = p["Patient name"] || "";
+        const header = document.getElementById("patientHeader");
+        if (p["Patient name"]) {
+          header.textContent = p["Patient name"];
+        } else {
+          header.textContent = "Please select a patient";
+        }
         const yob = p["Year of birth"] || "";
         document.getElementById("yearOfBirth").value = yob;
         if (yob) {
@@ -486,8 +582,6 @@ function loadPatientDetails(name) {
         document.getElementById("mutationsDetected").value = p["Mutations detected"] || "";
         document.getElementById("previousTreatment").value = p["Previous treatment"] || "";
         document.getElementById("moreThanOneTreatment").value = p["More than 1 treatment"] || "";
-
-        //document.getElementById("diagnosis").value = p["Diagnosis type"] || "";
         document.getElementById("cancerType").value = p["Cancer type"] || "";
         document.getElementById("country").value = p["Country"] || "";
         toggleCountyField();
