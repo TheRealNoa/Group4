@@ -26,6 +26,34 @@ COUNTIES = [
 FIRST_NAMES = ["Alice", "Bob", "Charlie", "Diana", "Ethan", "Fiona", "George", "Hannah"]
 LAST_NAMES = ["Smith", "Johnson", "Brown", "Taylor", "Anderson", "Lee", "Martin", "Clark"]
 
+EXCLUSIVE_STATUSES = [
+    ["Newly diagnosed", "Relapsed", "Treatment completed"],  # Diagnosis status
+    ["Stable", "Unstable", "Deteriorating", "Improving", "Critical", "Terminal"],  # Overall condition
+    ["Ambulatory", "Bedbound", "Wheelchair dependent", "Needs assistance with ADLs", "Independent"],  # Functional status
+]
+OTHER_STATUSES = [
+    "On active treatment","Palliative care only","Follow-up for surveillance","Pain uncontrolled",
+    "Symptomatic","Asymptomatic","Needs urgent intervention","For second opinion"]
+
+DISEASE_GROUPS = ["Solid Tumor", "Hematological Malignancy", "Sarcoma", "CNS Tumor"]
+
+T_STAGE = ["T0", "T1", "T2", "T3", "T4"]
+
+N_STAGE = ["N0", "N1", "N2", "N3"]
+
+M_STAGE = ["M0", "M1"]
+
+GRADES = ["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Undifferentiated"]
+
+HISTOLOGIES = ["Adenocarcinoma", "Squamous cell carcinoma", "Small cell carcinoma", "Lymphoma", "Sarcoma"]
+
+MUTATIONS = ["None", "EGFR", "KRAS", "BRAF", "TP53", "ALK", "BRCA1", "BRCA2"]
+
+TREATMENTS = ["None", "Surgery", "Chemotherapy", "Radiotherapy", "Immunotherapy", "Targeted therapy"]
+
+GENDER = ["Male","Female"]
+
+
 AGE_GROUPS = [
     range(7, 18),     
     range(18, 29),    
@@ -60,14 +88,79 @@ def generate_patients(num_patients, output_file):
                 trial_open = random.choice(["Yes", "No"])
                 country = random.choice(EU_COUNTRIES)
                 county = random.choice(COUNTIES) if country == "Ireland" else None
+                ECOG = random.randint(0, 5)
 
+                # Patient status on referral (non-conflicting)
+                status_pool = []
+                exclusive_statuses = [list(group) for group in EXCLUSIVE_STATUSES]
+                
+                if diagnosis_type == "newly_diagnosed":
+                    if "Relapsed" in exclusive_statuses[0]:
+                        exclusive_statuses[0].remove("Relapsed")
+                elif diagnosis_type == "relapsed":
+                    if "Newly diagnosed" in exclusive_statuses[0]:
+                        exclusive_statuses[0].remove("Newly diagnosed")
+                for group in exclusive_statuses:
+                    status_pool.append(random.choice(group))
+                status_pool.extend(OTHER_STATUSES)
+                num_statuses = random.randint(1, 3)
+                final_statuses = random.sample(status_pool, num_statuses)
+                status_on_referral = ", ".join(final_statuses)
+
+                # Disease characteristics
+                disease_group = random.choice(DISEASE_GROUPS)
+                t_stage = random.choice(T_STAGE)
+                n_stage = random.choice(N_STAGE)
+                m_stage = random.choice(M_STAGE)
+                grade = random.choice(GRADES)
+                histology = random.choice(HISTOLOGIES)
+                gender = random.choice(GENDER)
+                # Mutations detected: if 'None', then only 'None'
+                if random.random() < 0.3:
+                    mutations_detected = "None"
+                else:
+                    possible_mutations = [m for m in MUTATIONS if m != "None"]
+                    num_mutations = random.randint(1, 2)
+                    mutations = random.sample(possible_mutations, num_mutations)
+                    mutations_detected = ", ".join(mutations)
+
+                # Previous treatment logic
+                TREATMENT_OPTIONS = ["Surgery", "Chemotherapy", "Radiotherapy", "Immunotherapy", "Targeted therapy"]
+                prob = random.random()
+                if prob < 0.2:
+                    # 20% chance: No treatment
+                    previous_treatment = "None"
+                    more_than_one_treatment = "No"
+                elif prob < 0.7:
+                    # 50% chance: One treatment
+                    previous_treatment = random.choice(TREATMENT_OPTIONS)
+                    more_than_one_treatment = "No"
+                else:
+                    # 30% chance: Multiple treatments
+                    num_treatments = random.randint(2, min(3, len(TREATMENT_OPTIONS)))
+                    treatments = random.sample(TREATMENT_OPTIONS, num_treatments)
+                    previous_treatment = ", ".join(treatments)
+                    more_than_one_treatment = "Yes"
+
+            
                 patients.append({
                     "Patient ID": generate_six_digit_id(patient_id),
-                    "Patient name": name,
-                    "Patient age": age,
-                    "Diagnosis type": diagnosis_type,
+                    "Year of birth": age, #update
+                    "ECOG": ECOG,
+                    "Gender": gender,
+                    "Diagnosis": diagnosis_type,
+                    "Patient status on referral": status_on_referral,
+                    "Disease group": disease_group,
+                    "T stage": t_stage,
+                    "N stage": n_stage,
+                    "M stage": m_stage,
+                    "Grade": grade,
+                    "Histology": histology,
+                    "Mutations detected": mutations_detected,
+                    "Previous treatment": previous_treatment if more_than_one_treatment == "No" else "See 'More than 1 treatment'",
+                    "More than 1 treatment": previous_treatment if more_than_one_treatment == "Yes" else "No",
                     "Cancer type": cancer_type,
-                    "Clinical trial open for enrollment": trial_open,
+                    #"Clinical trial open for enrollment": trial_open,
                     "Country": country,
                     "County": county
                 })
@@ -86,7 +179,7 @@ df = pd.read_csv(OUTPUT_FILE)
 bins = [6, 17, 28, 38, 48, 58, 68, 78, 90]
 labels = ["7–17", "18–28", "29–38", "39–48", "49–58", "59–68", "69–78", "79–90"]
 
-df["Age Group"] = pd.cut(df["Patient age"], bins=bins, labels=labels, right=True, include_lowest=True)
+df["Age Group"] = pd.cut(df["Year of birth"], bins=bins, labels=labels, right=True, include_lowest=True)
 
 grouped = df.groupby(["Age Group", "Cancer type"]).size().unstack(fill_value=0)
 

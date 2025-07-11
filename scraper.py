@@ -197,7 +197,7 @@ def scrape_trials(cancer_type, country="Ireland"):
 
         base_url = CANCER_URLS.get(cancer_type)
         if not base_url:
-            print(f"⚠️ No URL found for cancer type: '{cancer_type}'.")
+            print(f"No URL found for cancer type: '{cancer_type}'.")
             return []
 
         trial_links = get_all_trial_links(base_url)
