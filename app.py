@@ -14,6 +14,9 @@ app.secret_key = 'your-secret-key'
 
 ADMIN_SECRETS_FILE = "admin_secrets.json"
 
+UPLOAD_FOLDER = 'uploads'
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
 
 def require_permission(permission_name):
     def decorator(f):
@@ -89,7 +92,8 @@ def remove_admin(email):
         save_admin_secrets(secrets)
         ADMIN_EMAILS.discard(email)
 
-
+def get_user_patient_file():
+    return session.get("patient_file")
 @app.route("/")
 def root():
     return redirect(url_for("home" if session.get("logged_in") else "login"))
@@ -101,13 +105,6 @@ def login():
         if email.lower() in ADMIN_EMAILS:
             return True
         if not email.endswith("@hse.ie"):
-            return False
-        patient_id = email.split("@")[0]
-        try:
-            with open("patients.csv", newline='', encoding="utf-8") as f:
-                reader = csv.DictReader(f)
-                return any(row["Patient ID"] == patient_id for row in reader)
-        except:
             return False
 
     if request.method == "POST":
@@ -130,22 +127,32 @@ def home():
     if not session.get("logged_in"):
         return redirect(url_for("login"))
 
+
     email = session["email"]
     is_admin = email in ADMIN_EMAILS
     is_verified = session.get("admin_verified", False)
     patient_id = email.split("@")[0]
     patient_info = {}
 
-    try:
-        with open("patients.csv", newline='', encoding="utf-8") as f:
+
+    patient_file = get_user_patient_file()
+    patients = []
+    if patient_file and os.path.exists(patient_file):
+        with open(patient_file, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
-                if row["Patient ID"] == patient_id:
-                    patient_info = row
-    except:
-        pass
+                patients.append({
+                    "name": row.get("Patient name", "").strip(),
+                    "cancer": row.get("Cancer type", "").strip()
+                })
 
-    return render_template("index.html", patient_info=patient_info, is_admin=is_admin, admin_verified=is_verified)
+    return render_template(
+        "index.html",
+        patient_info=patient_info,
+        is_admin=is_admin,
+        admin_verified=is_verified,
+        patient_list=patients
+)
 
 
 @app.route("/admin_qr")
@@ -330,9 +337,12 @@ def scrape_route():
 
 @app.route("/patient_names")
 def patient_names():
+    patient_file = get_user_patient_file()
+    if not patient_file or not os.path.exists(patient_file):
+        return "No patient file uploaded.", 400
     patients = []
     try:
-        with open("patients.csv", newline='', encoding="utf-8") as f:
+        with open(patient_file, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 name = row.get("Patient name", "").strip()
@@ -345,9 +355,12 @@ def patient_names():
 
 @app.route("/get_patient", methods=["GET"])
 def get_patient():
+    patient_file = get_user_patient_file()
+    if not patient_file or not os.path.exists(patient_file):
+        return "No patient file uploaded.", 400
     name = request.args.get("name", "").strip().lower()
     try:
-        with open("patients.csv", newline='', encoding="utf-8") as f:
+        with open(patient_file, newline='', encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for row in reader:
                 if row.get("Patient name", "").strip().lower() == name:
@@ -355,30 +368,50 @@ def get_patient():
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
     return jsonify({"success": False, "error": "Patient not found"}), 404
+
 @app.route("/update_patient", methods=["POST"])
 def update_patient():
-    data = request.get_json()
+    patient_file = get_user_patient_file()
+    if not patient_file or not os.path.exists(patient_file):
+        return "No patient file uploaded.", 400
 
+    data = request.get_json()
     if not data or "Patient name" not in data:
         return jsonify({"success": False, "error": "Missing patient name"}), 400
 
     updated = False
-    patient_id = None
 
     try:
         # Load existing patients
-        with open("patients.csv", newline='', encoding="utf-8") as f:
+        with open(patient_file, newline='', encoding="utf-8") as f:
             patients = list(csv.DictReader(f))
 
         for row in patients:
             if row["Patient name"].strip().lower() == data["Patient name"].strip().lower():
-                row.update({
-                    "Patient age": data.get("Patient age", row.get("Patient age", "")),
-                    "Diagnosis type": data.get("Diagnosis type", row.get("Diagnosis type", "")),
-                    "Cancer type": data.get("Cancer type", row.get("Cancer type", "")),
-                    "Country": data.get("Country", row.get("Country", "")),
-                    "County": data.get("County", row.get("County", "")),
-                })
+                # Update all relevant fields if present in payload
+                for key in [
+                    "Patient ID",
+                    "Patient name",
+                    "Year of birth",
+                    "ECOG",
+                    "Gender",
+                    "Diagnosis",
+                    "Patient status on referral",
+                    "Disease group",
+                    "T stage",
+                    "N stage",
+                    "M stage",
+                    "Grade",
+                    "Histology",
+                    "Mutations detected",
+                    "Previous treatment",
+                    "More than 1 treatment",
+                    "Cancer type",
+                    "Country",
+                    "County"
+                ]:
+                    if key in data:
+                        row[key] = data[key]
                 updated = True
                 break
 
@@ -386,7 +419,7 @@ def update_patient():
             return jsonify({"success": False, "error": "Patient not found"}), 404
 
         # Save updated CSV
-        with open("patients.csv", "w", newline='', encoding="utf-8") as f:
+        with open(patient_file, "w", newline='', encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=patients[0].keys())
             writer.writeheader()
             writer.writerows(patients)
@@ -394,7 +427,6 @@ def update_patient():
         return jsonify({"success": True})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
-
 @app.route("/screen_patients", methods=["POST"])
 def screen_patients():
     try:
@@ -402,6 +434,26 @@ def screen_patients():
         return jsonify({"success": True, "result": result})
     except Exception as e:
         return jsonify({"success": False, "error": str(e)}), 500
+    
+@app.route("/upload_patients", methods=["GET", "POST"])
+def upload_patients():
+    if not session.get("logged_in"):
+        return redirect(url_for("login"))
 
+    if request.method == "POST":
+        if "file" not in request.files:
+            return "No file part", 400
+        file = request.files["file"]
+        if file.filename == "":
+            return "No selected file", 400
+        if file:
+            email = session["email"].split("@")[0]
+            filename = f"{email}_patients.csv"
+            file_path = os.path.join(UPLOAD_FOLDER, filename)
+            file.save(file_path)
+            session["patient_file"] = file_path
+            return redirect(url_for("home"))
+
+    return render_template("upload_patients.html")
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)

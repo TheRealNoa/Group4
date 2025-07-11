@@ -9,7 +9,7 @@ OUTPUT_FILE = "patients.csv"
 
 # Fixed values
 CANCER_TYPES = ["breast", "lung", "CLL", "myeloma", "prostate"]
-DIAGNOSIS_TYPES = ["newly_diagnosed", "relapsed"]
+DIAGNOSIS_TYPES = ["newly diagnosed", "relapsed"]
 EU_COUNTRIES = [
     "Ireland", "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czech Republic",
     "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Italy",
@@ -53,6 +53,7 @@ TREATMENTS = ["None", "Surgery", "Chemotherapy", "Radiotherapy", "Immunotherapy"
 
 GENDER = ["Male","Female"]
 
+this_year = 2025
 
 AGE_GROUPS = [
     range(7, 18),     
@@ -83,7 +84,8 @@ def generate_patients(num_patients, output_file):
         for cancer_type in CANCER_TYPES:
             for _ in range(group_size):
                 name = f"{random.choice(FIRST_NAMES)} {random.choice(LAST_NAMES)}"
-                age = random.choice(age_group)  
+                age = random.choice(age_group)
+                year_of_birth = this_year - age
                 diagnosis_type = random.choice(DIAGNOSIS_TYPES)
                 trial_open = random.choice(["Yes", "No"])
                 country = random.choice(EU_COUNTRIES)
@@ -145,10 +147,11 @@ def generate_patients(num_patients, output_file):
             
                 patients.append({
                     "Patient ID": generate_six_digit_id(patient_id),
-                    "Year of birth": age, #update
+                    "Patient name": name,
+                    "Year of birth": year_of_birth, #update
                     "ECOG": ECOG,
                     "Gender": gender,
-                    "Diagnosis": diagnosis_type,
+                    "Diagnosis type": diagnosis_type,
                     "Patient status on referral": status_on_referral,
                     "Disease group": disease_group,
                     "T stage": t_stage,

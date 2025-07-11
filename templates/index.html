@@ -247,7 +247,7 @@
     <input type="text" id="patientName" value="{{ patient_info.get('Patient name', '') }}">
 
     <label for="patientAge">Patient Age:</label>
-    <input type="number" id="patientAge" value="{{ patient_info.get('Patient age', '') }}">
+    <input type="text" id="patientAge" readonly>
 
     <label for="diagnosis">Diagnosis Type:</label>
     <select id="diagnosis">
@@ -255,6 +255,49 @@
         <option value="{{ diag }}" {% if patient_info.get("Diagnosis type") == diag %}selected{% endif %}>{{ diag }}</option>
       {% endfor %}
     </select>
+
+    <label for="patientID">Patient ID:</label>
+    <input type="text" id="patientID" readonly>
+
+    <input type="hidden" id="yearOfBirth">
+
+    <label for="ecog">ECOG:</label>
+    <input type="number" id="ecog">
+
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender">
+
+    <input type="hidden" id="diagnosisText"> <!--Keeping for later, just in case-->
+
+    <label for="statusOnReferral">Patient Status on Referral:</label>
+    <input type="text" id="statusOnReferral">
+
+    <label for="diseaseGroup">Disease Group:</label>
+    <input type="text" id="diseaseGroup">
+
+    <label for="tStage">T Stage:</label>
+    <input type="text" id="tStage">
+
+    <label for="nStage">N Stage:</label>
+    <input type="text" id="nStage">
+
+    <label for="mStage">M Stage:</label>
+    <input type="text" id="mStage">
+
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade">
+
+    <label for="histology">Histology:</label>
+    <input type="text" id="histology">
+
+    <label for="mutationsDetected">Mutations Detected:</label>
+    <input type="text" id="mutationsDetected">
+
+    <label for="previousTreatment">Previous Treatment:</label>
+    <input type="text" id="previousTreatment">
+
+    <label for="moreThanOneTreatment">More Than 1 Treatment:</label>
+    <input type="text" id="moreThanOneTreatment">
 
     <button onclick="savePatientDetails()">Update Patient Details</button>
     <button onclick="startScraping()">Start Scraping</button>
@@ -264,18 +307,37 @@
   </div>
 
   <div id="patientListPanel">
-    <h4>Patients</h4>
-    <button onclick="screenPatients()" style="width: 100%; margin-bottom: 10px;">Screen Patients</button>
-    <input type="text" id="patientSearch" placeholder="Search by name..." style="width: 100%; padding: 6px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
-    <ul id="patientNames" style="list-style: none; padding-left: 0;"></ul>
-  </div>
+  <h4>Patients</h4>
 
+  <button onclick="triggerPatientUpload()" style="width: 100%; margin-bottom: 10px;">
+    Upload Patient CSV
+  </button>
+
+  <form id="uploadPatientForm" action="/upload_patients" method="POST" enctype="multipart/form-data" style="display: none;">
+    <input type="file" id="uploadPatientInput" name="file" accept=".csv">
+  </form>
+
+  <button onclick="screenPatients()" style="width: 100%; margin-bottom: 10px;">
+    Screen Patients
+  </button>
+
+  <input type="text" id="patientSearch" placeholder="Search by name..." style="width: 100%; padding: 6px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+  <ul id="patientNames" style="list-style: none; padding-left: 0;"></ul>
 </div>
 
-
-
-<!-- JS scripts (unchanged logic, all consolidated below) -->
+</div>
 <script>
+  const initialPatients = JSON.parse('{{ patient_list | tojson | safe }}');
+</script>
+
+<script>
+function calculateAge(yearOfBirth) {
+  const now = new Date();
+  const thisYear = now.getFullYear();
+  const age = thisYear - parseInt(yearOfBirth, 10);
+  return age;
+}
+
 function toggleCountyField() {
   const country = document.getElementById("country").value;
   document.getElementById("countyDiv").style.display = (country === "Ireland") ? "block" : "none";
@@ -293,13 +355,13 @@ function savePatientDetails() {
   };
 
   const payload = {
-    "Patient name": document.getElementById("patientName").value,
-    "Patient age": document.getElementById("patientAge").value,
-    "Diagnosis type": diagnosisMap[document.getElementById("diagnosis").value] || "",
-    "Cancer type": document.getElementById("cancerType").value,
-    "Country": document.getElementById("country").value,
-    "County": document.getElementById("county").value
-  };
+  "Patient name": document.getElementById("patientName").value,
+  "Patient age": document.getElementById("patientAge").value,
+  "Diagnosis type": document.getElementById("diagnosis").value,
+  "Cancer type": document.getElementById("cancerType").value,
+  "Country": document.getElementById("country").value,
+  "County": document.getElementById("county").value
+};
 
   fetch("/update_patient", {
     method: "POST",
@@ -385,9 +447,31 @@ function loadPatientDetails(name) {
     .then(data => {
       if (data.success && data.patient) {
         const p = data.patient;
+        document.getElementById("patientID").value = p["Patient ID"] || "";
         document.getElementById("patientName").value = p["Patient name"] || "";
-        document.getElementById("patientAge").value = p["Patient age"] || "";
-        document.getElementById("diagnosis").value = p["Diagnosis type"] === "newly_diagnosed" ? "newly diagnosed" : p["Diagnosis type"];
+        const yob = p["Year of birth"] || "";
+        document.getElementById("yearOfBirth").value = yob;
+        if (yob) {
+          const age = calculateAge(yob);
+          document.getElementById("patientAge").value = `${age} (Born in ${yob})`;
+        } else {
+          document.getElementById("patientAge").value = "";
+        }
+        document.getElementById("ecog").value = p["ECOG"] || "";
+        document.getElementById("gender").value = p["Gender"] || "";
+        document.getElementById("diagnosisText").value = p["Diagnosis"] || "";
+        document.getElementById("statusOnReferral").value = p["Patient status on referral"] || "";
+        document.getElementById("diseaseGroup").value = p["Disease group"] || "";
+        document.getElementById("tStage").value = p["T stage"] || "";
+        document.getElementById("nStage").value = p["N stage"] || "";
+        document.getElementById("mStage").value = p["M stage"] || "";
+        document.getElementById("grade").value = p["Grade"] || "";
+        document.getElementById("histology").value = p["Histology"] || "";
+        document.getElementById("mutationsDetected").value = p["Mutations detected"] || "";
+        document.getElementById("previousTreatment").value = p["Previous treatment"] || "";
+        document.getElementById("moreThanOneTreatment").value = p["More than 1 treatment"] || "";
+
+        //document.getElementById("diagnosis").value = p["Diagnosis type"] || "";
         document.getElementById("cancerType").value = p["Cancer type"] || "";
         document.getElementById("country").value = p["Country"] || "";
         toggleCountyField();
@@ -404,10 +488,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtered = allPatients.filter(p => p.name.toLowerCase().includes(term));
     renderPatientList(filtered);
   });
-  fetchPatientNames();
+
+  if (initialPatients?.length) {
+    allPatients = initialPatients;
+    renderPatientList(allPatients);
+  } else {
+    fetchPatientNames();
+  }
+});
+  document.getElementById("yearOfBirth").addEventListener("input", function() {
+  const yob = this.value;
+  if (yob) {
+    const age = calculateAge(yob);
+    document.getElementById("patientAge").value = `${age} (Year ${yob})`;
+  } else {
+    document.getElementById("patientAge").value = "";
+  }
 });
 </script>
 
+<script>
+function triggerPatientUpload() {
+  const fileInput = document.getElementById('uploadPatientInput');
+  fileInput.click();
+
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      document.getElementById('uploadPatientForm').submit();
+    }
+  };
+}
+</script>
 <script>
 function verify2FA() {
   const code = document.getElementById("twoFACode").value;
