@@ -299,7 +299,6 @@
     <label for="moreThanOneTreatment">More Than 1 Treatment:</label>
     <input type="text" id="moreThanOneTreatment">
 
-    <button onclick="savePatientDetails()">Update Patient Details</button>
     <button onclick="startScraping()">Start Scraping</button>
 
     <p id="status"></p>
@@ -311,6 +310,10 @@
 
   <button onclick="triggerPatientUpload()" style="width: 100%; margin-bottom: 10px;">
     Upload Patient CSV
+  </button>
+
+  <button onclick="downloadPatientCSV()" style="width: 100%; margin-bottom: 10px;">
+  Download Patient CSV
   </button>
 
   <form id="uploadPatientForm" action="/upload_patients" method="POST" enctype="multipart/form-data" style="display: none;">
@@ -349,19 +352,28 @@ function handleLogout() {
 }
 
 function savePatientDetails() {
-  const diagnosisMap = {
-    "newly diagnosed": "newly_diagnosed",
-    "relapsed": "relapsed"
-  };
-
   const payload = {
-  "Patient name": document.getElementById("patientName").value,
-  "Patient age": document.getElementById("patientAge").value,
-  "Diagnosis type": document.getElementById("diagnosis").value,
-  "Cancer type": document.getElementById("cancerType").value,
-  "Country": document.getElementById("country").value,
-  "County": document.getElementById("county").value
-};
+    "Patient ID": document.getElementById("patientID").value,
+    "Patient name": document.getElementById("patientName").value,
+    "Year of birth": document.getElementById("yearOfBirth").value,
+    "ECOG": document.getElementById("ecog").value,
+    "Gender": document.getElementById("gender").value,
+    "Diagnosis type": document.getElementById("diagnosis").value,
+    "Patient status on referral": document.getElementById("statusOnReferral").value,
+    "Disease group": document.getElementById("diseaseGroup").value,
+    "T stage": document.getElementById("tStage").value,
+    "N stage": document.getElementById("nStage").value,
+    "M stage": document.getElementById("mStage").value,
+    "Grade": document.getElementById("grade").value,
+    "Histology": document.getElementById("histology").value,
+    "Mutations detected": document.getElementById("mutationsDetected").value,
+    "Previous treatment": document.getElementById("previousTreatment").value,
+    "More than 1 treatment": document.getElementById("moreThanOneTreatment").value,
+    "Cancer type": document.getElementById("cancerType").value,
+    "Country": document.getElementById("country").value,
+    "County": document.getElementById("county").value,
+    "Patient age": document.getElementById("patientAge").value
+  };
 
   fetch("/update_patient", {
     method: "POST",
@@ -370,9 +382,13 @@ function savePatientDetails() {
   })
   .then(response => response.json())
   .then(result => {
-    alert(result.success ? "Patient details updated successfully." : "Failed: " + (result.error || "Unknown error."));
+    if (!result.success) {
+      console.error("Failed to save:", result.error || "Unknown error");
+    } else {
+      console.log("Patient auto-saved.");
+    }
   })
-  .catch(() => alert("Network error occurred."));
+  .catch(err => console.error("Network error:", err));
 }
 
 function startScraping() {
@@ -505,6 +521,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("patientAge").value = "";
   }
 });
+const PatientFieldsToWatch = [
+    "country", "county", "cancerType", "patientName",
+    "diagnosis", "ecog", "gender", "statusOnReferral",
+    "diseaseGroup", "tStage", "nStage", "mStage",
+    "grade", "histology", "mutationsDetected",
+    "previousTreatment", "moreThanOneTreatment"
+  ];
+
+  PatientFieldsToWatch.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener("change", savePatientDetails);
+      el.addEventListener("input", savePatientDetails); // For text inputs
+    }
+  });
 </script>
 
 <script>
@@ -517,6 +548,9 @@ function triggerPatientUpload() {
       document.getElementById('uploadPatientForm').submit();
     }
   };
+}
+function downloadPatientCSV() {
+  window.location.href = "/download_patients";
 }
 </script>
 <script>

@@ -455,5 +455,18 @@ def upload_patients():
             return redirect(url_for("home"))
 
     return render_template("upload_patients.html")
+
+@app.route("/download_patients")
+def download_patients():
+    if not session.get("logged_in"):
+        return redirect(url_for("login"))
+
+    patient_file = get_user_patient_file()
+    if not patient_file or not os.path.exists(patient_file):
+        return "No patient file uploaded.", 400
+
+    filename = os.path.basename(patient_file)
+    return send_file(patient_file, as_attachment=True, download_name=filename)
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000, debug=True)
