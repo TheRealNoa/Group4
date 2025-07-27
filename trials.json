@@ -1,0 +1,37 @@
+[
+  {
+    "trial_id": "ASCENT-05",
+    "name": "ASCENT-05",
+    "cancer_type": "Breast",
+    "inclusion_criteria": {
+      "age_min": 18,
+      "ecog_max": 1,
+      "diagnosis": ["HER2+ Breast Cancer"],
+      "staging": ["Stage II", "Stage III"],
+      "prior_treatment": ["Neoadjuvant Chemotherapy"],
+      "measurable_disease": true
+    },
+    "exclusion_criteria": {
+      "prior_treatment_lines": ">2",
+      "comorbidities": ["Uncontrolled hypertension", "Active infection"],
+      "mutations_excluded": []
+    }
+  },
+  {
+    "trial_id": "MajesTEC-4",
+    "name": "MajesTEC-4",
+    "cancer_type": "Multiple Myeloma",
+    "inclusion_criteria": {
+      "age_min": 18,
+      "ecog_max": 2,
+      "diagnosis": ["Relapsed/Refractory Multiple Myeloma"],
+      "staging": ["ISS Stage II", "ISS Stage III"],
+      "prior_treatment": ["At least 1 prior line of therapy"],
+      "genetics_required": []
+    },
+    "exclusion_criteria": {
+      "prior_treatment_lines": ">6",
+      "comorbidities": ["Cardiac failure NYHA III/IV", "CNS involvement"]
+    }
+  }
+]
